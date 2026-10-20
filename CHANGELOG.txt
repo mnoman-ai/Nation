@@ -1,0 +1,8 @@
+NATION: RISE TO POWER — CHANGELOG v0.0.1
+- Rebuilt as a landscape-first political operations dashboard inspired by the supplied reference.
+- Single index.html contains HTML, CSS and JavaScript.
+- Added compact top status bar and persistent left navigation.
+- Added stylised clickable India map and national overview dashboard.
+- Added campaign, parliament, economy, government, election, parties, regional, society, infrastructure, policy, media, institutions, security, events, records and save/load screens.
+- Added career creation, strategic actions, date advancement, event feed and local saves.
+- Clearly labels illustrative data and unimplemented simulation systems.
