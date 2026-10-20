@@ -1,6 +1,0 @@
-NATION: RISE TO POWER — v0.0.1 PWA package
-- Preserved the approved game as a single index.html containing all game CSS and JavaScript.
-- Added a web app manifest with standalone display and landscape orientation preference.
-- Added a service worker for app-shell caching and offline reopening after first successful load.
-- Added app icons and Android installation instructions.
-- PWA installation requires HTTPS hosting (or localhost); opening index.html directly from storage is not sufficient.
