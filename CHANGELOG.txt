@@ -1,8 +1,13 @@
-NATION: RISE TO POWER — CHANGELOG v0.0.1
-- Rebuilt as a landscape-first political operations dashboard inspired by the supplied reference.
-- Single index.html contains HTML, CSS and JavaScript.
-- Added compact top status bar and persistent left navigation.
-- Added stylised clickable India map and national overview dashboard.
-- Added campaign, parliament, economy, government, election, parties, regional, society, infrastructure, policy, media, institutions, security, events, records and save/load screens.
-- Added career creation, strategic actions, date advancement, event feed and local saves.
-- Clearly labels illustrative data and unimplemented simulation systems.
+NATION: RISE TO POWER — CHANGELOG v0.0.3
+
+- Began actual game development on the existing v0.0.1 web foundation; v0.0.2 was Android/Capacitor packaging only.
+- Updated the app and package version to v0.0.3 while preserving the Capacitor Android workflow.
+- Simplified the sidebar to Dashboard, Parliament, Election, Political Parties, State Assemblies, Infrastructure and Save / Load.
+- Removed the separate Campaign navigation and placed campaign operations under Election.
+- Removed fabricated Rajya Sabha, Lok Sabha seat distribution, central government and static legislative proceedings from the active Parliament view.
+- Replaced the dashboard's fabricated national seats, government approval and macroeconomic metrics with explicit starting-world status.
+- Added the approved ten fictional political parties with add, edit and archive/restore controls; archived parties remain stored.
+- Added a selectable State/UT Assembly directory for all 28 states and 8 union territories, without fabricated assembly memberships or government data.
+- Replaced fabricated infrastructure project progress with the seven approved infrastructure categories and clear inactive-system labels.
+- Added a one-way, versioned migration path for compatible v0.0.1 local saves into the v0.0.3 save namespace; the original save remains untouched.
+- Election outcome formulas, campaign treasury, candidate rosters, infrastructure costs/durations/outcomes, and legislative proceedings remain unimplemented pending approved rules/data.

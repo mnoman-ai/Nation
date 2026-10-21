@@ -10,7 +10,7 @@ on:
       - "index.html"
       - "package.json"
       - "package-lock.json"
-      - "capacitor.config.ts"
+      - "capacitor.config.js"
       - "scripts/**"
       - ".github/workflows/android-apk.yml"
 

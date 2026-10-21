@@ -1,18 +1,24 @@
-NATION: RISE TO POWER — v0.0.1
-LANDSCAPE DASHBOARD FOUNDATION
+NATION: RISE TO POWER — v0.0.3
+LANDSCAPE-FIRST DEVELOPMENT BUILD
 
-All game HTML, CSS and JavaScript are contained in one file: index.html. No external libraries or network connection are required.
+The game remains a single-file HTML/CSS/JavaScript prototype in index.html. Capacitor configuration and the Android APK workflow are preserved.
 
-ANDROID START
-1. Extract this ZIP.
-2. Open index.html in a full browser.
-3. Keep your phone in landscape orientation.
-4. Create a career to enable actions and time progression.
+ANDROID / WEB SOURCE
+- Extract this ZIP.
+- Open index.html in a modern browser to test the web foundation.
+- For APK builds, use the existing GitHub Actions workflow and Capacitor configuration.
+- Keep the device in landscape orientation for the intended layout.
 
-INCLUDED
-Premium dark dashboard, stylised clickable India map, left-side navigation, national overview, campaign, parliament, economy, government, election, parties, regions, society, infrastructure, laws/policy, media, institutions, security, events, records and save/load screens. Career actions include outreach, research, volunteers, statements and policy workshops. Time advances by one or seven days. Autosave and three manual save slots are provided where localStorage is supported.
+V0.0.3 SCOPE
+- Core navigation: Dashboard, Parliament, Election, Political Parties, State Assemblies, Infrastructure, Save / Load.
+- Campaign operations are grouped under Election.
+- Political party management supports add, edit and archive/restore.
+- State Assembly directory provides selection/navigation only; seat counts, elected members and government details are not fabricated.
+- Infrastructure categories are visible; project cost, budget impact, duration and outcomes are not active.
+- Parliament is explicitly inactive until an election and legislative systems can supply real in-game data. No Rajya Sabha is included.
 
-IMPORTANT SCOPE NOTE
-This is a visual and playable foundation, not a completed full political simulation. The map is illustrative, several page metrics are mock UI data, and full elections, candidate simulation, cabinet, laws and macroeconomics are not implemented. Dashboard values should not be treated as live/current real-world data.
+IMPORTANT LIMITATIONS
+This is an early playable foundation, not a complete political simulation. Election resolution, constituency-level candidate data, party treasury, government formation, legislative proceedings and infrastructure simulation are not implemented. UI must not be interpreted as real-world current data.
 
-If localStorage is restricted when opening file://, use a full browser rather than a preview app.
+SAVE COMPATIBILITY
+The game uses a new v0.0.3 local-save namespace. A compatible v0.0.1 autosave/manual slot is copied into the new namespace when first read; the old save remains untouched.
