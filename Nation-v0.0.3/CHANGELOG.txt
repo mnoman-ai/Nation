@@ -1,0 +1,12 @@
+NATION: RISE TO POWER — CHANGELOG v0.0.3
+
+- Removed National Overview fake data and the Rajya Sabha box.
+- Removed Government, Campaign, State & Region, Economy, Society, Law & Policy, Media, Institutions, Security, Events and Records navigation buttons.
+- Moved campaign preparation, campaign funds, campaign operations and campaign planning under Election Command.
+- Rebuilt Parliament as a chamber-style institutional screen with no fabricated MPs, seat counts, majority figures, government or parliamentary business.
+- Added a searchable directory for all 28 Indian states and 8 union territories, with dedicated legislature screens and no fabricated member or government data.
+- Added ten fictional political parties, including select, create, edit, archive and restore actions. Archived parties are retained in the save.
+- Implemented seven infrastructure categories: roads/highways/bridges; railways/metro; airports/ports; electricity/energy; water/sanitation; public transport; urban/rural development.
+- Added project selection, explicit fictional costs and durations, development-budget deduction, day-by-day progress and development-point rewards on completion.
+- Added local autosave, three manual save slots, save/load, JSON backup export/import.
+- Preserved v0.0.3 package version and Capacitor/GitHub Actions Android APK build workflow.
