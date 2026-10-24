@@ -1,25 +1,37 @@
-NATION: RISE TO POWER — v0.0.3
-LANDSCAPE-FIRST PLAYABLE FOUNDATION
+NATION: RISE TO POWER — v0.0.6
+Playable-foundation update and scrolling fixes
 
-ANDROID / WEB SOURCE
-- Extract this ZIP.
-- Open index.html in a modern browser for the offline browser build.
-- For Android APK, push the contents to your GitHub repository and run the existing Build NATION Android APK workflow.
-- Capacitor packaging, app ID, package version and landscape APK workflow are preserved.
-- Keep the device in landscape for the intended layout.
+WHAT CHANGED
+- Fixed viewport sizing and scrolling on the start screen, main content pages, sidebar, mobile navigation and modals.
+- Mobile layout now keeps the main content as the scrollable area and the navigation in a bottom strip.
+- Constituency explorer has interactive State/UT selection, Assembly/Lok Sabha type toggle, search, region filter and a details view with type/state/region/fictional ID.
+- No geographic India map is included in this version, as requested; the structured interactive list is the primary explorer for now.
+- Reads a previous v0.0.5 local save when available and writes new saves to the v0.0.6 key. Keep an exported backup before major updates.
+- Updated service-worker cache version so older cached files are less likely to override this build.
 
-IMPLEMENTED IN v0.0.3
-- Removed National Overview fake metrics and the Rajya Sabha box.
-- Removed the Government, Campaign, State & Region, Economy, Society, Law & Policy, Media, Institutions, Security, Events and Records navigation buttons.
-- Campaign preparation, funds and operations are grouped under Election Command.
-- Parliament has a chamber-style visual and explicitly starts without assigned MPs, seats, majority, government, bills or scheduled sitting.
-- State Assembly directory lists all 28 states and 8 union territories. Each opens a dedicated screen; no seat totals or current government/member details are fabricated.
-- Includes the ten fictional political parties with select, create, edit, archive and restore controls.
-- Infrastructure has seven categories, selectable projects, fictional in-game costs, duration, development budget deduction, daily progress and completion outcomes.
-- Autosave, three manual slots and JSON backup import/export are included.
+PLAYABLE SYSTEMS (SIMPLIFIED)
+- New game and character creation, citizen career, date advancement and salary.
+- Dashboard and local save/autosave, manual save slots, JSON export/import.
+- Interactive State/UT selector and fictional constituency list.
+- Basic election setup, campaign actions, polling, vote allocation and results.
+- Party creation, recruitment, candidate roster, relationship proposals.
+- News, public opinion, events, policies/projects, finance, research and achievements.
 
-SIMULATION CLARITY
-This is an early playable foundation, not a complete political simulation. Election result resolution, constituency candidate rosters, seat allocation, government formation, legislative voting and the full impact of development projects are not implemented. Party names and all campaign/infrastructure economy values are fictional game content, not real-world data. Parliament and assemblies start unconstituted, with no governments assigned.
+IMPORTANT DATA NOTICE
+The constituency names and IDs are fictional gameplay records, not official ECI constituency data. This build does not include a geographic map or a complete verified seat-by-seat dataset. Government, diplomacy, AI and economic simulation remain simplified.
 
-SAVE DATA
-Saves are local to the browser/device. Use Export Backup to move a save between browsers. Browser private mode or file previews may restrict local storage.
+RUN
+1. Extract this ZIP.
+2. Open index.html in a modern browser for a quick preview. PWA/service worker requires localhost or HTTPS.
+3. Android workflow: npm install; npm run web:prepare; npx cap sync android; then build in Android Studio/your existing Android build workflow.
+
+APP ID: com.nation.risetopower
+APP NAME: NATION: RISE TO POWER
+VERSION: 0.0.6
+
+SCROLLING PATCH (v0.0.6 corrected package)
+- Corrected the app shell sizing: the shell no longer incorrectly takes 100% height inside an already constrained grid row.
+- Main content is now the constrained flex/grid child with its own vertical scrolling viewport.
+- Mobile layout explicitly allocates remaining height to main content and keeps the horizontal nav strip separate.
+- Start screen and modals have independent overflow handling for short landscape viewports.
+- This patch addresses the CSS sizing/overflow root cause, but final physical-device verification is still recommended.

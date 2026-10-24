@@ -1,12 +1,21 @@
-NATION: RISE TO POWER — CHANGELOG v0.0.3
+NATION: RISE TO POWER — CHANGELOG
 
-- Removed National Overview fake data and the Rajya Sabha box.
-- Removed Government, Campaign, State & Region, Economy, Society, Law & Policy, Media, Institutions, Security, Events and Records navigation buttons.
-- Moved campaign preparation, campaign funds, campaign operations and campaign planning under Election Command.
-- Rebuilt Parliament as a chamber-style institutional screen with no fabricated MPs, seat counts, majority figures, government or parliamentary business.
-- Added a searchable directory for all 28 Indian states and 8 union territories, with dedicated legislature screens and no fabricated member or government data.
-- Added ten fictional political parties, including select, create, edit, archive and restore actions. Archived parties are retained in the save.
-- Implemented seven infrastructure categories: roads/highways/bridges; railways/metro; airports/ports; electricity/energy; water/sanitation; public transport; urban/rural development.
-- Added project selection, explicit fictional costs and durations, development-budget deduction, day-by-day progress and development-point rewards on completion.
-- Added local autosave, three manual save slots, save/load, JSON backup export/import.
-- Preserved v0.0.3 package version and Capacitor/GitHub Actions Android APK build workflow.
+v0.0.6
+- Fixed responsive viewport and scrolling: page content, start screen, sidebar/navigation and modal content now have explicit independent scroll containers.
+- Corrected mobile navigation layout to keep the main page scrollable above the bottom navigation.
+- Added landscape/short-screen safeguards and touch momentum scrolling.
+- Improved constituency detail modal: state/UT, Assembly/Lok Sabha type, region, fictional record ID and explicit fictional-data notice.
+- Improved constituency list count/search results. Interactive state/UT and Assembly/Lok Sabha list remains the primary navigation; no geographic map is included yet, as requested.
+- Added v0.0.5 local-save read/migration path and v0.0.6 save key; bumped service-worker cache to prevent stale v0.0.5 assets.
+- Updated package metadata, title and backup filename.
+- Added save-on-pagehide safeguard and Escape-to-close modal.
+
+Verification
+- JavaScript syntax check passed.
+- ZIP archive integrity check passed.
+- Headless browser smoke test could not be completed in this environment.
+- Full Android APK build and manual touch testing on the user's device are not verified in this environment.
+
+Known limitations
+- Constituency records are fictional gameplay labels and are not a verified official constituency dataset. The requested real map is deferred.
+- Some government, diplomacy, AI and economy mechanics remain simplified; not every planned feature is fully simulated.
