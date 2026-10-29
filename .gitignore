@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.log
+.env
+data-source/*
+!data-source/README.md
+!data-source/.gitkeep

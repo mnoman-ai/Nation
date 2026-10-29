@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "currency": {"code":"GC","name":"Game Credits","note":"Fictional game currency, not INR."},
+  "baseline": {
+    "annualRevenue":4850000000000,
+    "annualExpenditure":4850000000000,
+    "defenceSharePercent":14,
+    "healthSharePercent":8,
+    "educationSharePercent":12,
+    "infrastructureSharePercent":18,
+    "socialWelfareSharePercent":20,
+    "otherSharePercent":28
+  },
+  "sourceNote":"Internally consistent foundation values only. Tune during game balancing before release. All economy and budget screens must read this file rather than duplicating values."
+}

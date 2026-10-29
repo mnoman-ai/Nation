@@ -1,0 +1,78 @@
+{
+  "generatedAt": "2026-10-29T05:48:03.633Z",
+  "generatedFiles": [
+    {
+      "file": "political-parties.json",
+      "source": "POLITICAL_PARTIES.csv",
+      "records": 34,
+      "large": false
+    },
+    {
+      "file": "party-leadership.json",
+      "source": "PARTY_LEADERSHIP.csv",
+      "records": 382,
+      "large": false
+    },
+    {
+      "file": "party-state-units.json",
+      "source": "PARTY_STATE_UNITS.csv",
+      "records": 212,
+      "large": false
+    },
+    {
+      "file": "states-reference.json",
+      "source": "STATES_REFERENCE.csv",
+      "records": 36,
+      "large": false
+    },
+    {
+      "file": "constituencies.json",
+      "source": "CONSTITUENCIES.csv",
+      "records": 4666,
+      "large": false
+    },
+    {
+      "file": "constituency-seat-counts.json",
+      "source": "CONSTITUENCY_SEAT_COUNTS.csv",
+      "records": 36,
+      "large": false
+    },
+    {
+      "file": "data-dictionary.json",
+      "source": "DATA_DICTIONARY.csv",
+      "records": 116,
+      "large": false
+    },
+    {
+      "file": "validation-report.json",
+      "source": "VALIDATION_REPORT.csv",
+      "records": 15,
+      "large": false
+    },
+    {
+      "file": "candidate-affiliations.json",
+      "source": "CANDIDATE_AFFILIATIONS.csv",
+      "records": 29075,
+      "large": false
+    },
+    {
+      "file": "election-candidatures.json",
+      "source": "ELECTION_CANDIDATURES.csv",
+      "records": 0,
+      "large": false
+    },
+    {
+      "file": "candidates.json",
+      "source": "CANDIDATES.csv",
+      "records": 45000,
+      "large": true
+    }
+  ],
+  "missingSources": [],
+  "notes": [
+    "Source CSV/XLSX files are user-provided.",
+    "Constituency seed names and boundaries are fictional, not official geography.",
+    "Financial capacity values are fictional game credits, not INR.",
+    "Large candidate lists should be queried on demand."
+  ]
+}
