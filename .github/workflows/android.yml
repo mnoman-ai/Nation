@@ -17,7 +17,7 @@ jobs:
       - run: npm run data:build
       - run: npm test
       - run: npm run build
-      - run: npx cap add android || true
+      - run: npx cap add android
       - run: npx cap sync android
       - name: Set Android minimum SDK
         run: |
