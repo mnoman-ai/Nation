@@ -1,0 +1,8 @@
+{
+  "appId": "com.nation.risetopower",
+  "appName": "Nation: Rise to Power",
+  "webDir": "dist",
+  "android": {
+    "backgroundColor": "#071b26"
+  }
+}
