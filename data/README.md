@@ -1,1 +1,0 @@
-Generated JSON is rebuilt from `data-source/` with `npm run data:build`. Do not manually edit generated files. `economy.json` is the single source of truth for initial economy/budget UI values. Candidate data must be queried on demand. Fictional constituency seeds must not be presented as official geography.

@@ -1,0 +1,16 @@
+﻿check_name,actual_result,status
+Candidate count preserved,45000,PASS
+Candidate IDs preserved,45000,PASS
+All attributes except full_name preserved,Only full_name changed,PASS
+Candidate names unique,45000,PASS
+Lok Sabha records,543,PASS
+Assembly records,4123,PASS
+Unique constituency IDs,4666,PASS
+Separate legislature IDs,LS-/AC- IDs disjoint,PASS
+All 36 jurisdictions have LS records,36,PASS
+All 31 applicable assemblies covered,31,PASS
+No duplicate names per legislature,Unique within each type,PASS
+Required fields populated,All required values populated,PASS
+All names marked fictional,4666,PASS
+No placeholder labels,No obvious placeholders,PASS
+Valid state/UT IDs,All IDs valid,PASS

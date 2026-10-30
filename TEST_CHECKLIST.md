@@ -1,18 +1,21 @@
 # Test Checklist
 
-## M01 — Project scaffold
-- [ ] `npm install` completes in Termux.
+- [ ] `npm run data:build` processes all source CSVs.
+- [ ] Candidate total equals 45,000; state partition files are generated.
 - [ ] `npm test` passes.
-- [ ] `npm run build` creates `dist/`.
-- [ ] `npm run data:build` completes and clearly lists missing source files.
-- [ ] Put a small CSV in `data-source/`, run converter and inspect JSON output.
-- [ ] Open dev URL on phone; title and scaffold panel render.
-- [ ] Check source CSV/XLSX originals are not overwritten.
-- [ ] Confirm economy shares sum to 100 and revenue equals expenditure.
+- [ ] `npm run build` passes.
+- [ ] Main menu opens; New Game enters identity wizard.
+- [ ] Identity steps, portrait selection and background selection work.
+- [ ] Begin Journey opens Dashboard and tutorial; tutorial can be skipped.
+- [ ] All 12 top navigation entries open their screens.
+- [ ] Party search, selection and Join Party work.
+- [ ] India tile selection responds and does not draw borders.
+- [ ] Player profile and edit identity work.
+- [ ] Save and Continue restore browser save slot 1.
+- [ ] Notifications can be marked read.
+- [ ] End Turn advances one month through TimeEngine.
+- [ ] Offline reload works after service-worker cache is populated.
+- [ ] Landscape Android layout checked on physical Android 8+ device.
+- [ ] Capacitor APK and signed AAB built and installed.
 
-## Later device checks
-- [ ] Realme C55 landscape layout and 12px minimum text.
-- [ ] Touch targets >=44px; no unintended horizontal overflow.
-- [ ] Offline/PWA behavior after service worker milestone.
-- [ ] Save migration, export/restore and storage-failure handling.
-- [ ] Profile image loading and 30+ FPS target on low-end phone.
+Items not run must remain unchecked.

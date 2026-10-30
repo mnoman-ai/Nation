@@ -1,0 +1,8 @@
+import fs from 'node:fs'; import path from 'node:path';
+const root=process.cwd(), src=path.join(root,'data-source'), out=path.join(root,'public/data'); fs.mkdirSync(out,{recursive:true});
+function csv(s){const rows=[];let row=[],v='',q=false;for(let i=0;i<s.length;i++){const c=s[i];if(c==='"'&&q&&s[i+1]==='"'){v+='"';i++;}else if(c==='"')q=!q;else if(c===','&&!q){row.push(v);v='';}else if((c==='\n'||c==='\r')&&!q){if(c==='\r'&&s[i+1]==='\n')i++;row.push(v);if(row.some(x=>x!==''))rows.push(row);row=[];v='';}else v+=c;}row.push(v);if(row.some(x=>x!==''))rows.push(row);return rows;}
+function read(name){const p=path.join(src,name);if(!fs.existsSync(p))return [];const r=csv(fs.readFileSync(p,'utf8'));const h=r.shift().map((x,i)=>i===0?x.replace(/^\uFEFF/,''):x);return r.map(a=>Object.fromEntries(h.map((k,i)=>[k,a[i]??''])));}
+for(const [file,outfile] of [['POLITICAL_PARTIES.csv','parties.json'],['STATES_REFERENCE.csv','states.json'],['CONSTITUENCIES.csv','constituencies.json'],['CONSTITUENCY_SEAT_COUNTS.csv','seat-counts.json'],['PARTY_LEADERSHIP.csv','leadership.json']])fs.writeFileSync(path.join(out,outfile),JSON.stringify(read(file)));
+const candidates=read('CANDIDATES.csv');const by={};for(const c of candidates){const k=c.state_id||'unknown';(by[k]??=[]).push(c);}for(const [k,v] of Object.entries(by))fs.writeFileSync(path.join(out,`candidates-${k}.json`),JSON.stringify(v));
+fs.writeFileSync(path.join(out,'index.json'),JSON.stringify({candidateCount:candidates.length,states:Object.keys(by),partyCount:read('POLITICAL_PARTIES.csv').length,constituencyCount:read('CONSTITUENCIES.csv').length}));
+console.log(`Built ${candidates.length} candidates across ${Object.keys(by).length} state files.`);

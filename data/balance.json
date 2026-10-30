@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0-ui-foundation",
+  "turn": {
+    "mode": "turn-based",
+    "monthsPerTurn": 1
+  },
+  "difficulty": "single",
+  "fictionalCredits": true
+}

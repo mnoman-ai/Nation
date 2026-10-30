@@ -1,1 +1,0 @@
-M01 placeholder for pure game logic. Engine modules must not import UI/DOM code, should use injected seeded randomness instead of Math.random(), and should be deterministic/testable. Full simulation is not implemented in M01.

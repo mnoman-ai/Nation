@@ -1,15 +1,22 @@
 {
-  "schemaVersion": 1,
-  "currency": {"code":"GC","name":"Game Credits","note":"Fictional game currency, not INR."},
-  "baseline": {
-    "annualRevenue":4850000000000,
-    "annualExpenditure":4850000000000,
-    "defenceSharePercent":14,
-    "healthSharePercent":8,
-    "educationSharePercent":12,
-    "infrastructureSharePercent":18,
-    "socialWelfareSharePercent":20,
-    "otherSharePercent":28
+  "currency": "GC",
+  "startingPlayerFunds": 500000,
+  "initial": {
+    "gdpIndex": 100,
+    "inflationPercent": 4.2,
+    "unemploymentPercent": 7.8,
+    "publicDebtIndex": 62,
+    "revenueIndex": 100,
+    "expenditureIndex": 100,
+    "publicMood": 50
   },
-  "sourceNote":"Internally consistent foundation values only. Tune during game balancing before release. All economy and budget screens must read this file rather than duplicating values."
+  "monthly": {
+    "gdpGrowthRange": 0.25,
+    "inflationDriftRange": 0.08,
+    "unemploymentDriftRange": 0.12,
+    "debtDriftRange": 0.18,
+    "revenueGrowthRange": 0.2,
+    "expenditureGrowthRange": 0.22,
+    "publicMoodSensitivity": 0.12
+  }
 }

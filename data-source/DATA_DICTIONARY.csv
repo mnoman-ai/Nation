@@ -1,0 +1,117 @@
+﻿sheet_name,field_name,data_type,meaning,valid_range_or_allowed_values
+CANDIDATES,candidate_id,string,Globally unique permanent candidate ID,PC000001-PC012000 or AI000001-AI033000
+CANDIDATES,control_type,enum,Player or AI control pool,PLAYER_CONTROLLED; AI_CONTROLLED
+CANDIDATES,full_name,string,Full name field for candidates.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATES,age,integer,Candidate age in years,25-75
+CANDIDATES,gender,enum,Synthetic gender classification,FEMALE; MALE; NON_BINARY
+CANDIDATES,state_id,string,Stable fictional dataset state/UT identifier,ST01-ST28; UT01-UT08
+CANDIDATES,home_district,string,Home district field for candidates.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATES,profession,string,Profession field for candidates.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATES,education_level,string,Education level field for candidates.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATES,background_summary,string,Background summary field for candidates.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATES,political_experience_level,string,Political experience level field for candidates.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATES,years_of_experience,numeric,Years of experience field for candidates.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATES,previous_elections_contested,numeric,Previous elections contested field for candidates.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATES,previous_elections_won,numeric,Previous elections won field for candidates.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATES,political_reputation,integer,Political reputation score,0-100
+CANDIDATES,public_image,integer,Public image score,0-100
+CANDIDATES,local_influence,integer,Local influence score,0-100
+CANDIDATES,public_trust,integer,Public trust score,0-100
+CANDIDATES,political_loyalty,integer,Political loyalty score,0-100
+CANDIDATES,leadership_skill,integer,Leadership skill score,0-100
+CANDIDATES,public_speaking_skill,integer,Public speaking score,0-100
+CANDIDATES,organisation_skill,integer,Organisation skill score,0-100
+CANDIDATES,administrative_skill,integer,Administrative skill score,0-100
+CANDIDATES,campaign_skill,integer,Campaign skill score,0-100
+CANDIDATES,negotiation_skill,integer,Negotiation skill score,0-100
+CANDIDATES,media_skill,integer,Media skill score,0-100
+CANDIDATES,financial_capacity,integer,Starting personal game currency; units are fictional credits,0 or greater
+CANDIDATES,political_network_strength,numeric,Political network strength field for candidates.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATES,grassroots_support,numeric,Grassroots support field for candidates.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATES,special_strength,string,Special strength field for candidates.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATES,special_weakness,string,Special weakness field for candidates.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATES,career_potential,integer,Long-term career potential,0-100
+CANDIDATES,initial_party_id,string,Party ID at game start or NONE,Known party_id; NONE
+CANDIDATES,initial_membership_status,enum,Initial membership state,NONE; MEMBER; ACTIVE_MEMBER; SENIOR_MEMBER
+CANDIDATES,initial_candidate_status,enum,Initial election nomination state,NOT_NOMINATED
+CANDIDATES,initial_government_position,string,Initial government appointment,NONE
+CANDIDATES,data_quality_status,enum,Generation/provenance marker,SYNTHETIC_GENERATED
+POLITICAL_PARTIES,party_id,string,Party id field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,party_name,string,Party name field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,short_name,string,Short name field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,party_type,string,Party type field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,ideology,string,Ideology field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,founding_year,numeric,Founding year field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,founding_background,string,Founding background field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,national_strength,numeric,National strength field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,organisation_strength,numeric,Organisation strength field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,public_support,numeric,Public support field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,leadership_strength,numeric,Leadership strength field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,financial_strength,numeric,Financial strength field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,candidate_quality,numeric,Candidate quality field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,grassroots_network,numeric,Grassroots network field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,media_influence,numeric,Media influence field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,internal_unity,numeric,Internal unity field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,factional_conflict,numeric,Factional conflict field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,coalition_compatibility,numeric,Coalition compatibility field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,initial_leader_id,string,Initial leader id field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,initial_alliance_id,string,Initial alliance id field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+POLITICAL_PARTIES,initial_party_status,string,Initial party status field for political parties.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_LEADERSHIP,leadership_id,string,Leadership id field for party leadership.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_LEADERSHIP,party_id,string,Party id field for party leadership.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_LEADERSHIP,candidate_id,string,Globally unique permanent candidate ID,PC000001-PC012000 or AI000001-AI033000
+PARTY_LEADERSHIP,role,string,Role field for party leadership.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_LEADERSHIP,jurisdiction,string,Jurisdiction field for party leadership.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_LEADERSHIP,state_id,string,Stable fictional dataset state/UT identifier,ST01-ST28; UT01-UT08
+PARTY_LEADERSHIP,authority,numeric,Authority field for party leadership.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_LEADERSHIP,loyalty_to_party,numeric,Loyalty to party field for party leadership.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_LEADERSHIP,leadership_effectiveness,numeric,Leadership effectiveness field for party leadership.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_LEADERSHIP,appointment_status,string,Appointment status field for party leadership.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_STATE_UNITS,state_unit_id,string,State unit id field for party state units.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_STATE_UNITS,party_id,string,Party id field for party state units.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_STATE_UNITS,state_id,string,Stable fictional dataset state/UT identifier,ST01-ST28; UT01-UT08
+PARTY_STATE_UNITS,organisation_strength,numeric,Organisation strength field for party state units.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_STATE_UNITS,membership_strength,numeric,Membership strength field for party state units.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_STATE_UNITS,local_network_strength,numeric,Local network strength field for party state units.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_STATE_UNITS,campaign_capacity,numeric,Campaign capacity field for party state units.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_STATE_UNITS,regional_public_support,numeric,Regional public support field for party state units.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_STATE_UNITS,regional_financial_capacity,numeric,Regional financial capacity field for party state units.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_STATE_UNITS,state_unit_leader_id,string,State unit leader id field for party state units.,See field meaning; IDs reference their corresponding master sheet where applicable.
+PARTY_STATE_UNITS,unit_status,string,Unit status field for party state units.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATE_AFFILIATIONS,affiliation_id,string,Affiliation id field for candidate affiliations.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATE_AFFILIATIONS,candidate_id,string,Globally unique permanent candidate ID,PC000001-PC012000 or AI000001-AI033000
+CANDIDATE_AFFILIATIONS,party_id,string,Party id field for candidate affiliations.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATE_AFFILIATIONS,membership_type,string,Membership type field for candidate affiliations.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATE_AFFILIATIONS,start_date,string,Start date field for candidate affiliations.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATE_AFFILIATIONS,end_date,string,End date field for candidate affiliations.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATE_AFFILIATIONS,affiliation_status,string,Affiliation status field for candidate affiliations.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATE_AFFILIATIONS,loyalty_score,numeric,Loyalty score field for candidate affiliations.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATE_AFFILIATIONS,reason_for_joining,string,Reason for joining field for candidate affiliations.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CANDIDATE_AFFILIATIONS,reason_for_leaving,string,Reason for leaving field for candidate affiliations.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CONSTITUENCIES,state_id,string,Stable fictional dataset state/UT identifier,ST01-ST28; UT01-UT08
+CONSTITUENCIES,data_source,string,Data source field for constituencies.,See field meaning; IDs reference their corresponding master sheet where applicable.
+ELECTION_CANDIDATURES,candidature_id,string,Candidature id field for election candidatures.,See field meaning; IDs reference their corresponding master sheet where applicable.
+ELECTION_CANDIDATURES,election_id,string,Election id field for election candidatures.,See field meaning; IDs reference their corresponding master sheet where applicable.
+ELECTION_CANDIDATURES,candidate_id,string,Globally unique permanent candidate ID,PC000001-PC012000 or AI000001-AI033000
+ELECTION_CANDIDATURES,constituency_id,string,Constituency id field for election candidatures.,See field meaning; IDs reference their corresponding master sheet where applicable.
+ELECTION_CANDIDATURES,party_id,string,Party id field for election candidatures.,See field meaning; IDs reference their corresponding master sheet where applicable.
+ELECTION_CANDIDATURES,nomination_status,string,Nomination status field for election candidatures.,See field meaning; IDs reference their corresponding master sheet where applicable.
+ELECTION_CANDIDATURES,campaign_status,string,Campaign status field for election candidatures.,See field meaning; IDs reference their corresponding master sheet where applicable.
+ELECTION_CANDIDATURES,votes_received,string,Votes received field for election candidatures.,See field meaning; IDs reference their corresponding master sheet where applicable.
+ELECTION_CANDIDATURES,vote_share,string,Vote share field for election candidatures.,See field meaning; IDs reference their corresponding master sheet where applicable.
+ELECTION_CANDIDATURES,result_status,string,Result status field for election candidatures.,See field meaning; IDs reference their corresponding master sheet where applicable.
+CONSTITUENCIES,constituency_id,string,Permanent constituency identifier; LS- prefix for Lok Sabha and AC- prefix for Assembly,Unique; stable independent of row order
+CONSTITUENCIES,state_ut_id,string,Stable jurisdiction identifier from STATES_REFERENCE,ST01-ST28; UT01-UT08
+CONSTITUENCIES,state_ut_name,string,Real Indian State or Union Territory name,Official jurisdiction label
+CONSTITUENCIES,constituency_name,string,Fictional in-game display name,Unique within each legislature type
+CONSTITUENCIES,legislature_type,enum,Legislative dataset type,LOK_SABHA; ASSEMBLY
+CONSTITUENCIES,region,string,Game-defined regional identity tag,Fictional/illustrative; not official boundary mapping
+CONSTITUENCIES,name_type,string,Broad name classification,city; regional/geographic
+CONSTITUENCIES,is_fictional_name,boolean-like string,Marks the display name as fictional,true
+CONSTITUENCIES,seat_count_source,string,Official source used for jurisdiction-level seat count baseline,ECI About ECI / Electoral Statistics
+CONSTITUENCIES,verification_status,enum,Distinguishes count baseline from fictional naming and boundaries,COUNT_BASELINE_VERIFIED_NAME_GENERATED_BOUNDARIES_NOT_OFFICIAL
+CONSTITUENCY_SEAT_COUNTS,state_ut_id,string,Stable jurisdiction identifier from STATES_REFERENCE,ST01-ST28; UT01-UT08
+CONSTITUENCY_SEAT_COUNTS,state_ut_name,string,Real Indian State or Union Territory name,Official jurisdiction label
+CONSTITUENCY_SEAT_COUNTS,seat_count_source,string,Official source used for jurisdiction-level seat count baseline,ECI About ECI / Electoral Statistics
+CONSTITUENCY_SEAT_COUNTS,lok_sabha_seats,integer,Official baseline number of Lok Sabha seats for the jurisdiction,Non-negative integer
+CONSTITUENCY_SEAT_COUNTS,assembly_seats,integer/string,Official baseline number of Assembly seats or NOT_APPLICABLE,Non-negative integer; NOT_APPLICABLE where no assembly

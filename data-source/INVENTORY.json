@@ -1,0 +1,26 @@
+[
+  {
+    "path": "data-source/README.txt",
+    "bytes": 4045
+  },
+  {
+    "path": "data-source/NATION_party_emblems.zip",
+    "bytes": 16554
+  },
+  {
+    "path": "data-source/VALIDATION_REPORT.csv",
+    "bytes": 691
+  },
+  {
+    "path": "data-source/POLITICAL_PARTIES.csv",
+    "bytes": 5854
+  },
+  {
+    "path": "data-source/CONSTITUENCIES.csv",
+    "bytes": 1163350
+  },
+  {
+    "path": "data-source/NATION_CANDIDATES_AND_PARTIES.xlsx",
+    "bytes": 10614964
+  }
+]
