@@ -1,0 +1,66 @@
+[
+  {
+    "id": "oil",
+    "name": "Oil price surge",
+    "warningDays": 30,
+    "effects": {
+      "inflation": 1.2,
+      "growth": -0.4
+    }
+  },
+  {
+    "id": "recession",
+    "name": "Global recession",
+    "warningDays": 30,
+    "effects": {
+      "inflation": -0.2,
+      "growth": -1.2,
+      "unemployment": 1
+    }
+  },
+  {
+    "id": "pandemic",
+    "name": "Public health emergency",
+    "warningDays": 30,
+    "effects": {
+      "growth": -1.5,
+      "unemployment": 0.8
+    }
+  },
+  {
+    "id": "goodMonsoon",
+    "name": "Strong monsoon",
+    "warningDays": 30,
+    "effects": {
+      "growth": 0.5,
+      "inflation": -0.3
+    }
+  },
+  {
+    "id": "badMonsoon",
+    "name": "Weak monsoon",
+    "warningDays": 30,
+    "effects": {
+      "growth": -0.7,
+      "inflation": 0.7
+    }
+  },
+  {
+    "id": "tradeWar",
+    "name": "Trade restrictions",
+    "warningDays": 30,
+    "effects": {
+      "exports": -5,
+      "growth": -0.4
+    }
+  },
+  {
+    "id": "currency",
+    "name": "Currency shock",
+    "warningDays": 30,
+    "effects": {
+      "inflation": 0.8,
+      "imports": -3
+    }
+  }
+]

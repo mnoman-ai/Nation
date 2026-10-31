@@ -1,127 +1,15 @@
-const numeric = (value, fallback = 0) => Number.isFinite(Number(value)) ? Number(value) : fallback;
+export const UNION_MINISTRIES=['Home Affairs','Finance','External Affairs','Defence','Education','Health & Family Welfare','Agriculture','Infrastructure','Rural Development','Environment'];export const STATE_MINISTRIES=UNION_MINISTRIES.filter(x=>!['External Affairs','Defence'].includes(x));
+export function calculateBudget(revenue,allocations,reserveFund=0){const expenditure=Object.values(allocations).reduce((a,b)=>a+Number(b||0),0);if(expenditure>revenue)throw new Error('Budget must be balanced: expenditure exceeds revenue');return{revenue,expenditure,surplus:revenue-expenditure,reserveFund:reserveFund+revenue-expenditure,allocations:{...allocations}};}
+export function setBudget(world,{revenue,allocations,sectorAllocations={}}){const total={...sectorAllocations,...allocations};const b=calculateBudget(revenue,total,world.economy.budget.reserveFund);world.economy.budget=b;world.government.budget=b;return b;}
+export function appointCabinet(world,appointments,{level='union'}={}){const allowed=level==='state'?STATE_MINISTRIES:UNION_MINISTRIES;for(const a of appointments){if(!allowed.includes(a.ministry))throw new Error(`Invalid ${level} ministry: ${a.ministry}`);}world.government.cabinet=appointments.map(a=>({...a,competence:Math.max(0,Math.min(100,Number(a.competence||50))),performance:Math.max(0,Math.min(100,Number(a.competence||50)))}));return world.government.cabinet;}
+export function approvePolicy(world,id){const p=world.policies.find(x=>x.id===id);if(!p)throw new Error('Policy not found');if(world.economy.budget.reserveFund<p.cost)throw new Error('Insufficient reserve funds');p.status='Funded';p.monthsRemaining=p.durationMonths;world.economy.budget.reserveFund-=p.cost;world.activePolicies.push(p.id);return p;}
+export function startProject(world,id){const p=world.projects.find(x=>x.id===id);if(!p)throw new Error('Project not found');if(world.economy.budget.reserveFund<p.cost)throw new Error('Insufficient reserve funds');p.status='Implementing';p.monthsRemaining=p.durationMonths;world.economy.budget.reserveFund-=p.cost;world.activeProjects.push(p.id);return p;}
+export function publicApproval(world){const w=world.balance.approvalWeights;const factors={economy:Math.max(0,Math.min(100,50+world.economy.national.growth*3-world.economy.national.inflation*2)),services:world.government.servicePerformance,stability:world.government.stability,publicMood:world.publicMood,integrity:world.integrity};const value=Object.entries(w).reduce((s,[k,v])=>s+factors[k]*v,0);world.economy.approval={value:Math.round(value*10)/10,breakdown:factors};return world.economy.approval;}
 
-function ideologyCompatibility(left = '', right = '', bonus = 14) {
-  const a = String(left).toLowerCase();
-  const b = String(right).toLowerCase();
-  const leftTokens = new Set(a.split(/[^a-z]+/).filter(Boolean));
-  const rightTokens = new Set(b.split(/[^a-z]+/).filter(Boolean));
-  const overlap = [...leftTokens].some((token) => rightTokens.has(token));
-  const broadLeft = /left|social|progressive|green|reform/.test(a);
-  const broadRight = /left|social|progressive|green|reform/.test(b);
-  const conservativeLeft = /right|nationalist|cultural|agrarian/.test(a);
-  const conservativeRight = /right|nationalist|cultural|agrarian/.test(b);
-  if (overlap || (broadLeft && broadRight) || (conservativeLeft && conservativeRight)) return bonus;
-  return 0;
-}
+export function governmentFalls(world,reason,level='state'){if(!['Coalition partner withdrew support','Lost confidence motion'].includes(reason))throw new Error('Government can fall only through withdrawal or failed confidence motion');world.government.status='Fallen';world.government.fallReason=reason;world.government.fallenAt=world.time.date;if(level==='state'){world.government.presidentsRule={active:true,startDate:world.time.date,months:0,maximumMonths:world.rules.presidentsRuleMaxMonths};}else world.government.alternativeGovernmentAttempt=true;return world.government;}
+export function reviewPresidentsRule(world,majorityShown){const pr=world.government.presidentsRule;if(!pr?.active)return{active:false};if(majorityShown){pr.active=false;world.government.status='Formed';return{active:false,restored:true};}pr.months++;if(pr.months>=pr.maximumMonths){pr.active=false;world.government.status='Fresh election required';return{active:false,electionRequired:true};}return{active:true,monthsRemaining:pr.maximumMonths-pr.months};}
 
-function compatibility(state, partyA, partyB) {
-  const configured = state.rules.balance.government;
-  const a = state.parties.find((party) => party.party_id === partyA);
-  const b = state.parties.find((party) => party.party_id === partyB);
-  if (!a || !b) return 0;
-  return (numeric(a.coalition_compatibility, state.rules.balance.simulation.defaultPartyStat) + numeric(b.coalition_compatibility, state.rules.balance.simulation.defaultPartyStat)) / 2
-    + ideologyCompatibility(a.ideology, b.ideology, configured.ideologyCompatibilityBonus);
-}
-
-export function formGovernment(state, electionResult) {
-  const seatCounts = electionResult.seatsByParty || {};
-  const parties = [...state.parties].sort((a, b) => numeric(seatCounts[b.party_id]) - numeric(seatCounts[a.party_id]) || a.party_id.localeCompare(b.party_id));
-  const totalSeats = numeric(electionResult.totalSeats, Object.values(seatCounts).reduce((sum, seats) => sum + numeric(seats), 0));
-  const majority = Math.floor(totalSeats / 2) + state.rules.balance.government.majorityBuffer;
-  const first = parties[0];
-  if (!first || totalSeats <= 0) return null;
-  const coalition = [first.party_id];
-  let coalitionSeats = numeric(seatCounts[first.party_id]);
-  const remaining = parties.slice(1).sort((a, b) => {
-    const scoreA = compatibility(state, first.party_id, a.party_id) + numeric(seatCounts[a.party_id]) / Math.max(1, totalSeats) * 100;
-    const scoreB = compatibility(state, first.party_id, b.party_id) + numeric(seatCounts[b.party_id]) / Math.max(1, totalSeats) * 100;
-    return scoreB - scoreA || a.party_id.localeCompare(b.party_id);
-  });
-  for (const candidate of remaining) {
-    if (coalitionSeats >= majority) break;
-    const score = compatibility(state, coalition[0], candidate.party_id);
-    if (score >= state.rules.balance.government.coalitionCompatibilityMinimum || coalitionSeats + numeric(seatCounts[candidate.party_id]) >= majority) {
-      coalition.push(candidate.party_id);
-      coalitionSeats += numeric(seatCounts[candidate.party_id]);
-    }
-  }
-  // If no viable coalition can cross the majority line, the largest party forms a minority government.
-  const rulingPartyIds = coalitionSeats >= majority ? coalition : [first.party_id];
-  coalitionSeats = rulingPartyIds.reduce((sum, id) => sum + numeric(seatCounts[id]), 0);
-  const oppositionPartyIds = parties.map((party) => party.party_id).filter((id) => !rulingPartyIds.includes(id) && numeric(seatCounts[id]) > 0);
-  const leaderParty = state.parties.find((party) => party.party_id === rulingPartyIds[0]);
-  const playerLeadsRulingParty = state.player.isPartyLeader && state.player.partyId === rulingPartyIds[0];
-  return {
-    formed: true,
-    jurisdiction: electionResult.type === 'LOK_SABHA' ? 'NATIONAL' : electionResult.type === 'BY_ELECTION' ? (electionResult.legislatureType === 'LOK_SABHA' ? 'NATIONAL' : 'STATE') : 'STATE',
-    stateId: electionResult.stateId || null,
-    electionId: electionResult.electionId,
-    formedMonth: state.calendar.monthIndex,
-    totalSeats,
-    majorityMark: majority,
-    rulingPartyIds,
-    coalitionSeats,
-    majorityAchieved: coalitionSeats >= majority,
-    leaderPartyId: rulingPartyIds[0],
-    leaderCandidateId: playerLeadsRulingParty ? 'PLAYER' : leaderParty?.initial_leader_id || null,
-    primeMinister: electionResult.type === 'LOK_SABHA' || (electionResult.type === 'BY_ELECTION' && electionResult.legislatureType === 'LOK_SABHA')
-      ? { partyId: rulingPartyIds[0], candidateId: playerLeadsRulingParty ? 'PLAYER' : leaderParty?.initial_leader_id || null, title: 'Prime Minister' }
-      : null,
-    chiefMinister: electionResult.type === 'ASSEMBLY' || (electionResult.type === 'BY_ELECTION' && electionResult.legislatureType === 'ASSEMBLY')
-      ? { partyId: rulingPartyIds[0], candidateId: playerLeadsRulingParty ? 'PLAYER' : leaderParty?.initial_leader_id || null, title: 'Chief Minister' }
-      : null,
-    oppositionPartyIds,
-    confidence: coalitionSeats / totalSeats,
-    dissolved: false,
-  };
-}
-
-export function applyGovernmentResult(state, electionResult) {
-  const government = formGovernment(state, electionResult);
-  if (!government) return state;
-  if (government.jurisdiction === 'NATIONAL') state.government.national = government;
-  else state.government.states[electionResult.stateId] = government;
-  return government;
-}
-
-export function queueConfidenceMotion(state, { stateId = null, votesFor = 0 } = {}) {
-  state.government.pendingConfidenceMotions.push({ stateId, votesFor: numeric(votesFor), requestedMonth: state.calendar.monthIndex });
-  return state;
-}
-
-export function resolveConfidenceMotions(state) {
-  const pending = state.government.pendingConfidenceMotions.splice(0);
-  const dissolved = [];
-  for (const motion of pending) {
-    const government = motion.stateId ? state.government.states[motion.stateId] : state.government.national;
-    if (!government || government.dissolved) continue;
-    const required = Math.floor(government.totalSeats * state.rules.balance.government.confidenceMotionThreshold) + state.rules.balance.government.majorityBuffer;
-    if (motion.votesFor < required) {
-      government.dissolved = true;
-      government.dissolvedMonth = state.calendar.monthIndex;
-      government.dissolutionReason = 'Lost confidence motion';
-      const target = motion.stateId
-        ? state.elections.find((election) => election.type === 'ASSEMBLY' && election.stateId === motion.stateId)
-        : state.elections.find((election) => election.type === 'LOK_SABHA');
-      if (target) {
-        target.status = 'scheduled';
-        target.phase = 'schedule';
-        target.scheduledMonth = state.calendar.monthIndex + 1;
-        target.snapElection = true;
-      }
-      dissolved.push({ stateId: motion.stateId, electionId: target?.id || null });
-      state.historyLog.unshift({ monthIndex: state.calendar.monthIndex, type: 'government_dissolved', stateId: motion.stateId, message: `${motion.stateId ? 'State' : 'National'} government lost a confidence motion.` });
-    }
-  }
-  return dissolved;
-}
-
-export function setAlliance(state, { id, partyIds }) {
-  const uniquePartyIds = [...new Set(partyIds || [])];
-  if (!id || uniquePartyIds.length < 2) throw new Error('An alliance needs an id and at least two parties');
-  if (uniquePartyIds.some((partyId) => !state.parties.some((party) => party.party_id === partyId))) throw new Error('Alliance contains an unknown party');
-  state.world.alliances = state.world.alliances.filter((alliance) => !alliance.partyIds.some((partyId) => uniquePartyIds.includes(partyId)));
-  state.world.alliances.push({ id, partyIds: uniquePartyIds });
-  state.historyLog.unshift({ monthIndex: state.calendar.monthIndex, type: 'alliance_registered', message: `Alliance ${id} registered.` });
-  return state;
-}
+export function adjustTaxRate(world,source,rate){if(!Object.hasOwn(world.economy.revenue,source))throw new Error('Unknown revenue source');if(!Number.isFinite(rate)||rate<0||rate>60)throw new Error('Tax rate must be between 0 and 60');world.economy.revenue[source]=rate;const total=Object.values(world.economy.revenue).reduce((a,b)=>a+Number(b),0);world.economy.budget.revenue=Math.round(world.balance.monthlyBaseRevenue*total/60);return world.economy.revenue[source];}
+export function useEmergencyReserve(world,amount){if(!Number.isFinite(amount)||amount<=0||amount>world.economy.budget.reserveFund)throw new Error('Invalid reserve withdrawal');world.economy.budget.reserveFund-=amount;world.economy.budget.revenue+=amount;return world.economy.budget.reserveFund;}
+export function grantToState(world,stateId,amount,politicalBias=0){if(!world.economy.states[stateId])throw new Error('Unknown state');if(!Number.isFinite(amount)||amount<0)throw new Error('Invalid grant');const bias=Math.max(-0.2,Math.min(0.2,politicalBias));const granted=Math.round(amount*(1+bias));world.economy.states[stateId].grant=(world.economy.states[stateId].grant||0)+granted;return granted;}
+export function resolveUnionCollapse(world,alternativeMajority){if(world.government.status!=='Fallen')throw new Error('Union government has not fallen');if(alternativeMajority){world.government.status='Alternative government formation';world.government.alternativeGovernmentAttempt=false;return'Alternative government';}world.government.status='Fresh Lok Sabha election required';return'Fresh election';}

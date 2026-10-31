@@ -1,0 +1,72 @@
+[
+  {
+    "id": "joinParty",
+    "hours": 2,
+    "label": "joinParty"
+  },
+  {
+    "id": "rally",
+    "hours": 8,
+    "label": "rally"
+  },
+  {
+    "id": "outreach",
+    "hours": 4,
+    "label": "outreach"
+  },
+  {
+    "id": "speech",
+    "hours": 2,
+    "label": "speech"
+  },
+  {
+    "id": "fundraise",
+    "hours": 3,
+    "label": "fundraise"
+  },
+  {
+    "id": "allianceTalk",
+    "hours": 6,
+    "label": "allianceTalk"
+  },
+  {
+    "id": "pressRelease",
+    "hours": 1,
+    "label": "pressRelease"
+  },
+  {
+    "id": "poll",
+    "hours": 3,
+    "label": "poll"
+  },
+  {
+    "id": "billProposal",
+    "hours": 4,
+    "label": "billProposal"
+  },
+  {
+    "id": "committeeWork",
+    "hours": 5,
+    "label": "committeeWork"
+  },
+  {
+    "id": "campaign",
+    "hours": 8,
+    "label": "campaign"
+  },
+  {
+    "id": "donate",
+    "hours": 1,
+    "label": "donate"
+  },
+  {
+    "id": "factCheck",
+    "hours": 2,
+    "label": "factCheck"
+  },
+  {
+    "id": "crisisResponse",
+    "hours": 3,
+    "label": "crisisResponse"
+  }
+]

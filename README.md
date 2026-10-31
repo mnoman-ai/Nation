@@ -1,55 +1,39 @@
-# NATION: RISE TO POWER v1.0.0
+# NATION: RISE TO POWER — v1.1.0 update
 
-Offline-first, landscape political career game frontend built with React + Vite and prepared for Capacitor Android packaging.
+Overlay this ZIP on top of the v1.0.0 project root. Do not extract into a nested folder.
 
-## Requirements
-- Node.js 20+ and npm
-- Termux on Android: `pkg update && pkg install nodejs-lts git unzip`
-
-## Termux setup
+## Termux commands
 ```sh
-unzip nation-v1.0.0.zip -d Nation
-cd Nation
-bash scripts/termux-setup.sh
-npm run data:build
-npm test
-npm run build
-npm run dev -- --host 0.0.0.0
-```
-Open the local Vite URL shown in Termux. The app bundles fonts and artwork; runtime network access is not used by game screens.
-
-## Capacitor Android
-```sh
+pkg update && pkg upgrade
+pkg install nodejs-lts git unzip
+unzip nation-v1.1.0-update.zip -d /path/to/NationProject
+cd /path/to/NationProject
 npm install
-npx cap add android
+npm run data:build
+npm run test
+npm run check
+npm run check:assets
 npm run build
 npx cap sync android
-npx cap open android
-```
-Android Studio + Android SDK/Gradle are required to produce APK/AAB. Set `minSdkVersion 26` in the generated Android project before release. The included workflow can build a debug APK and optionally sign an AAB when signing secrets are configured.
-
-## Data workflow
-Original source data is preserved in `data-source/`. Run `npm run data:build` after updating source CSVs. Do not edit generated public/data files by hand.
-
-## GitHub backup
-```sh
-git init
-git add .
-git commit -m "Nation v1.0.0 frontend"
-git branch -M main
-git remote add origin https://github.com/USERNAME/REPOSITORY.git
-git push -u origin main
 ```
 
-## Play Store readiness checklist
-- Publish a privacy policy stating the game works offline, has no ads/analytics and stores saves locally. Update it if any data collection is introduced.
-- Complete Play Console Data safety accurately; do not claim a third-party audit.
-- Set content rating via IARC questionnaire; describe fictional political themes and non-graphic crisis events accurately.
-- Listing title: Nation: Rise to Power.
-- Short description: Build a political career in an offline fictional political strategy game.
-- Long description: Create your identity, explore fictional parties, build relationships and navigate institutions in a landscape-first political career experience. Set in India with fictional political actors and fictional constituency data.
-- Provide phone/tablet screenshots, icon, feature graphic, target API compliance and signed AAB.
-- Verify all fictional disclaimers and artwork rights before submission.
+Open the existing Android project in Android Studio or build with the Android Gradle wrapper already configured in your project. This update does not replace `capacitor.config.js` or the Android folder.
 
-## Important
-This package is the UI/frontend release foundation, not a complete simulation engine or certified commercial launch. Read `ASSUMPTIONS.md`, `PROJECT_STATE.md` and `FINAL_REPORT.md` before release.
+## Scripts
+- `npm run data:build` — rebuild source JSON, state-wise candidate partitions and public runtime configs.
+- `npm run test` — Node headless engine tests.
+- `npm run check` — esbuild parse check over every JS/JSX source file, reporting all failures together.
+- `npm run check:assets` — registry existence and hardcoded image path check. It currently reports the absent G12 event art.
+- `npm run build` — Vite production build.
+
+## Offline / privacy
+All runtime game data and art are bundled. There are no ad or analytics SDKs and no external runtime endpoints. Candidate and party data are fictional. No real political parties, leaders or candidates are represented.
+
+## Play Store preparation
+- Provide a public privacy policy URL stating that the game stores saves locally and has no analytics, advertising or account backend.
+- Complete the Play Console Data Safety form based on the final Android package and SDK inventory.
+- Complete the content rating questionnaire; describe fictional political themes, campaign conflict, scandals and disasters accurately.
+- Suggested short listing: “Build a political career, lead a party and shape a fictional nation in an offline strategy simulation.”
+- Suggested full listing: “Start as a citizen, build influence, contest elections, negotiate coalitions and manage public institutions. All parties, candidates and constituencies are fictional.”
+- Add landscape screenshots, feature graphic, app icon, version details and a tested signed AAB.
+- Verify Android 8+ compatibility, 3 GB RAM performance, offline launch and privacy disclosures before release.

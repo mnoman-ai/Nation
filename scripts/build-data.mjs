@@ -1,11 +1,11 @@
-import fs from 'node:fs';import path from 'node:path';
-const root=process.cwd(),src=path.join(root,'data-source'),out=path.join(root,'public','data');
-fs.mkdirSync(out,{recursive:true});
-function parseCSV(s){const rows=[];let row=[],v='',q=false;for(let i=0;i<s.length;i++){const c=s[i];if(q){if(c==='"'&&s[i+1]==='"'){v+='"';i++;}else if(c==='"')q=false;else v+=c;}else if(c==='"')q=true;else if(c===','){row.push(v);v='';}else if(c==='\n'){row.push(v.replace(/\r$/,''));rows.push(row);row=[];v='';}else v+=c;}if(v.length||row.length){row.push(v.replace(/\r$/,''));rows.push(row);}const h=rows.shift()||[];return rows.filter(r=>r.length>1).map(r=>Object.fromEntries(h.map((k,i)=>[k,r[i]??''])));}
-const states=parseCSV(fs.readFileSync(path.join(src,'STATES_REFERENCE.csv'),'utf8'));
-const parties=parseCSV(fs.readFileSync(path.join(src,'POLITICAL_PARTIES.csv'),'utf8'));
-fs.writeFileSync(path.join(out,'states.json'),JSON.stringify(states));fs.writeFileSync(path.join(out,'parties.json'),JSON.stringify(parties));
-const candidates=parseCSV(fs.readFileSync(path.join(src,'CANDIDATES.csv'),'utf8'));
-const byState=new Map();for(const c of candidates){const k=c.state_id||'UNASSIGNED';if(!byState.has(k))byState.set(k,[]);byState.get(k).push(c);}
-const dir=path.join(out,'candidates');fs.mkdirSync(dir,{recursive:true});for(const [k,v] of byState)fs.writeFileSync(path.join(dir,`${k}.json`),JSON.stringify(v));
-console.log(`Built ${states.length} states, ${parties.length} parties and ${candidates.length} candidates across ${byState.size} state files.`);
+import fs from 'node:fs'; import path from 'node:path';
+const root=process.cwd(), src=path.join(root,'data-source'), out=path.join(root,'public/data'); fs.mkdirSync(out,{recursive:true});
+function csv(s){const rows=[];let row=[],v='',q=false;for(let i=0;i<s.length;i++){const c=s[i];if(c==='"'&&q&&s[i+1]==='"'){v+='"';i++;}else if(c==='"')q=!q;else if(c===','&&!q){row.push(v);v='';}else if((c==='\n'||c==='\r')&&!q){if(c==='\r'&&s[i+1]==='\n')i++;row.push(v);if(row.some(x=>x!==''))rows.push(row);row=[];v='';}else v+=c;}row.push(v);if(row.some(x=>x!==''))rows.push(row);return rows;}
+function read(name){const p=path.join(src,name);if(!fs.existsSync(p))return [];const r=csv(fs.readFileSync(p,'utf8'));const h=r.shift().map((x,i)=>i===0?x.replace(/^\uFEFF/,''):x);return r.map(a=>Object.fromEntries(h.map((k,i)=>[k,a[i]??''])));}
+for(const [file,outfile] of [['POLITICAL_PARTIES.csv','parties.json'],['STATES_REFERENCE.csv','states.json'],['CONSTITUENCIES.csv','constituencies.json'],['CONSTITUENCY_SEAT_COUNTS.csv','seat-counts.json'],['PARTY_LEADERSHIP.csv','leadership.json']])fs.writeFileSync(path.join(out,outfile),JSON.stringify(read(file)));
+const candidates=read('CANDIDATES.csv');const by={};for(const c of candidates){const k=c.state_id||'unknown';(by[k]??=[]).push(c);}for(const [k,v] of Object.entries(by))fs.writeFileSync(path.join(out,`candidates-${k}.json`),JSON.stringify(v));
+fs.writeFileSync(path.join(out,'index.json'),JSON.stringify({candidateCount:candidates.length,states:Object.keys(by),partyCount:read('POLITICAL_PARTIES.csv').length,constituencyCount:read('CONSTITUENCIES.csv').length}));
+console.log(`Built ${candidates.length} candidates across ${Object.keys(by).length} state files.`);
+
+const configDir=path.join(root,'data');for(const f of fs.readdirSync(configDir).filter(x=>x.endsWith('.json'))){fs.copyFileSync(path.join(configDir,f),path.join(out,f));}
+console.log('Copied configurable simulation rules and content into public/data.');

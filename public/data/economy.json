@@ -1,0 +1,38 @@
+{
+  "currency": "fictional credits",
+  "national": {
+    "gdp": 100000000,
+    "growth": 6.2,
+    "perCapitaIncome": 120000,
+    "inflation": 4.8,
+    "unemployment": 6.1,
+    "exports": 1000000,
+    "imports": 900000,
+    "fdi": 250000,
+    "sectors": {
+      "agriculture": 25,
+      "manufacturing": 18,
+      "services": 47,
+      "infrastructure": 10
+    }
+  },
+  "states": {},
+  "revenue": {
+    "incomeTax": 18,
+    "corporateTax": 20,
+    "gst": 12,
+    "customs": 6,
+    "nonTax": 4
+  },
+  "budget": {
+    "revenue": 1000000,
+    "expenditure": 1000000,
+    "surplus": 0,
+    "reserveFund": 10000,
+    "allocations": {}
+  },
+  "approval": {
+    "value": 50,
+    "breakdown": {}
+  }
+}

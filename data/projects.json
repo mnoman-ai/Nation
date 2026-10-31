@@ -1,0 +1,326 @@
+[
+  {
+    "id": "PJ01",
+    "name": "National Expressway Network",
+    "sector": "Infrastructure",
+    "cost": 100000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 100,
+      "publicMood": 1
+    }
+  },
+  {
+    "id": "PJ02",
+    "name": "Green Energy Mission",
+    "sector": "Energy",
+    "cost": 125000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 125,
+      "publicMood": 2
+    }
+  },
+  {
+    "id": "PJ03",
+    "name": "Rural Healthcare Expansion",
+    "sector": "Health",
+    "cost": 150000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 150,
+      "publicMood": 3
+    }
+  },
+  {
+    "id": "PJ04",
+    "name": "Metro Connectivity Plan",
+    "sector": "Transport",
+    "cost": 175000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 175,
+      "publicMood": 1
+    }
+  },
+  {
+    "id": "PJ05",
+    "name": "Smart Village Initiative",
+    "sector": "Rural Development",
+    "cost": 200000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 200,
+      "publicMood": 2
+    }
+  },
+  {
+    "id": "PJ06",
+    "name": "Agricultural Storage Grid",
+    "sector": "Infrastructure",
+    "cost": 225000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 100,
+      "publicMood": 3
+    }
+  },
+  {
+    "id": "PJ07",
+    "name": "Industrial Corridor",
+    "sector": "Energy",
+    "cost": 250000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 125,
+      "publicMood": 1
+    }
+  },
+  {
+    "id": "PJ08",
+    "name": "Coastal Resilience Works",
+    "sector": "Health",
+    "cost": 100000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 150,
+      "publicMood": 2
+    }
+  },
+  {
+    "id": "PJ09",
+    "name": "School Renewal Programme",
+    "sector": "Transport",
+    "cost": 125000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 175,
+      "publicMood": 3
+    }
+  },
+  {
+    "id": "PJ10",
+    "name": "Primary Care Centres",
+    "sector": "Rural Development",
+    "cost": 150000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 200,
+      "publicMood": 1
+    }
+  },
+  {
+    "id": "PJ11",
+    "name": "Water Supply Network",
+    "sector": "Infrastructure",
+    "cost": 175000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 100,
+      "publicMood": 2
+    }
+  },
+  {
+    "id": "PJ12",
+    "name": "River Cleaning Mission",
+    "sector": "Energy",
+    "cost": 200000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 125,
+      "publicMood": 3
+    }
+  },
+  {
+    "id": "PJ13",
+    "name": "Digital Access Hubs",
+    "sector": "Health",
+    "cost": 225000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 150,
+      "publicMood": 1
+    }
+  },
+  {
+    "id": "PJ14",
+    "name": "Solar Rooftop Scheme",
+    "sector": "Transport",
+    "cost": 250000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 175,
+      "publicMood": 2
+    }
+  },
+  {
+    "id": "PJ15",
+    "name": "Rural Roads Upgrade",
+    "sector": "Rural Development",
+    "cost": 100000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 200,
+      "publicMood": 3
+    }
+  },
+  {
+    "id": "PJ16",
+    "name": "Urban Drainage Plan",
+    "sector": "Infrastructure",
+    "cost": 125000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 100,
+      "publicMood": 1
+    }
+  },
+  {
+    "id": "PJ17",
+    "name": "Port Modernisation",
+    "sector": "Energy",
+    "cost": 150000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 125,
+      "publicMood": 2
+    }
+  },
+  {
+    "id": "PJ18",
+    "name": "Rail Freight Corridors",
+    "sector": "Health",
+    "cost": 175000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 150,
+      "publicMood": 3
+    }
+  },
+  {
+    "id": "PJ19",
+    "name": "Skill Development Centres",
+    "sector": "Transport",
+    "cost": 200000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 175,
+      "publicMood": 1
+    }
+  },
+  {
+    "id": "PJ20",
+    "name": "Affordable Housing Build",
+    "sector": "Rural Development",
+    "cost": 225000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 200,
+      "publicMood": 2
+    }
+  },
+  {
+    "id": "PJ21",
+    "name": "Waste Processing Network",
+    "sector": "Infrastructure",
+    "cost": 250000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 100,
+      "publicMood": 3
+    }
+  },
+  {
+    "id": "PJ22",
+    "name": "Irrigation Renewal",
+    "sector": "Energy",
+    "cost": 100000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 125,
+      "publicMood": 1
+    }
+  },
+  {
+    "id": "PJ23",
+    "name": "Public Bus Fleet",
+    "sector": "Health",
+    "cost": 125000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 150,
+      "publicMood": 2
+    }
+  },
+  {
+    "id": "PJ24",
+    "name": "Flood Control Works",
+    "sector": "Transport",
+    "cost": 150000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 175,
+      "publicMood": 3
+    }
+  },
+  {
+    "id": "PJ25",
+    "name": "Forest Restoration",
+    "sector": "Rural Development",
+    "cost": 175000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 200,
+      "publicMood": 1
+    }
+  },
+  {
+    "id": "PJ26",
+    "name": "Market Yard Modernisation",
+    "sector": "Infrastructure",
+    "cost": 200000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 100,
+      "publicMood": 2
+    }
+  },
+  {
+    "id": "PJ27",
+    "name": "District Hospitals",
+    "sector": "Energy",
+    "cost": 225000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "jobs": 125,
+      "publicMood": 3
+    }
+  }
+]

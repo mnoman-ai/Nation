@@ -1,0 +1,362 @@
+[
+  {
+    "id": "PL01",
+    "name": "National Education Policy 2.0",
+    "ministry": "Home Affairs",
+    "cost": 50000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.0
+    }
+  },
+  {
+    "id": "PL02",
+    "name": "Clean Energy Mission",
+    "ministry": "Finance",
+    "cost": 65000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 2,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "PL03",
+    "name": "Digital India Access",
+    "ministry": "External Affairs",
+    "cost": 80000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 3,
+      "economy": 0.2
+    }
+  },
+  {
+    "id": "PL04",
+    "name": "Rural Employment Boost",
+    "ministry": "Defence",
+    "cost": 95000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.0
+    }
+  },
+  {
+    "id": "PL05",
+    "name": "Healthcare for All",
+    "ministry": "Education",
+    "cost": 110000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 2,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "PL06",
+    "name": "Agriculture Resilience",
+    "ministry": "Health & Family Welfare",
+    "cost": 50000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 3,
+      "economy": 0.2
+    }
+  },
+  {
+    "id": "PL07",
+    "name": "Manufacturing Growth Plan",
+    "ministry": "Agriculture",
+    "cost": 65000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.0
+    }
+  },
+  {
+    "id": "PL08",
+    "name": "Export Acceleration",
+    "ministry": "Infrastructure",
+    "cost": 80000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 2,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "PL09",
+    "name": "Women’s Safety Initiative",
+    "ministry": "Rural Development",
+    "cost": 95000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 3,
+      "economy": 0.2
+    }
+  },
+  {
+    "id": "PL10",
+    "name": "Skills for Tomorrow",
+    "ministry": "Environment",
+    "cost": 110000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.0
+    }
+  },
+  {
+    "id": "PL11",
+    "name": "Water Security Programme",
+    "ministry": "Home Affairs",
+    "cost": 50000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 2,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "PL12",
+    "name": "Affordable Housing",
+    "ministry": "Finance",
+    "cost": 65000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 3,
+      "economy": 0.2
+    }
+  },
+  {
+    "id": "PL13",
+    "name": "Public Transport Renewal",
+    "ministry": "External Affairs",
+    "cost": 80000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.0
+    }
+  },
+  {
+    "id": "PL14",
+    "name": "School Quality Mission",
+    "ministry": "Defence",
+    "cost": 95000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 2,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "PL15",
+    "name": "Primary Care Network",
+    "ministry": "Education",
+    "cost": 110000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 3,
+      "economy": 0.2
+    }
+  },
+  {
+    "id": "PL16",
+    "name": "Green Industry Transition",
+    "ministry": "Health & Family Welfare",
+    "cost": 50000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.0
+    }
+  },
+  {
+    "id": "PL17",
+    "name": "Coastal Protection",
+    "ministry": "Agriculture",
+    "cost": 65000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 2,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "PL18",
+    "name": "Small Business Credit",
+    "ministry": "Infrastructure",
+    "cost": 80000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 3,
+      "economy": 0.2
+    }
+  },
+  {
+    "id": "PL19",
+    "name": "Food Storage Modernisation",
+    "ministry": "Rural Development",
+    "cost": 95000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.0
+    }
+  },
+  {
+    "id": "PL20",
+    "name": "Urban Sanitation",
+    "ministry": "Environment",
+    "cost": 110000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 2,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "PL21",
+    "name": "Renewable Grid Expansion",
+    "ministry": "Home Affairs",
+    "cost": 50000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 3,
+      "economy": 0.2
+    }
+  },
+  {
+    "id": "PL22",
+    "name": "Research and Innovation",
+    "ministry": "Finance",
+    "cost": 65000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.0
+    }
+  },
+  {
+    "id": "PL23",
+    "name": "Labour Standards Upgrade",
+    "ministry": "External Affairs",
+    "cost": 80000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 2,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "PL24",
+    "name": "Local Governance Reform",
+    "ministry": "Defence",
+    "cost": 95000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 3,
+      "economy": 0.2
+    }
+  },
+  {
+    "id": "PL25",
+    "name": "Disaster Readiness",
+    "ministry": "Education",
+    "cost": 110000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.0
+    }
+  },
+  {
+    "id": "PL26",
+    "name": "Digital Public Services",
+    "ministry": "Health & Family Welfare",
+    "cost": 50000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 2,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "PL27",
+    "name": "River Restoration",
+    "ministry": "Agriculture",
+    "cost": 65000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 3,
+      "economy": 0.2
+    }
+  },
+  {
+    "id": "PL28",
+    "name": "Youth Opportunity Plan",
+    "ministry": "Infrastructure",
+    "cost": 80000,
+    "durationMonths": 1,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.0
+    }
+  },
+  {
+    "id": "PL29",
+    "name": "Inclusive Finance",
+    "ministry": "Rural Development",
+    "cost": 95000,
+    "durationMonths": 2,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 2,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "PL30",
+    "name": "Sustainable Tourism",
+    "ministry": "Environment",
+    "cost": 110000,
+    "durationMonths": 3,
+    "status": "Proposed",
+    "effects": {
+      "publicMood": 3,
+      "economy": 0.2
+    }
+  }
+]

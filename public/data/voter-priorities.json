@@ -1,0 +1,37 @@
+{
+  "Youth": {
+    "jobs": 1.4,
+    "education": 1.3,
+    "media": 1.1
+  },
+  "Women": {
+    "health": 1.2,
+    "safety": 1.5,
+    "welfare": 1.2
+  },
+  "Farmers": {
+    "agriculture": 1.7,
+    "water": 1.3,
+    "prices": 1.4
+  },
+  "Workers & Labourers": {
+    "jobs": 1.5,
+    "wages": 1.4,
+    "health": 1.1
+  },
+  "Middle-Class": {
+    "inflation": 1.5,
+    "tax": 1.3,
+    "services": 1.1
+  },
+  "Business Owners & Entrepreneurs": {
+    "tax": 1.4,
+    "infrastructure": 1.3,
+    "trade": 1.4
+  },
+  "General/Others": {
+    "stability": 1.2,
+    "services": 1.1,
+    "integrity": 1.1
+  }
+}

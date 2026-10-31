@@ -1,0 +1,1144 @@
+[
+  {
+    "id": "EV01",
+    "title": "Flood emergency",
+    "art": "G01",
+    "description": "A severe flood disrupts several districts.",
+    "trigger": {
+      "type": "calendar_or_condition",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Deploy relief teams",
+        "effects": {
+          "publicMood": 3,
+          "reserve": -500
+        }
+      },
+      {
+        "id": "b",
+        "label": "Delay response",
+        "effects": {
+          "publicMood": -5,
+          "stability": -2
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV02",
+    "title": "Farmers' protest",
+    "art": "G02",
+    "description": "Farm groups organise a sustained protest.",
+    "trigger": {
+      "type": "calendar_or_condition",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Open negotiations",
+        "effects": {
+          "publicMood": 3,
+          "economy": -1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Enforce restrictions",
+        "effects": {
+          "stability": -1,
+          "publicMood": -4
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV03",
+    "title": "Youth rally",
+    "art": "G03",
+    "description": "Students and young workers demand opportunities.",
+    "trigger": {
+      "type": "calendar_or_condition",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Announce skills consultations",
+        "effects": {
+          "publicMood": 2,
+          "media": 2
+        }
+      },
+      {
+        "id": "b",
+        "label": "Ignore demands",
+        "effects": {
+          "publicMood": -3
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV04",
+    "title": "Major public rally",
+    "art": "G04",
+    "description": "A large public rally draws national attention.",
+    "trigger": {
+      "type": "calendar_or_condition",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Address the gathering",
+        "effects": {
+          "media": 3,
+          "support": 2
+        }
+      },
+      {
+        "id": "b",
+        "label": "Cancel appearance",
+        "effects": {
+          "media": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV05",
+    "title": "Scandal press storm",
+    "art": "G05",
+    "description": "A damaging allegation dominates headlines.",
+    "trigger": {
+      "type": "calendar_or_condition",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Commission an inquiry",
+        "effects": {
+          "integrity": 3,
+          "media": -1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Deny without evidence",
+        "effects": {
+          "integrity": -4,
+          "media": -3
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV06",
+    "title": "No-confidence night session",
+    "art": "G06",
+    "description": "A confidence motion is scheduled for debate.",
+    "trigger": {
+      "type": "calendar_or_condition",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Whip and negotiate",
+        "effects": {
+          "stability": 2,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Allow a free vote",
+        "effects": {
+          "stability": -2,
+          "reputation": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV07",
+    "title": "Coalition meeting",
+    "art": "G07",
+    "description": "Coalition partners request a policy meeting.",
+    "trigger": {
+      "type": "calendar_or_condition",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Offer a compromise",
+        "effects": {
+          "stability": 3,
+          "funds": -200
+        }
+      },
+      {
+        "id": "b",
+        "label": "Reject demands",
+        "effects": {
+          "stability": -4
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV08",
+    "title": "Victory celebration",
+    "art": "G08",
+    "description": "Supporters celebrate an electoral victory.",
+    "trigger": {
+      "type": "calendar_or_condition",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Thank supporters",
+        "effects": {
+          "support": 2,
+          "media": 2
+        }
+      },
+      {
+        "id": "b",
+        "label": "Keep a low profile",
+        "effects": {
+          "reputation": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV09",
+    "title": "Election defeat",
+    "art": "G09",
+    "description": "The party faces disappointment after a defeat.",
+    "trigger": {
+      "type": "calendar_or_condition",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Begin a review",
+        "effects": {
+          "unity": 3,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Blame partners",
+        "effects": {
+          "unity": -4,
+          "stability": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV10",
+    "title": "Oath ceremony",
+    "art": "G10",
+    "description": "A new government is preparing to take office.",
+    "trigger": {
+      "type": "calendar_or_condition",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Prioritise inclusive cabinet",
+        "effects": {
+          "stability": 2,
+          "publicMood": 2
+        }
+      },
+      {
+        "id": "b",
+        "label": "Reward only loyalists",
+        "effects": {
+          "unity": -2,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV11",
+    "title": "Cyclone relief",
+    "art": "G11",
+    "description": "A cyclone warning requires rapid preparation.",
+    "trigger": {
+      "type": "calendar_or_condition",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Pre-position relief",
+        "effects": {
+          "reserve": -400,
+          "publicMood": 3
+        }
+      },
+      {
+        "id": "b",
+        "label": "Wait for impact",
+        "effects": {
+          "publicMood": -4
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV12",
+    "title": "Festival of unity",
+    "art": "G12",
+    "description": "A national festival offers an opportunity for unity.",
+    "trigger": {
+      "type": "calendar_or_condition",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Host inclusive events",
+        "effects": {
+          "publicMood": 3,
+          "media": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Avoid public engagement",
+        "effects": {
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV13",
+    "title": "Local transport disruption",
+    "art": null,
+    "description": "Local transport disruption requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV14",
+    "title": "Industrial investment proposal",
+    "art": null,
+    "description": "Industrial investment proposal requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV15",
+    "title": "Public health warning",
+    "art": null,
+    "description": "Public health warning requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV16",
+    "title": "Education reform petition",
+    "art": null,
+    "description": "Education reform petition requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV17",
+    "title": "Water shortage",
+    "art": null,
+    "description": "Water shortage requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV18",
+    "title": "Border trade disruption",
+    "art": null,
+    "description": "Border trade disruption requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV19",
+    "title": "Court petition filed",
+    "art": null,
+    "description": "Court petition filed requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV20",
+    "title": "Party leadership challenge",
+    "art": null,
+    "description": "Party leadership challenge requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV21",
+    "title": "Cabinet reshuffle request",
+    "art": null,
+    "description": "Cabinet reshuffle request requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV22",
+    "title": "Infrastructure delay",
+    "art": null,
+    "description": "Infrastructure delay requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV23",
+    "title": "Employment report",
+    "art": null,
+    "description": "Employment report requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV24",
+    "title": "Price rise concerns",
+    "art": null,
+    "description": "Price rise concerns requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV25",
+    "title": "Regional language consultation",
+    "art": null,
+    "description": "Regional language consultation requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV26",
+    "title": "University funding debate",
+    "art": null,
+    "description": "University funding debate requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV27",
+    "title": "Rural connectivity issue",
+    "art": null,
+    "description": "Rural connectivity issue requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV28",
+    "title": "Small business forum",
+    "art": null,
+    "description": "Small business forum requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV29",
+    "title": "Environmental review",
+    "art": null,
+    "description": "Environmental review requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV30",
+    "title": "Digital services outage",
+    "art": null,
+    "description": "Digital services outage requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV31",
+    "title": "Opposition press briefing",
+    "art": null,
+    "description": "Opposition press briefing requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV32",
+    "title": "Public procurement audit",
+    "art": null,
+    "description": "Public procurement audit requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV33",
+    "title": "Women’s safety campaign",
+    "art": null,
+    "description": "Women’s safety campaign requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV34",
+    "title": "Labour wage negotiation",
+    "art": null,
+    "description": "Labour wage negotiation requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV35",
+    "title": "Agriculture market update",
+    "art": null,
+    "description": "Agriculture market update requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV36",
+    "title": "Foreign trade opportunity",
+    "art": null,
+    "description": "Foreign trade opportunity requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV37",
+    "title": "Energy supply concern",
+    "art": null,
+    "description": "Energy supply concern requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV38",
+    "title": "Municipal service complaint",
+    "art": null,
+    "description": "Municipal service complaint requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV39",
+    "title": "Youth employment fair",
+    "art": null,
+    "description": "Youth employment fair requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EV40",
+    "title": "Coalition seat-sharing dispute",
+    "art": null,
+    "description": "Coalition seat-sharing dispute requires a political response and a measurable decision.",
+    "trigger": {
+      "type": "monthly_weighted",
+      "weight": 1
+    },
+    "choices": [
+      {
+        "id": "a",
+        "label": "Consult stakeholders",
+        "effects": {
+          "publicMood": 1,
+          "media": 1,
+          "reputation": 1
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take a firm position",
+        "effects": {
+          "stability": 1,
+          "publicMood": -1
+        }
+      }
+    ]
+  }
+]

@@ -1,24 +1,2 @@
-/** Small deterministic PRNG helpers. The stateful variant stores its cursor in serializable game state. */
-export function seededRng(seed = 241024) {
-  let state = Number(seed) >>> 0;
-  return () => {
-    state = (state + 0x6D2B79F5) >>> 0;
-    let t = state;
-    t = Math.imul(t ^ (t >>> 15), t | 1);
-    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
-}
-
-export function nextRandom(state) {
-  let cursor = (Number(state.rngState) + 0x6D2B79F5) >>> 0;
-  state.rngState = cursor;
-  let t = cursor;
-  t = Math.imul(t ^ (t >>> 15), t | 1);
-  t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-  return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-}
-
-export function randomBetween(state, min, max) {
-  return min + nextRandom(state) * (max - min);
-}
+export function createRng(seed=1){let state=seed>>>0;return{next(){state=(state+0x6D2B79F5)>>>0;let t=state;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return((t^(t>>>14))>>>0)/4294967296;},int(min,max){return min+Math.floor(this.next()*(max-min+1));},pick(items){return items[Math.floor(this.next()*items.length)];},getState(){return state;},setState(v){state=v>>>0;}};}
+export function hashSeed(seed,key){let h=seed>>>0;for(const c of String(key)){h=Math.imul(h^c.charCodeAt(0),16777619)>>>0;}return h;}

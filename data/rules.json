@@ -1,0 +1,64 @@
+{
+  "startDate": "2025-01-01T08:00:00",
+  "minCandidateAge": 25,
+  "lokSabhaSeats": 543,
+  "assemblyStateCount": 31,
+  "assemblySeatTotal": 4123,
+  "firstAssemblyPoll": "2027-04-06",
+  "firstAssemblyResults": "2027-04-11",
+  "firstLokSabhaPoll": "2029-04-26",
+  "firstLokSabhaResults": "2029-05-01",
+  "termYears": 5,
+  "governmentNegotiationDays": 14,
+  "presidentsRuleMaxMonths": 6,
+  "byElectionMaxMonths": 6,
+  "voterGroups": [
+    "Youth",
+    "Women",
+    "Farmers",
+    "Workers & Labourers",
+    "Middle-Class",
+    "Business Owners & Entrepreneurs",
+    "General/Others"
+  ],
+  "voterGroupShares": [
+    14,
+    16,
+    18,
+    15,
+    14,
+    8,
+    15
+  ],
+  "seatCandidateMin": 4,
+  "seatCandidateMax": 8,
+  "maxPlayerSeats": 2,
+  "sessionMonths": [
+    2,
+    7,
+    11
+  ],
+  "sessionDays": [
+    5,
+    15,
+    25
+  ],
+  "maxMajorEventsPerMonth": 1,
+  "sessionSchedule": [
+    {
+      "month": 2,
+      "day": 5,
+      "kind": "Budget"
+    },
+    {
+      "month": 7,
+      "day": 15,
+      "kind": "Monsoon"
+    },
+    {
+      "month": 11,
+      "day": 25,
+      "kind": "Winter"
+    }
+  ]
+}

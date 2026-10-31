@@ -1,0 +1,1 @@
+import{simulateElection}from'./elections.js';self.onmessage=e=>{try{const result=simulateElection({...e.data,onProgress:(done,total)=>self.postMessage({type:'progress',done,total})});self.postMessage({type:'result',result});}catch(error){self.postMessage({type:'error',error:error.message});}};

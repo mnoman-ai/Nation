@@ -1,0 +1,24 @@
+{
+  "union": [
+    "Home Affairs",
+    "Finance",
+    "External Affairs",
+    "Defence",
+    "Education",
+    "Health & Family Welfare",
+    "Agriculture",
+    "Infrastructure",
+    "Rural Development",
+    "Environment"
+  ],
+  "state": [
+    "Home Affairs",
+    "Finance",
+    "Education",
+    "Health & Family Welfare",
+    "Agriculture",
+    "Infrastructure",
+    "Rural Development",
+    "Environment"
+  ]
+}

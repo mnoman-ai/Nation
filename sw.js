@@ -1,0 +1,5 @@
+const CACHE='nation-v110-offline-v1';
+const CORE=['./','./index.html','./precache-manifest.json'];
+self.addEventListener('install',event=>event.waitUntil((async()=>{const cache=await caches.open(CACHE);let files=CORE;try{const response=await fetch('./precache-manifest.json');if(response.ok)files=await response.json();}catch{}await cache.addAll(files);await self.skipWaiting();})()));
+self.addEventListener('activate',event=>event.waitUntil((async()=>{for(const key of await caches.keys())if(key!==CACHE)await caches.delete(key);await self.clients.claim();})()));
+self.addEventListener('fetch',event=>{if(event.request.method!=='GET')return;const url=new URL(event.request.url);if(url.origin!==self.location.origin)return;event.respondWith((async()=>{const cached=await caches.match(event.request);if(cached)return cached;try{const response=await fetch(event.request);if(response.ok)(await caches.open(CACHE)).put(event.request,response.clone());return response;}catch{return caches.match('./index.html');}})());});

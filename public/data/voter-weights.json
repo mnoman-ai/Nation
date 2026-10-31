@@ -1,0 +1,66 @@
+{
+  "Youth": {
+    "jobs": 0.24,
+    "education": 0.2,
+    "development": 0.16,
+    "economy": 0.12,
+    "media": 0.12,
+    "candidate": 0.1,
+    "ideology": 0.06
+  },
+  "Women": {
+    "health": 0.2,
+    "welfare": 0.2,
+    "safety": 0.18,
+    "development": 0.12,
+    "economy": 0.1,
+    "candidate": 0.1,
+    "media": 0.05,
+    "ideology": 0.05
+  },
+  "Farmers": {
+    "agriculture": 0.32,
+    "water": 0.18,
+    "prices": 0.16,
+    "development": 0.1,
+    "economy": 0.08,
+    "candidate": 0.08,
+    "ideology": 0.08
+  },
+  "Workers & Labourers": {
+    "jobs": 0.22,
+    "wages": 0.2,
+    "welfare": 0.16,
+    "prices": 0.12,
+    "development": 0.1,
+    "candidate": 0.1,
+    "ideology": 0.1
+  },
+  "Middle-Class": {
+    "inflation": 0.24,
+    "tax": 0.18,
+    "services": 0.16,
+    "jobs": 0.12,
+    "development": 0.1,
+    "candidate": 0.1,
+    "ideology": 0.1
+  },
+  "Business Owners & Entrepreneurs": {
+    "investment": 0.24,
+    "tax": 0.2,
+    "infrastructure": 0.16,
+    "trade": 0.14,
+    "jobs": 0.1,
+    "candidate": 0.08,
+    "ideology": 0.08
+  },
+  "General/Others": {
+    "services": 0.2,
+    "development": 0.18,
+    "economy": 0.16,
+    "candidate": 0.14,
+    "ideology": 0.12,
+    "media": 0.1,
+    "stability": 0.1
+  }
+}

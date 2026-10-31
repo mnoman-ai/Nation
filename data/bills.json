@@ -1,0 +1,398 @@
+[
+  {
+    "id": "BL01",
+    "name": "National Education Quality Bill",
+    "ministry": "Home Affairs",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL02",
+    "name": "Employment Opportunity Bill",
+    "ministry": "Finance",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL03",
+    "name": "Agriculture Market Access Bill",
+    "ministry": "External Affairs",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL04",
+    "name": "Public Health Access Bill",
+    "ministry": "Defence",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL05",
+    "name": "Digital Governance Bill",
+    "ministry": "Education",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL06",
+    "name": "Clean Energy Transition Bill",
+    "ministry": "Health & Family Welfare",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL07",
+    "name": "Rural Connectivity Bill",
+    "ministry": "Agriculture",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL08",
+    "name": "Water Security Bill",
+    "ministry": "Infrastructure",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL09",
+    "name": "Small Enterprise Growth Bill",
+    "ministry": "Rural Development",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL10",
+    "name": "Public Procurement Transparency Bill",
+    "ministry": "Environment",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL11",
+    "name": "Urban Mobility Bill",
+    "ministry": "Home Affairs",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL12",
+    "name": "Food Security Bill",
+    "ministry": "Finance",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL13",
+    "name": "Skills Development Bill",
+    "ministry": "External Affairs",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL14",
+    "name": "Industrial Standards Bill",
+    "ministry": "Defence",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL15",
+    "name": "Export Facilitation Bill",
+    "ministry": "Education",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL16",
+    "name": "Disaster Preparedness Bill",
+    "ministry": "Health & Family Welfare",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL17",
+    "name": "Environmental Restoration Bill",
+    "ministry": "Agriculture",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL18",
+    "name": "Women’s Safety Bill",
+    "ministry": "Infrastructure",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL19",
+    "name": "Labour Protection Bill",
+    "ministry": "Rural Development",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL20",
+    "name": "Local Government Capacity Bill",
+    "ministry": "Environment",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL21",
+    "name": "Public Data Standards Bill",
+    "ministry": "Home Affairs",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL22",
+    "name": "Affordable Housing Bill",
+    "ministry": "Finance",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL23",
+    "name": "Renewable Grid Bill",
+    "ministry": "External Affairs",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL24",
+    "name": "School Nutrition Bill",
+    "ministry": "Defence",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL25",
+    "name": "Primary Care Expansion Bill",
+    "ministry": "Education",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL26",
+    "name": "River Basin Management Bill",
+    "ministry": "Health & Family Welfare",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL27",
+    "name": "Public Transport Integration Bill",
+    "ministry": "Agriculture",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL28",
+    "name": "Coastal Resilience Bill",
+    "ministry": "Infrastructure",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL29",
+    "name": "Research and Innovation Bill",
+    "ministry": "Rural Development",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL30",
+    "name": "Consumer Protection Bill",
+    "ministry": "Environment",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL31",
+    "name": "Municipal Finance Bill",
+    "ministry": "Home Affairs",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL32",
+    "name": "Vocational Training Bill",
+    "ministry": "Finance",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL33",
+    "name": "Agricultural Storage Bill",
+    "ministry": "External Affairs",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL34",
+    "name": "Waste Management Bill",
+    "ministry": "Defence",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL35",
+    "name": "Digital Access Bill",
+    "ministry": "Education",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  },
+  {
+    "id": "BL36",
+    "name": "Public Service Delivery Bill",
+    "ministry": "Health & Family Welfare",
+    "support": 50,
+    "status": "Draft",
+    "effects": {
+      "publicMood": 1,
+      "economy": 0.1
+    }
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "shapes": [
+    "circle",
+    "star",
+    "sun",
+    "lotus",
+    "leaf",
+    "torch",
+    "book",
+    "wheel",
+    "mountain",
+    "river",
+    "rising-sun",
+    "shield",
+    "tree",
+    "dove",
+    "gear",
+    "flame"
+  ],
+  "colours": [
+    "#C89B3C",
+    "#1E6B58",
+    "#2357A6",
+    "#9A3D35",
+    "#6D4B9A",
+    "#D9D2BC",
+    "#202C35",
+    "#E3A33C",
+    "#4B7D9A",
+    "#6C8A42",
+    "#9C6B42",
+    "#7A8791"
+  ]
+}

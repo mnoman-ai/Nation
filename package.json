@@ -1,1 +1,37 @@
-{"name":"nation-rise-to-power","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"vite --host 0.0.0.0","build":"vite build","test":"node --test tests/*.test.js","data:build":"node scripts/build-data.js","preview":"vite preview --host 0.0.0.0","android:sync":"npx cap sync android","android:open":"npx cap open android"},"dependencies":{"@capacitor/android":"^7.4.3","@capacitor/core":"^7.4.3","@fontsource/cinzel":"^5.2.6","@fontsource/inter":"^5.2.6","@fontsource/playfair-display":"^5.2.6","@fontsource/noto-sans-devanagari":"^5.2.6","dexie":"^4.2.0","motion":"^12.23.24","react":"^19.1.1","react-dom":"^19.1.1","zustand":"^5.0.8"},"devDependencies":{"@capacitor/cli":"^7.4.3","@vitejs/plugin-react":"^5.0.4","vite":"^7.1.7"}}
+{
+  "name": "nation-rise-to-power",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "test": "node --test tests/*.test.js",
+    "data:build": "node scripts/build-data.mjs",
+    "preview": "vite preview --host 0.0.0.0",
+    "android:sync": "npx cap sync android",
+    "android:open": "npx cap open android",
+    "check": "node scripts/check.mjs",
+    "check:assets": "node scripts/check-assets.mjs",
+    "engine:test": "node --test tests/engine-v110.test.js"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/core": "^7.4.3",
+    "@fontsource/cinzel": "^5.2.6",
+    "@fontsource/inter": "^5.2.6",
+    "@fontsource/playfair-display": "^5.2.6",
+    "@fontsource/noto-sans-devanagari": "^5.2.6",
+    "dexie": "^4.2.0",
+    "motion": "^12.23.24",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3",
+    "@vitejs/plugin-react": "^5.0.4",
+    "vite": "^7.1.7",
+    "esbuild": "^0.25.10"
+  }
+}

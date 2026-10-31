@@ -1,374 +1,109 @@
 {
-  "assets": [
-    {
-      "id": "E02_PRP_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E02_PRP_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E22_URP_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E22_URP_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E29_FDP_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E29_FDP_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E28_RDF_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E28_RDF_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E08_DJF_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E08_DJF_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E06_NUF_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E06_NUF_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E26_SPP2_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E26_SPP2_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E05_PWC_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E05_PWC_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E16_YDP_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E16_YDP_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E24_RJP_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E24_RJP_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E20_EDC_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E20_EDC_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E32_SPA_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E32_SPA_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E17_CPP_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E17_CPP_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E07_PDP_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E07_PDP_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E13_GDP_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E13_GDP_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E09_NPCO_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E09_NPCO_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E12_SPP_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E12_SPP_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E21_MPP_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E21_MPP_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E33_PEF_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E33_PEF_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E25_PSC_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E25_PSC_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E14_PLF_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E14_PLF_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E01_NDP_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E01_NDP_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E10_ICP_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E10_ICP_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E15_CFP_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E15_CFP_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E11_PAP_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E11_PAP_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E34_RPC_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E34_RPC_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E03_NPC_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E03_NPC_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E31_DPC_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E31_DPC_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E27_PDF_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E27_PDF_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E30_PCP_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E30_PCP_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E23_DLU_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E23_DLU_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E18_FUF_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E18_FUF_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E19_TRF_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E19_TRF_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "E04_FPF_emblem",
-      "file": "/assets/emblems/NATION_party_emblems/E04_FPF_emblem.svg",
-      "type": "NATION_party_emblems"
-    },
-    {
-      "id": "D05",
-      "file": "/assets/thumbs/D05.webp",
-      "type": "thumbs"
-    },
-    {
-      "id": "D02",
-      "file": "/assets/thumbs/D02.webp",
-      "type": "thumbs"
-    },
-    {
-      "id": "D04",
-      "file": "/assets/thumbs/D04.webp",
-      "type": "thumbs"
-    },
-    {
-      "id": "D09",
-      "file": "/assets/thumbs/D09.webp",
-      "type": "thumbs"
-    },
-    {
-      "id": "D08",
-      "file": "/assets/thumbs/D08.webp",
-      "type": "thumbs"
-    },
-    {
-      "id": "D07",
-      "file": "/assets/thumbs/D07.webp",
-      "type": "thumbs"
-    },
-    {
-      "id": "D11",
-      "file": "/assets/thumbs/D11.webp",
-      "type": "thumbs"
-    },
-    {
-      "id": "D10",
-      "file": "/assets/thumbs/D10.webp",
-      "type": "thumbs"
-    },
-    {
-      "id": "D01",
-      "file": "/assets/thumbs/D01.webp",
-      "type": "thumbs"
-    },
-    {
-      "id": "D03",
-      "file": "/assets/thumbs/D03.webp",
-      "type": "thumbs"
-    },
-    {
-      "id": "D06",
-      "file": "/assets/thumbs/D06.webp",
-      "type": "thumbs"
-    },
-    {
-      "id": "C01",
-      "file": "/assets/cards/C01.webp",
-      "type": "cards"
-    },
-    {
-      "id": "C02",
-      "file": "/assets/cards/C02.webp",
-      "type": "cards"
-    },
-    {
-      "id": "C03",
-      "file": "/assets/cards/C03.webp",
-      "type": "cards"
-    },
-    {
-      "id": "C06",
-      "file": "/assets/cards/C06.webp",
-      "type": "cards"
-    },
-    {
-      "id": "C04",
-      "file": "/assets/cards/C04.webp",
-      "type": "cards"
-    },
-    {
-      "id": "C05",
-      "file": "/assets/cards/C05.webp",
-      "type": "cards"
-    },
-    {
-      "id": "A09",
-      "file": "/assets/banners/A09.webp",
-      "type": "banners"
-    },
-    {
-      "id": "A01",
-      "file": "/assets/banners/A01.webp",
-      "type": "banners"
-    },
-    {
-      "id": "A02",
-      "file": "/assets/banners/A02.webp",
-      "type": "banners"
-    },
-    {
-      "id": "A04",
-      "file": "/assets/banners/A04.webp",
-      "type": "banners"
-    },
-    {
-      "id": "A07",
-      "file": "/assets/banners/A07.webp",
-      "type": "banners"
-    },
-    {
-      "id": "A03",
-      "file": "/assets/banners/A03.webp",
-      "type": "banners"
-    },
-    {
-      "id": "A10",
-      "file": "/assets/banners/A10.webp",
-      "type": "banners"
-    },
-    {
-      "id": "A08",
-      "file": "/assets/banners/A08.webp",
-      "type": "banners"
-    },
-    {
-      "id": "A05",
-      "file": "/assets/banners/A05.webp",
-      "type": "banners"
-    },
-    {
-      "id": "A06",
-      "file": "/assets/banners/A06.webp",
-      "type": "banners"
-    },
-    {
-      "id": "B08",
-      "file": "/assets/players/B08.webp",
-      "type": "players"
-    },
-    {
-      "id": "B02",
-      "file": "/assets/players/B02.webp",
-      "type": "players"
-    },
-    {
-      "id": "B03",
-      "file": "/assets/players/B03.webp",
-      "type": "players"
-    },
-    {
-      "id": "B05",
-      "file": "/assets/players/B05.webp",
-      "type": "players"
-    },
-    {
-      "id": "B10",
-      "file": "/assets/players/B10.webp",
-      "type": "players"
-    },
-    {
-      "id": "B06",
-      "file": "/assets/players/B06.webp",
-      "type": "players"
-    },
-    {
-      "id": "B07",
-      "file": "/assets/players/B07.webp",
-      "type": "players"
-    },
-    {
-      "id": "B04",
-      "file": "/assets/players/B04.webp",
-      "type": "players"
-    },
-    {
-      "id": "B01",
-      "file": "/assets/players/B01.webp",
-      "type": "players"
-    },
-    {
-      "id": "B09",
-      "file": "/assets/players/B09.webp",
-      "type": "players"
-    }
-  ],
-  "missing": [
-    "B11",
-    "G01",
-    "G02",
-    "G03",
-    "G04",
-    "G05",
-    "G06",
-    "G07",
-    "G08",
-    "G09",
-    "G10",
-    "G11",
-    "G12"
-  ]
+  "banners": {
+    "mainMenu": "banners/A01.webp",
+    "loadGame": "banners/A01.webp",
+    "credits": "banners/A01.webp",
+    "notifications": "banners/A01.webp",
+    "settings": "banners/A01.webp",
+    "createIdentity": "banners/A02.webp",
+    "playerProfile": "banners/A02.webp",
+    "dashboard": "banners/A03.webp",
+    "events": "banners/A03.webp",
+    "indiaMap": "banners/A03.webp",
+    "partyHQ": "banners/A04.webp",
+    "parties": "banners/A04.webp",
+    "electionCentre": "banners/A05.webp",
+    "parliament": "banners/A06.webp",
+    "stateAssembly": "banners/A07.webp",
+    "government": "banners/A08.webp",
+    "budget": "banners/A08.webp",
+    "media": "banners/A09.webp",
+    "economy": "banners/A10.webp",
+    "projects": "banners/A10.webp"
+  },
+  "players": {
+    "B01": "players/B01.webp",
+    "B02": "players/B02.webp",
+    "B03": "players/B03.webp",
+    "B04": "players/B04.webp",
+    "B05": "players/B05.webp",
+    "B06": "players/B06.webp",
+    "B07": "players/B07.webp",
+    "B08": "players/B08.webp",
+    "B09": "players/B09.webp",
+    "B10": "players/B10.webp",
+    "default": "players/B11.webp"
+  },
+  "careerCards": {
+    "studentLeader": "cards/C01.webp",
+    "socialWorker": "cards/C02.webp",
+    "businessProfessional": "cards/C03.webp",
+    "journalist": "cards/C04.webp",
+    "civilServant": "cards/C05.webp",
+    "politicalFamily": "cards/C06.webp"
+  },
+  "thumbnails": {
+    "partyFunding": "thumbs/D01.webp",
+    "partyAlliances": "thumbs/D02.webp",
+    "electionPolling": "thumbs/D03.webp",
+    "electionCounting": "thumbs/D04.webp",
+    "electionCourts": "thumbs/D05.webp",
+    "economyAgriculture": "thumbs/D06.webp",
+    "economyManufacturing": "thumbs/D07.webp",
+    "economyTrade": "thumbs/D08.webp",
+    "projectGreenEnergy": "thumbs/D09.webp",
+    "projectRuralHealthcare": "thumbs/D10.webp",
+    "projectMetro": "thumbs/D11.webp",
+    "economyInfrastructure": "thumbs/D11.webp"
+  },
+  "emblems": {
+    "NDP": "emblems/E01_NDP_emblem.svg",
+    "PRP": "emblems/E02_PRP_emblem.svg",
+    "NPC": "emblems/E03_NPC_emblem.svg",
+    "FPF": "emblems/E04_FPF_emblem.svg",
+    "PWC": "emblems/E05_PWC_emblem.svg",
+    "NUF": "emblems/E06_NUF_emblem.svg",
+    "PDP": "emblems/E07_PDP_emblem.svg",
+    "DJF": "emblems/E08_DJF_emblem.svg",
+    "NPCO": "emblems/E09_NPCO_emblem.svg",
+    "ICP": "emblems/E10_ICP_emblem.svg",
+    "PAP": "emblems/E11_PAP_emblem.svg",
+    "SPP": "emblems/E12_SPP_emblem.svg",
+    "GDP": "emblems/E13_GDP_emblem.svg",
+    "PLF": "emblems/E14_PLF_emblem.svg",
+    "CFP": "emblems/E15_CFP_emblem.svg",
+    "YDP": "emblems/E16_YDP_emblem.svg",
+    "CPP": "emblems/E17_CPP_emblem.svg",
+    "FUF": "emblems/E18_FUF_emblem.svg",
+    "TRF": "emblems/E19_TRF_emblem.svg",
+    "EDC": "emblems/E20_EDC_emblem.svg",
+    "MPP": "emblems/E21_MPP_emblem.svg",
+    "URP": "emblems/E22_URP_emblem.svg",
+    "DLU": "emblems/E23_DLU_emblem.svg",
+    "RJP": "emblems/E24_RJP_emblem.svg",
+    "PSC": "emblems/E25_PSC_emblem.svg",
+    "SPP2": "emblems/E26_SPP2_emblem.svg",
+    "PDF": "emblems/E27_PDF_emblem.svg",
+    "RDF": "emblems/E28_RDF_emblem.svg",
+    "FDP": "emblems/E29_FDP_emblem.svg",
+    "PCP": "emblems/E30_PCP_emblem.svg",
+    "DPC": "emblems/E31_DPC_emblem.svg",
+    "SPA": "emblems/E32_SPA_emblem.svg",
+    "PEF": "emblems/E33_PEF_emblem.svg",
+    "RPC": "emblems/E34_RPC_emblem.svg"
+  },
+  "events": {
+    "flood": "events/G01.webp",
+    "farmersProtest": "events/G02.webp",
+    "youthRally": "events/G03.webp",
+    "bigRally": "events/G04.webp",
+    "scandalPressStorm": "events/G05.webp",
+    "noConfidenceSession": "events/G06.webp",
+    "coalitionMeeting": "events/G07.webp",
+    "victoryCelebration": "events/G08.webp",
+    "defeat": "events/G09.webp",
+    "oathCeremony": "events/G10.webp",
+    "cycloneRelief": "events/G11.webp",
+    "festivalUnity": null
+  }
 }

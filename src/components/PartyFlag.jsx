@@ -1,0 +1,2 @@
+import React from'react';import{assetUrl,partyEmblemSlot}from'../assets/registry.js';import colours from'../assets/partyColours.json';
+export default function PartyFlag({partyId,colour,size=42}){return <span className="party-flag" style={{background:colour||colours[partyId]||'#9b793a',width:size,height:size}}><img src={assetUrl(partyEmblemSlot(partyId))||undefined} alt={`${partyId} emblem`}/></span>;}

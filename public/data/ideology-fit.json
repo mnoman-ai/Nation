@@ -1,0 +1,191 @@
+{
+  "Agrarian": {
+    "Youth": 50,
+    "Women": 50,
+    "Farmers": 75,
+    "Workers & Labourers": 50,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 50,
+    "General/Others": 50
+  },
+  "Agrarian centrist": {
+    "Youth": 50,
+    "Women": 50,
+    "Farmers": 75,
+    "Workers & Labourers": 50,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 50,
+    "General/Others": 50
+  },
+  "Centre-left": {
+    "Youth": 60,
+    "Women": 50,
+    "Farmers": 50,
+    "Workers & Labourers": 70,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 50,
+    "General/Others": 50
+  },
+  "Centre-right": {
+    "Youth": 50,
+    "Women": 50,
+    "Farmers": 50,
+    "Workers & Labourers": 50,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 50,
+    "General/Others": 50
+  },
+  "Centrist": {
+    "Youth": 50,
+    "Women": 50,
+    "Farmers": 50,
+    "Workers & Labourers": 50,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 50,
+    "General/Others": 50
+  },
+  "Cultural conservative": {
+    "Youth": 50,
+    "Women": 50,
+    "Farmers": 50,
+    "Workers & Labourers": 50,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 55,
+    "General/Others": 62
+  },
+  "Cultural regionalism": {
+    "Youth": 50,
+    "Women": 50,
+    "Farmers": 55,
+    "Workers & Labourers": 50,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 50,
+    "General/Others": 60
+  },
+  "Democratic socialist": {
+    "Youth": 60,
+    "Women": 62,
+    "Farmers": 50,
+    "Workers & Labourers": 68,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 50,
+    "General/Others": 50
+  },
+  "Development-focused": {
+    "Youth": 50,
+    "Women": 50,
+    "Farmers": 50,
+    "Workers & Labourers": 50,
+    "Middle-Class": 60,
+    "Business Owners & Entrepreneurs": 65,
+    "General/Others": 50
+  },
+  "Federalist": {
+    "Youth": 50,
+    "Women": 50,
+    "Farmers": 55,
+    "Workers & Labourers": 50,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 50,
+    "General/Others": 60
+  },
+  "Green politics": {
+    "Youth": 60,
+    "Women": 50,
+    "Farmers": 62,
+    "Workers & Labourers": 50,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 50,
+    "General/Others": 50
+  },
+  "Left-wing": {
+    "Youth": 60,
+    "Women": 50,
+    "Farmers": 50,
+    "Workers & Labourers": 70,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 50,
+    "General/Others": 50
+  },
+  "Nationalist": {
+    "Youth": 50,
+    "Women": 50,
+    "Farmers": 50,
+    "Workers & Labourers": 50,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 55,
+    "General/Others": 62
+  },
+  "Progressive": {
+    "Youth": 65,
+    "Women": 62,
+    "Farmers": 50,
+    "Workers & Labourers": 50,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 50,
+    "General/Others": 50
+  },
+  "Reformist": {
+    "Youth": 50,
+    "Women": 50,
+    "Farmers": 50,
+    "Workers & Labourers": 50,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 50,
+    "General/Others": 50
+  },
+  "Regional centrist": {
+    "Youth": 50,
+    "Women": 50,
+    "Farmers": 55,
+    "Workers & Labourers": 50,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 50,
+    "General/Others": 60
+  },
+  "Regional development": {
+    "Youth": 50,
+    "Women": 50,
+    "Farmers": 55,
+    "Workers & Labourers": 50,
+    "Middle-Class": 60,
+    "Business Owners & Entrepreneurs": 65,
+    "General/Others": 60
+  },
+  "Regionalist": {
+    "Youth": 50,
+    "Women": 50,
+    "Farmers": 55,
+    "Workers & Labourers": 50,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 50,
+    "General/Others": 60
+  },
+  "Social democratic": {
+    "Youth": 60,
+    "Women": 62,
+    "Farmers": 50,
+    "Workers & Labourers": 68,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 50,
+    "General/Others": 50
+  },
+  "Social justice": {
+    "Youth": 60,
+    "Women": 62,
+    "Farmers": 50,
+    "Workers & Labourers": 68,
+    "Middle-Class": 50,
+    "Business Owners & Entrepreneurs": 50,
+    "General/Others": 50
+  },
+  "Technocratic progressive": {
+    "Youth": 65,
+    "Women": 62,
+    "Farmers": 50,
+    "Workers & Labourers": 50,
+    "Middle-Class": 60,
+    "Business Owners & Entrepreneurs": 65,
+    "General/Others": 50
+  }
+}

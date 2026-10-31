@@ -1,0 +1,113 @@
+{
+  "seed": 241024,
+  "startingMoney": 1200,
+  "startingInfluence": 12,
+  "startingSupport": 18,
+  "startingReputation": 50,
+  "startingPartyFunds": 8000,
+  "startingReserve": 10000,
+  "monthlyBaseRevenue": 1000000,
+  "startingGDP": 100000000,
+  "actionCosts": {
+    "joinParty": 2,
+    "rally": 8,
+    "outreach": 4,
+    "speech": 2,
+    "fundraise": 3,
+    "allianceTalk": 6,
+    "pressRelease": 1,
+    "poll": 3,
+    "billProposal": 4,
+    "committeeWork": 5,
+    "campaign": 8,
+    "donate": 1,
+    "factCheck": 2,
+    "crisisResponse": 3
+  },
+  "partyCreation": {
+    "money": 5000,
+    "influence": 25,
+    "members": 100
+  },
+  "tax": {
+    "income": 18,
+    "corporate": 20,
+    "gst": 12,
+    "customs": 6,
+    "nonTax": 4
+  },
+  "economy": {
+    "growth": 6.2,
+    "perCapita": 120000,
+    "inflation": 4.8,
+    "unemployment": 6.1,
+    "agriculture": 25,
+    "manufacturing": 18,
+    "services": 47,
+    "infrastructure": 10
+  },
+  "approvalWeights": {
+    "economy": 0.25,
+    "services": 0.2,
+    "stability": 0.2,
+    "publicMood": 0.2,
+    "integrity": 0.15
+  },
+  "election": {
+    "electoratePerSeat": 100000,
+    "turnoutMin": 54,
+    "turnoutMax": 78,
+    "scoreJitter": 2,
+    "candidateMin": 4,
+    "candidateMax": 8,
+    "voteWeights": {
+      "partySupport": 0.14,
+      "nationalStrength": 0.07,
+      "organisation": 0.07,
+      "ideology": 0.08,
+      "policies": 0.08,
+      "candidateQuality": 0.16,
+      "localDevelopment": 0.1,
+      "economy": 0.08,
+      "campaign": 0.06,
+      "governmentPerformance": 0.06,
+      "mediaMood": 0.06,
+      "alliance": 0.04
+    }
+  },
+  "voterModel": {
+    "groupShareMin": 7,
+    "groupShareMax": 21,
+    "issueMin": 20,
+    "issueMax": 95,
+    "groupIssueImpact": 0.12
+  },
+  "actionEffects": {
+    "rally": {
+      "support": 2,
+      "media": 1
+    },
+    "outreach": {
+      "influence": 2,
+      "support": 1
+    },
+    "speech": {
+      "communication": 1,
+      "media": 1
+    },
+    "campaign": {
+      "support": 3
+    },
+    "committeeWork": {
+      "influence": 1
+    }
+  },
+  "economyLimits": {
+    "growthMin": -8,
+    "growthMax": 14,
+    "inflationMin": 0,
+    "inflationMax": 25,
+    "unemploymentMin": 1,
+    "unemploymentMax": 30
+  }
+}
