@@ -2,7 +2,7 @@
   {
     "id": "BL01",
     "name": "National Education Quality Bill",
-    "ministry": "Home Affairs",
+    "ministry": "Education",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -24,7 +24,7 @@
   {
     "id": "BL03",
     "name": "Agriculture Market Access Bill",
-    "ministry": "External Affairs",
+    "ministry": "Agriculture",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -35,7 +35,7 @@
   {
     "id": "BL04",
     "name": "Public Health Access Bill",
-    "ministry": "Defence",
+    "ministry": "Health & Family Welfare",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -57,7 +57,7 @@
   {
     "id": "BL06",
     "name": "Clean Energy Transition Bill",
-    "ministry": "Health & Family Welfare",
+    "ministry": "Environment",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -68,7 +68,7 @@
   {
     "id": "BL07",
     "name": "Rural Connectivity Bill",
-    "ministry": "Agriculture",
+    "ministry": "Infrastructure",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -101,7 +101,7 @@
   {
     "id": "BL10",
     "name": "Public Procurement Transparency Bill",
-    "ministry": "Environment",
+    "ministry": "Finance",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -112,7 +112,7 @@
   {
     "id": "BL11",
     "name": "Urban Mobility Bill",
-    "ministry": "Home Affairs",
+    "ministry": "Infrastructure",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -123,7 +123,7 @@
   {
     "id": "BL12",
     "name": "Food Security Bill",
-    "ministry": "Finance",
+    "ministry": "Agriculture",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -134,7 +134,7 @@
   {
     "id": "BL13",
     "name": "Skills Development Bill",
-    "ministry": "External Affairs",
+    "ministry": "Education",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -145,7 +145,7 @@
   {
     "id": "BL14",
     "name": "Industrial Standards Bill",
-    "ministry": "Defence",
+    "ministry": "Infrastructure",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -156,7 +156,7 @@
   {
     "id": "BL15",
     "name": "Export Facilitation Bill",
-    "ministry": "Education",
+    "ministry": "External Affairs",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -167,7 +167,7 @@
   {
     "id": "BL16",
     "name": "Disaster Preparedness Bill",
-    "ministry": "Health & Family Welfare",
+    "ministry": "Home Affairs",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -178,7 +178,7 @@
   {
     "id": "BL17",
     "name": "Environmental Restoration Bill",
-    "ministry": "Agriculture",
+    "ministry": "Environment",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -188,8 +188,8 @@
   },
   {
     "id": "BL18",
-    "name": "Women’s Safety Bill",
-    "ministry": "Infrastructure",
+    "name": "Women\u2019s Safety Bill",
+    "ministry": "Home Affairs",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -211,7 +211,7 @@
   {
     "id": "BL20",
     "name": "Local Government Capacity Bill",
-    "ministry": "Environment",
+    "ministry": "Rural Development",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -233,7 +233,7 @@
   {
     "id": "BL22",
     "name": "Affordable Housing Bill",
-    "ministry": "Finance",
+    "ministry": "Rural Development",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -244,7 +244,7 @@
   {
     "id": "BL23",
     "name": "Renewable Grid Bill",
-    "ministry": "External Affairs",
+    "ministry": "Environment",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -255,7 +255,7 @@
   {
     "id": "BL24",
     "name": "School Nutrition Bill",
-    "ministry": "Defence",
+    "ministry": "Education",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -266,7 +266,7 @@
   {
     "id": "BL25",
     "name": "Primary Care Expansion Bill",
-    "ministry": "Education",
+    "ministry": "Health & Family Welfare",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -277,7 +277,7 @@
   {
     "id": "BL26",
     "name": "River Basin Management Bill",
-    "ministry": "Health & Family Welfare",
+    "ministry": "Agriculture",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -288,7 +288,7 @@
   {
     "id": "BL27",
     "name": "Public Transport Integration Bill",
-    "ministry": "Agriculture",
+    "ministry": "Infrastructure",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -299,7 +299,7 @@
   {
     "id": "BL28",
     "name": "Coastal Resilience Bill",
-    "ministry": "Infrastructure",
+    "ministry": "Environment",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -310,7 +310,7 @@
   {
     "id": "BL29",
     "name": "Research and Innovation Bill",
-    "ministry": "Rural Development",
+    "ministry": "Education",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -321,7 +321,7 @@
   {
     "id": "BL30",
     "name": "Consumer Protection Bill",
-    "ministry": "Environment",
+    "ministry": "Finance",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -332,7 +332,7 @@
   {
     "id": "BL31",
     "name": "Municipal Finance Bill",
-    "ministry": "Home Affairs",
+    "ministry": "Finance",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -343,7 +343,7 @@
   {
     "id": "BL32",
     "name": "Vocational Training Bill",
-    "ministry": "Finance",
+    "ministry": "Education",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -354,7 +354,7 @@
   {
     "id": "BL33",
     "name": "Agricultural Storage Bill",
-    "ministry": "External Affairs",
+    "ministry": "Agriculture",
     "support": 50,
     "status": "Draft",
     "effects": {
@@ -365,7 +365,7 @@
   {
     "id": "BL34",
     "name": "Waste Management Bill",
-    "ministry": "Defence",
+    "ministry": "Environment",
     "support": 50,
     "status": "Draft",
     "effects": {

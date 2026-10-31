@@ -143,5 +143,9 @@
   "./data/constituencies.json",
   "./data/policies.json",
   "./data/leadership.json",
-  "./data/candidates-UT02.json"
+  "./data/candidates-UT02.json",
+  "./data/finance.json",
+  "./data/backgrounds.json",
+  "./data/player-candidates.json",
+  "./data/candidate-distribution.json"
 ]

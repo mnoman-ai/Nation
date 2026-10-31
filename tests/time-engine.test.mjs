@@ -1,4 +1,23 @@
-import test from 'node:test';import assert from 'node:assert/strict';import{tick,seededRandom}from'../src/engine/timeEngine.js';
-test('time engine advances exactly the requested months',()=>{assert.equal(tick({turn:4},1).turn,5);assert.equal(tick({turn:4},3).turn,7);});
-test('time engine rejects invalid month delta',()=>{assert.throws(()=>tick({turn:1},-1),RangeError);});
-test('seeded RNG is deterministic',()=>{const a=seededRandom(42),b=seededRandom(42);assert.deepEqual([a(),a(),a()],[b(),b(),b()]);});
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { TimeEngine } from '../src/engine/TimeEngine.js';
+import { createRng } from '../src/engine/rng.js';
+
+test('TimeEngine advances exactly the requested number of days', () => {
+  const clock = new TimeEngine({ date: '2025-01-01T08:00:00Z' });
+  assert.equal(clock.tick(1).advanced, 1);
+  assert.equal(clock.iso.slice(0, 10), '2025-01-02');
+  assert.equal(clock.tick(3).advanced, 3);
+  assert.equal(clock.iso.slice(0, 10), '2025-01-05');
+});
+
+test('TimeEngine rejects invalid day delta', () => {
+  const clock = new TimeEngine();
+  assert.throws(() => clock.tick(-1), /positive integer/);
+});
+
+test('seeded RNG is deterministic', () => {
+  const a = createRng(42);
+  const b = createRng(42);
+  assert.deepEqual([a.next(), a.next(), a.next()], [b.next(), b.next(), b.next()]);
+});

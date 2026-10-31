@@ -1,0 +1,65 @@
+{
+  "currency": "INR",
+  "citizenMonthlySalary": 55000,
+  "mlaMonthlySalary": 300000,
+  "mpMonthlySalary": 700000,
+  "partyMemberSalaryShare": 0.65,
+  "partyRegistrationFee": 10000,
+  "partyMembershipFeeMin": 1,
+  "partyMembershipFeeMax": 50000,
+  "candidateFilingFee": 5000,
+  "partyLoan": {
+    "minimum": 1000000,
+    "maximum": 10000000,
+    "annualInterestRate": 0.24,
+    "termYears": 2,
+    "warningsEveryMonths": 3,
+    "warningLimit": 3
+  },
+  "campaigns": [
+    {
+      "id": "rally",
+      "label": "Rally / Door-to-Door",
+      "fee": 100000,
+      "billing": "one-time"
+    },
+    {
+      "id": "politicalProgram",
+      "label": "Political Program",
+      "fee": 400000,
+      "billing": "one-time"
+    },
+    {
+      "id": "socialMedia",
+      "label": "Social Media",
+      "fee": 20000,
+      "billing": "monthly"
+    },
+    {
+      "id": "mediaInterview",
+      "label": "Media Interview",
+      "fee": 50000,
+      "billing": "one-time"
+    },
+    {
+      "id": "mediaBroadcasting",
+      "label": "Media Broadcasting",
+      "fee": 100000,
+      "billing": "contract-monthly-prepaid",
+      "minMonths": 1,
+      "maxMonths": 6
+    },
+    {
+      "id": "publicMeeting",
+      "label": "Public Meeting / Town Hall",
+      "fee": 200000,
+      "billing": "one-time"
+    },
+    {
+      "id": "printOutdoor",
+      "label": "Print & Outdoor Advertising",
+      "fee": 75000,
+      "billing": "monthly"
+    }
+  ]
+}

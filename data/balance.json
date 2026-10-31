@@ -25,7 +25,7 @@
     "crisisResponse": 3
   },
   "partyCreation": {
-    "money": 5000,
+    "money": 10000,
     "influence": 25,
     "members": 100
   },
@@ -109,5 +109,12 @@
     "inflationMax": 25,
     "unemploymentMin": 1,
     "unemploymentMax": 30
+  },
+  "currency": "INR",
+  "career": {
+    "citizenMonthlySalary": 55000,
+    "mlaMonthlySalary": 300000,
+    "mpMonthlySalary": 700000,
+    "partyMemberSalaryShare": 0.65
   }
 }

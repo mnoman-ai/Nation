@@ -1,0 +1,8 @@
+[
+  {"id":"studentLeader","name":"Student Leader","startingStats":{"influence":30,"support":35,"money":20000,"media":25,"leadership":30,"communication":35,"strategy":20,"negotiation":25},"contacts":["Student organisations","Youth groups","Campus volunteers"]},
+  {"id":"socialWorker","name":"Social Worker","startingStats":{"influence":25,"support":40,"money":18000,"media":22,"leadership":28,"communication":40,"strategy":18,"negotiation":22},"contacts":["Community groups","Local NGOs","Ward volunteers"]},
+  {"id":"businessProfessional","name":"Business Professional","startingStats":{"influence":20,"support":24,"money":40000,"media":30,"leadership":34,"communication":24,"strategy":40,"negotiation":35},"contacts":["Business associations","Trade groups","Local employers"]},
+  {"id":"journalist","name":"Journalist","startingStats":{"influence":28,"support":32,"money":22000,"media":42,"leadership":25,"communication":42,"strategy":28,"negotiation":30},"contacts":["Local reporters","Editors","Civil society sources"]},
+  {"id":"civilServant","name":"Civil Servant","startingStats":{"influence":24,"support":30,"money":28000,"media":26,"leadership":32,"communication":30,"strategy":34,"negotiation":26},"contacts":["Public administration network","Retired officials","Policy professionals"]},
+  {"id":"politicalFamily","name":"Political Family","startingStats":{"influence":38,"support":35,"money":34000,"media":28,"leadership":40,"communication":35,"strategy":34,"negotiation":38},"contacts":["Local party workers","Constituency organisers","Political mentors"]}
+]

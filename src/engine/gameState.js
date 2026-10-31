@@ -90,7 +90,7 @@ export function createNewGame(config, seed = 241024) {
       phase: 'schedule', status: 'scheduled', snapElection: false,
     });
   }
-  const homeState = states.find((item) => item.state_ut_name === 'Maharashtra') || states[0];
+  const homeState = null;
   const month = balance.time.startMonth;
   const year = balance.time.startYear;
   const game = {
@@ -98,7 +98,7 @@ export function createNewGame(config, seed = 241024) {
     seed: number(seed, balance.simulation.defaultSeed) >>> 0,
     rngState: seedCursor,
     player: {
-      name: 'Arjun Verma', age: 28, gender: 'Male', origin: 'Student Leader',
+      name: '', age: null, gender: '', origin: '',
       status: 'Citizen', careerStage: 'citizen', partyId: null, candidateId: null, isPartyLeader: false, candidacy: null,
       reputation: balance.career.startingReputation,
       influence: balance.career.startingInfluence,

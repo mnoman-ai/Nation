@@ -1,1 +1,10 @@
-{"name":"Nation: Rise to Power","short_name":"Nation","start_url":"./","display":"standalone","orientation":"landscape","background_color":"#071923","theme_color":"#071923","description":"Offline fictional political career strategy game."}
+{
+  "name": "Nation: Rise to Power",
+  "short_name": "Nation",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#071923",
+  "theme_color": "#071923",
+  "description": "Offline fictional political career strategy game."
+}

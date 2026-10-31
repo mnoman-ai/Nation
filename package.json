@@ -1,19 +1,20 @@
 {
   "name": "nation-rise-to-power",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "test": "node --test tests/*.test.js",
+    "test": "node --test tests/*.test.js tests/*.test.mjs",
     "data:build": "node scripts/build-data.mjs",
     "preview": "vite preview --host 0.0.0.0",
     "android:sync": "npx cap sync android",
     "android:open": "npx cap open android",
     "check": "node scripts/check.mjs",
     "check:assets": "node scripts/check-assets.mjs",
-    "engine:test": "node --test tests/engine-v110.test.js"
+    "engine:test": "node --test tests/engine-v110.test.js",
+    "check:ui": "node scripts/check-ui.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^7.4.3",

@@ -1,1 +1,123 @@
-# Asset Usage Registry\n\nEvery UI image reference is resolved through `src/assets/registry.js` and `assetUrl(slot)`.\n\n| Slot | File |\n|---|---|\n| `banner.mainMenu` | `/assets/banners/A01.webp` |\n| `banner.loadGame` | `/assets/banners/A01.webp` |\n| `banner.credits` | `/assets/banners/A01.webp` |\n| `banner.notifications` | `/assets/banners/A01.webp` |\n| `banner.settings` | `/assets/banners/A01.webp` |\n| `banner.createIdentity` | `/assets/banners/A02.webp` |\n| `banner.playerProfile` | `/assets/banners/A02.webp` |\n| `banner.dashboard` | `/assets/banners/A03.webp` |\n| `banner.events` | `/assets/banners/A03.webp` |\n| `banner.indiaMap` | `/assets/banners/A03.webp` |\n| `banner.partyHQ` | `/assets/banners/A04.webp` |\n| `banner.parties` | `/assets/banners/A04.webp` |\n| `banner.electionCentre` | `/assets/banners/A05.webp` |\n| `banner.parliament` | `/assets/banners/A06.webp` |\n| `banner.stateAssembly` | `/assets/banners/A07.webp` |\n| `banner.government` | `/assets/banners/A08.webp` |\n| `banner.budget` | `/assets/banners/A08.webp` |\n| `banner.media` | `/assets/banners/A09.webp` |\n| `banner.economy` | `/assets/banners/A10.webp` |\n| `banner.projects` | `/assets/banners/A10.webp` |\n| `player.B01` | `/assets/players/B01.webp` |\n| `player.B02` | `/assets/players/B02.webp` |\n| `player.B03` | `/assets/players/B03.webp` |\n| `player.B04` | `/assets/players/B04.webp` |\n| `player.B05` | `/assets/players/B05.webp` |\n| `player.B06` | `/assets/players/B06.webp` |\n| `player.B07` | `/assets/players/B07.webp` |\n| `player.B08` | `/assets/players/B08.webp` |\n| `player.B09` | `/assets/players/B09.webp` |\n| `player.B10` | `/assets/players/B10.webp` |\n| `player.B11` | `/assets/players/B11.webp` |\n| `origin.C01` | `/assets/cards/C01.webp` |\n| `origin.C02` | `/assets/cards/C02.webp` |\n| `origin.C03` | `/assets/cards/C03.webp` |\n| `origin.C04` | `/assets/cards/C04.webp` |\n| `origin.C05` | `/assets/cards/C05.webp` |\n| `origin.C06` | `/assets/cards/C06.webp` |\n| `thumb.partyHQ.funding` | `/assets/thumbs/D01.webp` |\n| `thumb.partyHQ.alliances` | `/assets/thumbs/D02.webp` |\n| `thumb.elections.polling` | `/assets/thumbs/D03.webp` |\n| `thumb.elections.counting` | `/assets/thumbs/D04.webp` |\n| `thumb.elections.courts` | `/assets/thumbs/D05.webp` |\n| `thumb.economy.agriculture` | `/assets/thumbs/D06.webp` |\n| `thumb.economy.manufacturing` | `/assets/thumbs/D07.webp` |\n| `thumb.economy.trade` | `/assets/thumbs/D08.webp` |\n| `thumb.projects.greenEnergy` | `/assets/thumbs/D09.webp` |\n| `thumb.projects.ruralHealthcare` | `/assets/thumbs/D10.webp` |\n| `thumb.projects.metro` | `/assets/thumbs/D11.webp` |\n| `thumb.economy.infrastructure` | `/assets/thumbs/D11.webp` |\n| `event.G01` | `/assets/events/G01.webp` |\n| `event.G02` | `/assets/events/G02.webp` |\n| `event.G03` | `/assets/events/G03.webp` |\n| `event.G04` | `/assets/events/G04.webp` |\n| `event.G05` | `/assets/events/G05.webp` |\n| `event.G06` | `/assets/events/G06.webp` |\n| `event.G07` | `/assets/events/G07.webp` |\n| `event.G08` | `/assets/events/G08.webp` |\n| `event.G09` | `/assets/events/G09.webp` |\n| `event.G10` | `/assets/events/G10.webp` |\n| `event.G11` | `/assets/events/G11.webp` |\n| `event.G12` | `MISSING — gradient/gold icon fallback` |\n| `emblem.NPC` | `/assets/emblems/NATION_party_emblems/E03_NPC_emblem.svg` |\n| `emblem.DPC` | `/assets/emblems/NATION_party_emblems/E31_DPC_emblem.svg` |\n| `emblem.EDC` | `/assets/emblems/NATION_party_emblems/E20_EDC_emblem.svg` |\n| `emblem.MPP` | `/assets/emblems/NATION_party_emblems/E21_MPP_emblem.svg` |\n| `emblem.PDF` | `/assets/emblems/NATION_party_emblems/E27_PDF_emblem.svg` |\n| `emblem.NUF` | `/assets/emblems/NATION_party_emblems/E06_NUF_emblem.svg` |\n| `emblem.PRP` | `/assets/emblems/NATION_party_emblems/E02_PRP_emblem.svg` |\n| `emblem.RPC` | `/assets/emblems/NATION_party_emblems/E34_RPC_emblem.svg` |\n| `emblem.SPP2` | `/assets/emblems/NATION_party_emblems/E26_SPP2_emblem.svg` |\n| `emblem.DJF` | `/assets/emblems/NATION_party_emblems/E08_DJF_emblem.svg` |\n| `emblem.SPP` | `/assets/emblems/NATION_party_emblems/E12_SPP_emblem.svg` |\n| `emblem.YDP` | `/assets/emblems/NATION_party_emblems/E16_YDP_emblem.svg` |\n| `emblem.PDP` | `/assets/emblems/NATION_party_emblems/E07_PDP_emblem.svg` |\n| `emblem.PSC` | `/assets/emblems/NATION_party_emblems/E25_PSC_emblem.svg` |\n| `emblem.PWC` | `/assets/emblems/NATION_party_emblems/E05_PWC_emblem.svg` |\n| `emblem.NPCO` | `/assets/emblems/NATION_party_emblems/E09_NPCO_emblem.svg` |\n| `emblem.PEF` | `/assets/emblems/NATION_party_emblems/E33_PEF_emblem.svg` |\n| `emblem.ICP` | `/assets/emblems/NATION_party_emblems/E10_ICP_emblem.svg` |\n| `emblem.CPP` | `/assets/emblems/NATION_party_emblems/E17_CPP_emblem.svg` |\n| `emblem.URP` | `/assets/emblems/NATION_party_emblems/E22_URP_emblem.svg` |\n| `emblem.GDP` | `/assets/emblems/NATION_party_emblems/E13_GDP_emblem.svg` |\n| `emblem.CFP` | `/assets/emblems/NATION_party_emblems/E15_CFP_emblem.svg` |\n| `emblem.PLF` | `/assets/emblems/NATION_party_emblems/E14_PLF_emblem.svg` |\n| `emblem.NDP` | `/assets/emblems/NATION_party_emblems/E01_NDP_emblem.svg` |\n| `emblem.PCP` | `/assets/emblems/NATION_party_emblems/E30_PCP_emblem.svg` |\n| `emblem.FPF` | `/assets/emblems/NATION_party_emblems/E04_FPF_emblem.svg` |\n| `emblem.FUF` | `/assets/emblems/NATION_party_emblems/E18_FUF_emblem.svg` |\n| `emblem.DLU` | `/assets/emblems/NATION_party_emblems/E23_DLU_emblem.svg` |\n| `emblem.TRF` | `/assets/emblems/NATION_party_emblems/E19_TRF_emblem.svg` |\n| `emblem.RJP` | `/assets/emblems/NATION_party_emblems/E24_RJP_emblem.svg` |\n| `emblem.SPA` | `/assets/emblems/NATION_party_emblems/E32_SPA_emblem.svg` |\n| `emblem.FDP` | `/assets/emblems/NATION_party_emblems/E29_FDP_emblem.svg` |\n| `emblem.RDF` | `/assets/emblems/NATION_party_emblems/E28_RDF_emblem.svg` |\n| `emblem.PAP` | `/assets/emblems/NATION_party_emblems/E11_PAP_emblem.svg` |\n
+# Asset Usage — NATION v1.2.0
+
+All artwork is resolved through `src/assets/registry.js`. No runtime image URL may bypass the registry. Unassigned slots render a gold icon or gradient.
+
+## Strict placement map
+
+| Registry group | Permitted screens / contexts |
+|---|---|
+| A01–A10 | A01 Main Menu / Load / Credits / Notifications / Settings; A02 Create Identity / Player Profile; A03 Dashboard / Events / India Map; A04 Party HQ / Parties; A05 Elections; A06 Parliament; A07 State Assembly; A08 Government / Budget; A09 Media; A10 Economy / Projects |
+| B01–B10 | Create Identity portrait picker only; selected portrait is overlaid once in the banner left third |
+| B11 | Default highlighted player portrait; shown once in the player banner |
+| C01–C06 | Create Identity background selection and Player Profile |
+| D01–D11 | D01 Funding; D02 Alliances; D03 Polling; D04 Counting; D05 Courts; D06 Agriculture; D07 Manufacturing; D08 Trade / Exports; D09 Green Energy; D10 Rural Healthcare; D11 Metro / Economy Infrastructure |
+| E01–E34 | Party name / party flag only |
+| G01–G12 | Event cards only |
+
+## Registered slots
+
+| Slot | File / treatment |
+|---|---|
+| `banner.mainMenu` | `/assets/banners/A01.webp` |
+| `banner.loadGame` | `/assets/banners/A01.webp` |
+| `banner.credits` | `/assets/banners/A01.webp` |
+| `banner.notifications` | `/assets/banners/A01.webp` |
+| `banner.settings` | `/assets/banners/A01.webp` |
+| `banner.createIdentity` | `/assets/banners/A02.webp` |
+| `banner.playerProfile` | `/assets/banners/A02.webp` |
+| `banner.dashboard` | `/assets/banners/A03.webp` |
+| `banner.events` | `/assets/banners/A03.webp` |
+| `banner.indiaMap` | `/assets/banners/A03.webp` |
+| `banner.partyHQ` | `/assets/banners/A04.webp` |
+| `banner.parties` | `/assets/banners/A04.webp` |
+| `banner.electionCentre` | `/assets/banners/A05.webp` |
+| `banner.parliament` | `/assets/banners/A06.webp` |
+| `banner.stateAssembly` | `/assets/banners/A07.webp` |
+| `banner.government` | `/assets/banners/A08.webp` |
+| `banner.budget` | `/assets/banners/A08.webp` |
+| `banner.media` | `/assets/banners/A09.webp` |
+| `banner.economy` | `/assets/banners/A10.webp` |
+| `banner.projects` | `/assets/banners/A10.webp` |
+| `player.B01` | `/assets/players/B01.webp` |
+| `player.B02` | `/assets/players/B02.webp` |
+| `player.B03` | `/assets/players/B03.webp` |
+| `player.B04` | `/assets/players/B04.webp` |
+| `player.B05` | `/assets/players/B05.webp` |
+| `player.B06` | `/assets/players/B06.webp` |
+| `player.B07` | `/assets/players/B07.webp` |
+| `player.B08` | `/assets/players/B08.webp` |
+| `player.B09` | `/assets/players/B09.webp` |
+| `player.B10` | `/assets/players/B10.webp` |
+| `player.B11` | `/assets/players/B11.webp` |
+| `origin.C01` | `/assets/cards/C01.webp` |
+| `origin.C02` | `/assets/cards/C02.webp` |
+| `origin.C03` | `/assets/cards/C03.webp` |
+| `origin.C04` | `/assets/cards/C04.webp` |
+| `origin.C05` | `/assets/cards/C05.webp` |
+| `origin.C06` | `/assets/cards/C06.webp` |
+| `thumb.partyHQ.funding` | `/assets/thumbs/D01.webp` |
+| `thumb.partyHQ.alliances` | `/assets/thumbs/D02.webp` |
+| `thumb.elections.polling` | `/assets/thumbs/D03.webp` |
+| `thumb.elections.counting` | `/assets/thumbs/D04.webp` |
+| `thumb.elections.courts` | `/assets/thumbs/D05.webp` |
+| `thumb.economy.agriculture` | `/assets/thumbs/D06.webp` |
+| `thumb.economy.manufacturing` | `/assets/thumbs/D07.webp` |
+| `thumb.economy.trade` | `/assets/thumbs/D08.webp` |
+| `thumb.projects.greenEnergy` | `/assets/thumbs/D09.webp` |
+| `thumb.projects.ruralHealthcare` | `/assets/thumbs/D10.webp` |
+| `thumb.projects.metro` | `/assets/thumbs/D11.webp` |
+| `thumb.economy.infrastructure` | `/assets/thumbs/D11.webp` |
+| `event.G01` | `/assets/events/G01.webp` |
+| `event.G02` | `/assets/events/G02.webp` |
+| `event.G03` | `/assets/events/G03.webp` |
+| `event.G04` | `/assets/events/G04.webp` |
+| `event.G05` | `/assets/events/G05.webp` |
+| `event.G06` | `/assets/events/G06.webp` |
+| `event.G07` | `/assets/events/G07.webp` |
+| `event.G08` | `/assets/events/G08.webp` |
+| `event.G09` | `/assets/events/G09.webp` |
+| `event.G10` | `/assets/events/G10.webp` |
+| `event.G11` | `/assets/events/G11.webp` |
+| `event.G12` | `Gold-icon fallback (G12 file is absent)` |
+| `emblem.NPC` | `/assets/emblems/NATION_party_emblems/E03_NPC_emblem.svg` |
+| `emblem.DPC` | `/assets/emblems/NATION_party_emblems/E31_DPC_emblem.svg` |
+| `emblem.EDC` | `/assets/emblems/NATION_party_emblems/E20_EDC_emblem.svg` |
+| `emblem.MPP` | `/assets/emblems/NATION_party_emblems/E21_MPP_emblem.svg` |
+| `emblem.PDF` | `/assets/emblems/NATION_party_emblems/E27_PDF_emblem.svg` |
+| `emblem.NUF` | `/assets/emblems/NATION_party_emblems/E06_NUF_emblem.svg` |
+| `emblem.PRP` | `/assets/emblems/NATION_party_emblems/E02_PRP_emblem.svg` |
+| `emblem.RPC` | `/assets/emblems/NATION_party_emblems/E34_RPC_emblem.svg` |
+| `emblem.SPP2` | `/assets/emblems/NATION_party_emblems/E26_SPP2_emblem.svg` |
+| `emblem.DJF` | `/assets/emblems/NATION_party_emblems/E08_DJF_emblem.svg` |
+| `emblem.SPP` | `/assets/emblems/NATION_party_emblems/E12_SPP_emblem.svg` |
+| `emblem.YDP` | `/assets/emblems/NATION_party_emblems/E16_YDP_emblem.svg` |
+| `emblem.PDP` | `/assets/emblems/NATION_party_emblems/E07_PDP_emblem.svg` |
+| `emblem.PSC` | `/assets/emblems/NATION_party_emblems/E25_PSC_emblem.svg` |
+| `emblem.PWC` | `/assets/emblems/NATION_party_emblems/E05_PWC_emblem.svg` |
+| `emblem.NPCO` | `/assets/emblems/NATION_party_emblems/E09_NPCO_emblem.svg` |
+| `emblem.PEF` | `/assets/emblems/NATION_party_emblems/E33_PEF_emblem.svg` |
+| `emblem.ICP` | `/assets/emblems/NATION_party_emblems/E10_ICP_emblem.svg` |
+| `emblem.CPP` | `/assets/emblems/NATION_party_emblems/E17_CPP_emblem.svg` |
+| `emblem.URP` | `/assets/emblems/NATION_party_emblems/E22_URP_emblem.svg` |
+| `emblem.GDP` | `/assets/emblems/NATION_party_emblems/E13_GDP_emblem.svg` |
+| `emblem.CFP` | `/assets/emblems/NATION_party_emblems/E15_CFP_emblem.svg` |
+| `emblem.PLF` | `/assets/emblems/NATION_party_emblems/E14_PLF_emblem.svg` |
+| `emblem.NDP` | `/assets/emblems/NATION_party_emblems/E01_NDP_emblem.svg` |
+| `emblem.PCP` | `/assets/emblems/NATION_party_emblems/E30_PCP_emblem.svg` |
+| `emblem.FPF` | `/assets/emblems/NATION_party_emblems/E04_FPF_emblem.svg` |
+| `emblem.FUF` | `/assets/emblems/NATION_party_emblems/E18_FUF_emblem.svg` |
+| `emblem.DLU` | `/assets/emblems/NATION_party_emblems/E23_DLU_emblem.svg` |
+| `emblem.TRF` | `/assets/emblems/NATION_party_emblems/E19_TRF_emblem.svg` |
+| `emblem.RJP` | `/assets/emblems/NATION_party_emblems/E24_RJP_emblem.svg` |
+| `emblem.SPA` | `/assets/emblems/NATION_party_emblems/E32_SPA_emblem.svg` |
+| `emblem.FDP` | `/assets/emblems/NATION_party_emblems/E29_FDP_emblem.svg` |
+| `emblem.RDF` | `/assets/emblems/NATION_party_emblems/E28_RDF_emblem.svg` |
+| `emblem.PAP` | `/assets/emblems/NATION_party_emblems/E11_PAP_emblem.svg` |
+
+## Verified artwork conditions
+
+- `public/assets/players/B03.webp`: background is baked white/checker; slot retained but UI does not render the image.
+- `public/assets/players/B05.webp`: background is baked white/checker; slot retained but UI does not render the image.
+- `public/assets/players/B11.webp`: present; default highlighted portrait.
+- `public/assets/events/G12.webp`: missing; `event.G12` remains a null registry slot and event cards render a gold icon.
+- No other image substitutions are made. The exact registry path is used for all mapped artwork.

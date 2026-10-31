@@ -1,0 +1,10 @@
+:root {
+  --nation-ink: #071923;
+  --nation-panel: #09232f;
+  --nation-gold: #e5bd68;
+  --nation-cream: #f2ead8;
+  --nation-text: #f7edd5;
+  --nation-muted: #d6ceb8;
+  --nation-disabled: #68777a;
+  color-scheme: dark;
+}
