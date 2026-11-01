@@ -1,4 +1,4 @@
-const CACHE='nation-v1.3.0-offline';
+const CACHE='nation-v1.3.1-offline';
 const CORE=['./','./index.html','./offline-assets.json'];
 self.addEventListener('install',event=>event.waitUntil((async()=>{const cache=await caches.open(CACHE);let files=CORE;try{const response=await fetch('./offline-assets.json');if(response.ok)files=await response.json();}catch{}for(const file of files){try{await cache.add(file);}catch(error){/* Missing optional art uses in-app SVG / gradient fallback. */}}await self.skipWaiting();})()));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{for(const key of await caches.keys())if(key!==CACHE)await caches.delete(key);await self.clients.claim();})()));

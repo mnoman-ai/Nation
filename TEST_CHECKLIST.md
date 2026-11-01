@@ -1,4 +1,4 @@
-# NATION v1.3.0 — Test Checklist
+# NATION v1.3.1 — Test Checklist
 
 ## Automated — verified 2026-11-01
 - [x] Full suite: 66 passed, 0 failed (`node --test tests/*.test.js tests/*.test.mjs`).
@@ -32,3 +32,10 @@
 8. Lok Sabha / State Assembly sessions and bills.
 9. Three-day meeting schedule, agreement and court case.
 10. Loan warnings/enforcement, notifications, save, close and reload.
+
+## v1.3.1 Android regression checks
+- [ ] Swipe the top navigation left/right until Notifications is reachable.
+- [ ] Swipe the game controls independently; verify Save, Pause, Stop, 1x, 2x, 4x, +1 Day and +7 Days.
+- [ ] Submit a complete party registration and advance seven in-game days.
+- [ ] Verify application status, registered party status, player affiliation and Party HQ actions update without restarting.
+- [ ] Save and reload after approval; verify party affiliation remains active.

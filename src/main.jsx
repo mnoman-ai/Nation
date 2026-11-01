@@ -36,8 +36,8 @@ function App() {
     function Header() {
         return <div className="topbar">
             <div className="brand" onClick={() => { if (g.started) go('Dashboard'); }}><span>NATION</span><small>RISE TO POWER</small></div>
-            {g.started && <nav>{nav.map((name, index) => <button key={name} className={g.screen === name ? 'active' : ''} onClick={() => go(name, ({'Party HQ':'Party Overview','Elections':'Election Calendar','Parliament':'Members of Parliament','State Assembly':'Overview','Government':'Overview','Media':'Overview','Economy':'Overview','Events':'Timeline','Notifications':'All','Meetings':'Overview','Courts':'Overview'})[name] || 'Overview')} title={name}><b>{['⌂', '▦', '♟', '⚑', '⚑', '♜', '♙', '♛', '▣', '▥', '◷', '♟', '◷', '⚖'][index]}</b><span>{name}</span>{name === 'Notifications' && unread > 0 && <i>{unread}</i>}</button>)}</nav>}
-            {g.started && <div className="time-controls">
+            {g.started && <nav className="primary-nav-scroll" aria-label="Main navigation" tabIndex={0}>{nav.map((name, index) => <button key={name} className={g.screen === name ? 'active' : ''} onClick={() => go(name, ({'Party HQ':'Party Overview','Elections':'Election Calendar','Parliament':'Members of Parliament','State Assembly':'Overview','Government':'Overview','Media':'Overview','Economy':'Overview','Events':'Timeline','Notifications':'All','Meetings':'Overview','Courts':'Overview'})[name] || 'Overview')} title={name}><b>{['⌂', '▦', '♟', '⚑', '⚑', '♜', '♙', '♛', '▣', '▥', '◷', '♟', '◷', '⚖'][index]}</b><span>{name}</span>{name === 'Notifications' && unread > 0 && <i>{unread}</i>}</button>)}</nav>}
+            {g.started && <div className="time-controls game-controls-scroll" role="group" aria-label="Game time controls" tabIndex={0}>
                 <button onClick={save}>Save</button>
                 <button onClick={() => g.timeEngine?.paused ? g.resumeTime() : g.pauseTime()}>{g.timeEngine?.paused ? 'Resume' : 'Pause'}</button>
                 <button onClick={() => g.stopTime()}>Stop</button>

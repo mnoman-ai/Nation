@@ -1,4 +1,4 @@
-# NATION: RISE TO POWER — v1.3.0
+# NATION: RISE TO POWER — v1.3.1
 
 Offline-first political career and governance simulation set in a fictional political world inspired by India's institutions and state structure.
 
@@ -9,7 +9,7 @@ Offline-first political career and governance simulation set in a fictional poli
 
 ## Install and run
 ```bash
-npm install
+npm ci
 npm run check
 npm run check:assets
 npm run check:ui
@@ -17,6 +17,11 @@ npm test
 npm run build
 npm run dev -- --host 0.0.0.0
 ```
+
+## v1.3.1 hotfixes
+- Android top navigation and game-time controls use separate horizontal touch-scroll strips.
+- Party approval synchronizes authoritative player affiliation and office status into UI state after deadlines and save loading.
+- Election Commission rows show application status, registered party status and active player affiliation.
 
 ## v1.3.0 highlights
 - Real-time clock: 30 seconds per game day at 1x; 2x and 4x available.

@@ -1,4 +1,4 @@
-# NATION v1.3.0 — Project State
+# NATION v1.3.1 — Project State
 
 ## Current baseline
 - Overlay is based on the supplied v1.2.0 source archive.
@@ -24,10 +24,15 @@
 - Seven voter groups are active.
 
 ## Current verification
-- 66 automated tests passed, 0 failed.
+- 69 automated tests passed, 0 failed (including three v1.3.1 regression checks).
 - `node scripts/check.mjs` passed (JS syntax, UI, asset and project checks).
 - Four JSX files passed parser verification.
-- Vite build, browser E2E, Capacitor sync/APK and physical Android QA are not verified.
+- Vite build, browser E2E, Capacitor sync/APK and physical Android QA are not verified for v1.3.1. npm dependency installation timed out in the build environment.
 
 ## Release gate
 See `docs/V130_IMPLEMENTATION_STATUS.md` and `FINAL_REPORT.md`. The update is not declared release-complete while the listed institutional workflows and platform QA remain outstanding.
+
+## v1.3.1 hotfix scope
+- Android WebView horizontal navigation and time-control scrolling.
+- Synchronize world player state to UI state after date/deadline processing and save load.
+- Separate application approval from registered-party and player-affiliation status in the Election Commission panel.
