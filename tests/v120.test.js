@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import { partitionCandidates } from '../src/engine/elections.js';
 import { createSession, startSession, introduceBill, voteBill } from '../src/engine/legislature.js';
 import { createWorld } from '../src/engine/GameEngine.js';
-import { payMonthlySalary, setPlayerOffice, requestPartyLoan, startCampaign, stopCampaign, tickPartyLoans } from '../src/engine/finance.js';
+import { payMonthlySalary, setPlayerOffice, requestPartyLoan, startCampaign, stopCampaign, tickPartyLoans, processPartyLoanDeadlines } from '../src/engine/finance.js';
 import { setMembershipFee, nominateCandidate } from '../src/engine/party.js';
 
 const readJson = (file) => JSON.parse(fs.readFileSync(new URL(file, import.meta.url), 'utf8'));
@@ -75,7 +75,7 @@ test('salary, elected-office party share, party loan and campaign contracts use 
     policies: readJson('../data/policies.json'), projects: readJson('../data/projects.json'),
     economy: readJson('../data/economy.json'), shocks: readJson('../data/shocks.json'), finance: readJson('../data/finance.json'),
   };
-  const world = createWorld(data, { player: { partyId: 'NDP', status: 'Citizen' } });
+  const world = createWorld(data, { player: { partyId: 'NDP', status: 'Citizen', partyOffice: 'Party President' } });
   const citizenPay = payMonthlySalary(world);
   assert.equal(citizenPay.salary, 55000);
   setPlayerOffice(world, 'MLA');
@@ -101,7 +101,7 @@ test('party membership fee is bounded and candidate filing charges ₹5,000', as
     policies: readJson('../data/policies.json'), projects: readJson('../data/projects.json'),
     economy: readJson('../data/economy.json'), shocks: readJson('../data/shocks.json'), finance: readJson('../data/finance.json'),
   };
-  const world = createWorld(data, { player: { partyId: 'NDP', members: 12 } });
+  const world = createWorld(data, { player: { partyId: 'NDP', members: 12, partyOffice: 'Party President' } });
   assert.equal(setMembershipFee(world, 50000), 50000);
   assert.throws(() => setMembershipFee(world, 50001), /between ₹1 and ₹50,000/);
   world.partyFunds = 10000;
@@ -120,15 +120,25 @@ test('rupee formatter uses lakh and crore units', async () => {
 
 test('party loan defaults produce three quarterly warnings, a court notice and enforcement state', async () => {
   const finance = readJson('../data/finance.json');
-  const world = { finance, time: { date: '2025-01-01T00:00:00.000Z' }, player: { partyId: 'NDP', money: 0 }, partyFunds: 0, partyLoans: [], notifications: [] };
+  const world = { finance, time: { date: '2025-01-01T00:00:00.000Z' }, player: { partyId: 'NDP', money: 0, partyOffice: 'Party President' }, partyFunds: 0, partyLoans: [], notifications: [] };
   const loan = requestPartyLoan(world, 1000000);
   world.partyFunds = 0;
-  for (let month = 1; month <= 31; month += 1) {
+  // The loan matures after 24 months. Three quarterly warnings follow at
+  // months 27, 30 and 33; the third warning opens a court case rather than
+  // skipping the hearing and final seven-day repayment opportunity.
+  for (let month = 1; month <= 33; month += 1) {
     world.time.date = new Date(Date.UTC(2025, month, 1)).toISOString();
     tickPartyLoans(world);
   }
   assert.equal(loan.warnings, 3);
-  assert.equal(loan.status, 'Election Commission Action');
+  assert.equal(loan.status, 'Court Notice');
   assert.ok(world.notifications.some((item) => item.title.includes('Court notice')));
+  world.time.date = `${loan.hearingDate}T00:00:00.000Z`;
+  assert.equal(processPartyLoanDeadlines(world), 1);
+  assert.ok(loan.hearingHeldAt);
+  assert.equal(loan.status, 'Court Notice');
+  world.time.date = loan.lastChanceDate;
+  assert.equal(processPartyLoanDeadlines(world), 1);
+  assert.equal(loan.status, 'Election Commission Action');
   assert.ok(world.notifications.some((item) => item.title.includes('Election Commission action')));
 });

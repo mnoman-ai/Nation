@@ -1,0 +1,35 @@
+/* v1.3 institutional panel refinements */
+.panel-body input,
+.panel-body select,
+.panel-body textarea {
+  width: min(100%, 520px);
+  min-height: 40px;
+  padding: 9px 10px;
+  border: 1px solid #9b7b42;
+  border-radius: 5px;
+  background: #f2ead8;
+  color: #18272b;
+  font: inherit;
+}
+.panel-body textarea { min-height: 82px; resize: vertical; }
+.panel-body label { display: flex; flex-direction: column; gap: 5px; margin: 9px 0; color: #f1e4c5; }
+.manifesto-preview { max-height: 260px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; padding: 10px; border: 1px solid #806638; border-radius: 5px; background: #071923; color: #e7d6ad; font-size: 12px; }
+.engine-live-grid .slot { flex-wrap: wrap; }
+.engine-live-grid .slot > div { min-width: min(100%, 220px); flex: 1 1 220px; }
+
+@media (max-width: 899px) {
+  .app { min-height: 100dvh; height: auto; }
+  .main { min-height: calc(100dvh - 58px); overflow: visible; }
+  .panel-body input, .panel-body select, .panel-body textarea { font-size: 14px; min-height: 42px; }
+  .action-control > button, .panel-body button { min-height: 40px; }
+  .date { min-width: 78px; width: 78px; white-space: normal; overflow-wrap: anywhere; }
+}
+
+@media (orientation: portrait) and (max-width: 899px) {
+  .topbar { flex-wrap: wrap; align-items: center; }
+  .topbar nav { order: 3; flex: 1 0 100%; max-height: 46px; }
+  .time-controls { max-width: calc(100vw - 150px); }
+  .main { min-height: calc(100dvh - 104px); }
+  .creator { grid-template-columns: minmax(0, 1fr); }
+  .creator-art { display: none; }
+}

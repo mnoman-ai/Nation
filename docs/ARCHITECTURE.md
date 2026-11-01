@@ -1,34 +1,34 @@
-# NATION v1.1.0 — Engine Architecture
+# NATION v1.3.0 — Architecture
 
 ## Runtime boundaries
-- `src/engine/` is pure JavaScript. No React, DOM, storage, or network APIs are imported there.
-- `src/store/useGame.js` is the UI adapter and owns the live world, TimeEngine instance, Dexie save calls, and screen actions.
-- `src/components/EnginePanel.jsx` connects engine state/actions to the relevant frontend screens.
-- `src/assets/registry.js` is the only image URL registry. UI components use slot keys, never construct file paths.
-- `data/*.json` is the authoritative balance/rules/content configuration. `scripts/build-data.mjs` builds the state-wise candidate data and copies config JSON into `public/data/`.
-- `data-source/` retains the original candidate, party, leadership, affiliation, constituency and seat-count source files unchanged.
+- `src/engine/` contains pure JavaScript simulation logic. No React, DOM, browser storage or network APIs are imported by engine modules.
+- `src/state/store.js` is the canonical UI state adapter and connects engine actions to React screens.
+- `src/components/EnginePanel.jsx` binds current engine actions and data to institutional screen panels.
+- `src/assets/registry.js` is the runtime artwork registry.
+- `data/*.json` contains editable simulation configuration; `data-source/` preserves original candidate and party source files.
 
-## Folder map
-- `src/engine`: clock, seeded RNG, voter model, eligibility, election simulation/lifecycle, candidate repository, party/player actions, coalition logic, legislature, government/budget, economy, events/media, AI, save migration, scenario helpers.
-- `src/assets`: slot registry and generated party palette.
-- `src/components`: reusable UI widgets, PartyFlag and EnginePanel.
-- `data`: editable simulation configuration.
-- `public/data`: offline runtime data; candidate JSON is split by state/UT.
-- `public/assets`: bundled WebP artwork and SVG emblems.
-- `tests`: Node headless engine and regression tests.
+## v1.3 institutional modules
+- `src/engine/v130/partyRegistry.js`: party applications, review, symbol allocation and membership decisions.
+- `src/engine/v130/manifesto.js`: policy commitments, promises and fiscal estimate.
+- `src/engine/v130/partyGovernance.js`: internal elections, factions, discipline, loyalty and office appointments.
+- `src/engine/v130/meetings.js`: invitations, responses, scheduled meetings, discussion and agreements.
+- `src/engine/v130/judiciary.js`: case filing, hearings, evidence-weighted adjudication and appeal window.
+- `src/engine/v130/media.js`: seven fictional media houses, reports and public-opinion effects.
+- `src/engine/v130/electionCommission.js`: notices, nominations, scrutiny, withdrawal and result certification.
 
-## State and data flow
-`loadEngineData()` loads only bundled local JSON. `createWorld()` copies the data into one save-scoped world and stores the deterministic RNG seed/state. `TimeEngine` is the sole game-time authority. Actions consume configured hours through `advanceHours`; day turns and real-time ticks use the same engine. Calendar callbacks advance monthly economy, AI, policies/projects, events and career review.
+## Time and deterministic state
+- `TimeEngine` is the sole game-time authority. Real-time 1x is 30 real seconds per game day; 2x/4x scale linearly.
+- Time advancement calls the world tick for every intermediate day/hour so deadlines and events are not silently skipped.
+- All new institution records are stored under `world.institutions`; notifications remain in `world.notifications`.
 
-`CandidateRepository` fetches a state/UT candidate file on demand and maintains a two-state LRU cache. Election simulation partitions each state's source candidates across that state's seats, processes the state batch in a Web Worker when available, and falls back to chunked main-thread processing.
+## Save migration
+- Save schema version is 4.
+- `src/engine/saveMigration.js` migrates v1-v3 saves and initializes new institution collections.
+- `src/engine/save.js` owns world serialization/deserialization and exports the canonical version.
 
-The economy object in `world.economy` is the only live economy/budget state. Economy, Government and Budget panels read that object.
+## Excluded scope
+- Upper-house legislature functionality is intentionally excluded. Parliament remains Lok Sabha only.
 
-## Save flow
-Three save slots use Dexie/IndexedDB with a localStorage compatibility copy. `saveVersion` is 3; migrations are in `src/engine/save.js`. Slot 1 is autosaved after day/action changes. The seed and RNG state are part of the serialized world.
-
-## Offline / Capacitor
-All data, images, fonts and JS dependencies are bundled. Runtime fetches target only local `/data/` files. Capacitor `webDir: dist`, app ID and Android configuration are preserved from v1.0.0. No server, ad SDK, analytics SDK or external runtime endpoint is introduced.
-
-## Known implementation boundaries
-See `ASSUMPTIONS.md` and `FINAL_REPORT.md`. Engine unit/integration tests are not equivalent to a verified Android build or UI end-to-end test.
+## Limitations
+- UI decomposition into one JSX file per screen is not complete.
+- Browser E2E, production build and physical Android QA are not claimed. See `docs/V130_IMPLEMENTATION_STATUS.md`.

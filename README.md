@@ -1,39 +1,44 @@
-# NATION: RISE TO POWER — v1.1.0 update
+# NATION: RISE TO POWER — v1.3.0
 
-Overlay this ZIP on top of the v1.0.0 project root. Do not extract into a nested folder.
+Offline-first political career and governance simulation set in a fictional political world inspired by India's institutions and state structure.
 
-## Termux commands
-```sh
-pkg update && pkg upgrade
-pkg install nodejs-lts git unzip
-unzip nation-v1.1.0-update.zip -d /path/to/NationProject
-cd /path/to/NationProject
+## Requirements
+- Node.js 20+ recommended
+- npm
+- Android 8+ target through Capacitor (native Android project is maintained separately)
+
+## Install and run
+```bash
 npm install
-npm run data:build
-npm run test
 npm run check
 npm run check:assets
+npm run check:ui
+npm test
 npm run build
-npx cap sync android
+npm run dev -- --host 0.0.0.0
 ```
 
-Open the existing Android project in Android Studio or build with the Android Gradle wrapper already configured in your project. This update does not replace `capacitor.config.js` or the Android folder.
+## v1.3.0 highlights
+- Real-time clock: 30 seconds per game day at 1x; 2x and 4x available.
+- Intermediate time callbacks process scheduled deadlines when advancing multiple days.
+- Party registration workflow with ₹10,000 fee and seven-day Election Commission decision.
+- Party membership applications, manifesto policy commitments and internal governance records.
+- Political meetings with a three-day scheduling rule.
+- Judiciary case register and evidence-weighted adjudication.
+- Seven fictional media organisations with configurable attributes and public-opinion impact.
+- Election Commission notices, candidate nominations, scrutiny and result certification.
+- Save schema v4 with migration from v1-v3.
 
-## Scripts
-- `npm run data:build` — rebuild source JSON, state-wise candidate partitions and public runtime configs.
-- `npm run test` — Node headless engine tests.
-- `npm run check` — esbuild parse check over every JS/JSX source file, reporting all failures together.
-- `npm run check:assets` — registry existence and hardcoded image path check. It currently reports the absent G12 event art.
-- `npm run build` — Vite production build.
+## Project structure
+- `src/engine/` — simulation logic
+- `src/engine/v130/` — v1.3 institutional systems
+- `src/state/store.js` — canonical UI state store
+- `src/components/` — shared UI and engine panels
+- `src/styles/` — single stylesheet entry and responsive styles
+- `data/` — authoritative simulation configuration
+- `data-source/` — preserved source datasets
+- `public/data/` — offline runtime datasets
+- `tests/` — deterministic engine and institution tests
 
-## Offline / privacy
-All runtime game data and art are bundled. There are no ad or analytics SDKs and no external runtime endpoints. Candidate and party data are fictional. No real political parties, leaders or candidates are represented.
-
-## Play Store preparation
-- Provide a public privacy policy URL stating that the game stores saves locally and has no analytics, advertising or account backend.
-- Complete the Play Console Data Safety form based on the final Android package and SDK inventory.
-- Complete the content rating questionnaire; describe fictional political themes, campaign conflict, scandals and disasters accurately.
-- Suggested short listing: “Build a political career, lead a party and shape a fictional nation in an offline strategy simulation.”
-- Suggested full listing: “Start as a citizen, build influence, contest elections, negotiate coalitions and manage public institutions. All parties, candidates and constituencies are fictional.”
-- Add landscape screenshots, feature graphic, app icon, version details and a tested signed AAB.
-- Verify Android 8+ compatibility, 3 GB RAM performance, offline launch and privacy disclosures before release.
+## Important status
+This package contains tested v1.3 institutional foundations, not a claim that every item in the blueprint is complete. The existing UI remains partly consolidated in `main.jsx` and `EnginePanel.jsx`. Full Election Commission administration, complete judiciary hierarchy, full newsroom simulation, complete internal party organisation, production build, browser E2E and Android device QA remain outstanding. See `docs/V130_IMPLEMENTATION_STATUS.md` and `FINAL_REPORT.md`.

@@ -1,25 +1,30 @@
-# ASSUMPTIONS.md — NATION v1.2.0
+# NATION v1.3.0 — Assumptions and Concerns
 
-## Concerns
-1. **Native landscape lock:** both web manifests specify `orientation: landscape`, but the supplied source has no `android/app/src/main/AndroidManifest.xml`. The native Capacitor activity orientation cannot be verified or safely patched without that project file.
-2. **Baked-background portraits:** `/assets/players/B03.webp` and `/assets/players/B05.webp` contain a baked white/checker background. Registry keys are retained, but the UI uses the gold-icon treatment instead of rendering these two files.
-3. **Missing event artwork:** `/assets/events/G12.webp` is absent. The `event.G12` registry slot is retained as `null`; event UI uses a gold icon. No replacement artwork is substituted.
-4. **Candidate home districts:** source candidate profiles have state IDs but no constituency assignments. Generated AI `state_id` assignments are seat-proportional; original `home_district` strings are preserved and may not match the generated target state. Source candidate IDs and profile data are not fabricated.
-5. **Player pool separation:** the 12,000 `PLAYER_CONTROLLED` records are emitted separately as `public/data/player-candidates.json`; they are not mixed into AI seat allocation.
-6. **Party loan workflow:** principal, 24% annual interest, two-year term, three-month warnings, court notice and enforcement status are modelled in the engine. Full hearing adjudication and Election Commission UI are incomplete.
-7. **Campaign workflow:** all seven campaign types and fees are configurable; monthly and prepaid contract accounting is implemented. Complete campaign outcome effects and election-code cutoff wiring remain incomplete.
-8. **Salary distribution:** the player's ₹55,000 citizen / ₹3 lakh MLA / ₹7 lakh MP salary and 65% party contribution when elected are implemented. Salary transfers from all other AI elected members are not yet modelled as a full payroll ledger.
-9. **Screen architecture:** the duplicate store and stylesheet systems were removed. The root UI has not yet been fully decomposed into a separate JSX file for every screen; this remains a known gap.
-10. **Build verification:** npm install was intentionally not run. `npm run check` cannot execute because esbuild is not installed in this sandbox. Node tests, JS syntax checks, JSX parsing, UI scan and asset scan were run instead.
-11. **Offline scope:** no server endpoints, analytics, ads or remote APIs were added. Runtime data fetches target bundled local `/data/` files.
-12. **Source datasets:** `data-source` CSV/XLSX files are carried over unchanged from the supplied v1.0.0 baseline where required by `scripts/build-data.mjs`; the build script reads them and writes generated JSON only.
+## Confirmed decisions
+- Parliament is implemented as Lok Sabha only; no upper-house system is included.
+- Party creation costs exactly ₹10,000 from the personal account; no influence or membership threshold applies.
+- Party registration decision is due after seven in-game days.
+- Accepted political meeting invitations schedule the meeting three in-game days later.
+- Real-time speed is 30 seconds per game day at 1x, 15 seconds at 2x and 7.5 seconds at 4x.
+- Donation income and unsupported fundraising income are disabled. Personal transfers, membership fees, office-holder contributions and loans remain separately accounted.
 
-13. **Background profiles:** starting stats and contacts are read from `data/backgrounds.json`; the chosen background does not change the monthly salary rate.
+## Assumptions needed to make unspecified mechanics executable
+- The new six-group voter list is treated as an abbreviated list; General/Others from the prior seven-group voter model remains active to preserve the original GDD.
+- Membership applications receive a party-side decision after seven in-game days. This deadline was not specified in the v1.3 brief.
+- The Election Commission's seven-day automatic review approves only unique party names/abbreviations when a symbol is available; otherwise it requests changes. This is a temporary deterministic review rule, not a complete document-authentication simulation.
+- Evidence-weighted court outcomes use a deterministic case-strength calculation. This avoids political-affiliation-based verdicts but is not a substitute for a full judicial hierarchy, judge roster and precedent model.
 
-## Decisions retained
-- Start date: 1 January 2025; one difficulty; English-only UI.
-- 31 Assembly jurisdictions / 4,123 Assembly seats; 543 Lok Sabha seats; 5 no-Assembly UTs.
-- Opening Assembly poll/results: 6 April 2027 / 11 April 2027.
-- Opening Lok Sabha poll/results: 26 April 2029 / 1 May 2029.
-- No Rajya Sabha, no reserved seats, no real political parties or politicians.
-- AI candidate apportionment uses state/UT constituency seat counts and deterministic Hamilton allocation.
+## Concerns / incomplete scope
+- The v1.3 blueprint is larger than a safe single patch can fully complete without a full UI and engine rewrite. This update adds tested institutional mechanics but does not complete every item in all five phases.
+- The existing UI still uses a shared `main.jsx` plus `EnginePanel.jsx`; per-screen JSX decomposition remains outstanding.
+- Native Android orientation locking requires the Android project/manifest and device verification. A web manifest orientation hint alone cannot prove native enforcement.
+- The seven media organisations have working attributes and report effects, but automatic newsroom generation and ownership evolution are not complete.
+- Parliament/Assembly, court hierarchy, EC document review and party faction simulation remain partial.
+- No production build, browser automation or physical Android test is claimed.
+
+## Verification update (2026-11-01)
+- The current test suite was rerun directly in the project runtime: 66 tests passed, 0 failed.
+- `scripts/check.mjs` was added because `package.json` referenced it but the file was missing. It runs JS syntax checks, UI contract, asset registry and project integrity checks.
+- Four JSX files were separately parsed with the host TypeScript compiler; this was a syntax-only check and does not add TypeScript as a game dependency.
+- Production build remains unverified because Vite and project dependencies are not installed. No package installation was performed.
+- The Android platform directory is not present in the supplied source project. `scripts/android-patch.sh` is provided for the owner's Android development checkout; native orientation, immersive status bar and APK output remain unverified.

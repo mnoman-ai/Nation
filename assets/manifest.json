@@ -19,20 +19,23 @@
     "budget": "banners/A08.webp",
     "media": "banners/A09.webp",
     "economy": "banners/A10.webp",
-    "projects": "banners/A10.webp"
+    "projects": "banners/A10.webp",
+    "courts": null,
+    "meetings": null,
+    "electionCommission": null
   },
   "players": {
     "B01": "players/B01.webp",
     "B02": "players/B02.webp",
-    "B03": "players/B03.webp",
+    "B03": null,
     "B04": "players/B04.webp",
-    "B05": "players/B05.webp",
+    "B05": null,
     "B06": "players/B06.webp",
     "B07": "players/B07.webp",
     "B08": "players/B08.webp",
     "B09": "players/B09.webp",
     "B10": "players/B10.webp",
-    "default": "players/B11.webp"
+    "default": null
   },
   "careerCards": {
     "studentLeader": "cards/C01.webp",
@@ -54,7 +57,12 @@
     "projectGreenEnergy": "thumbs/D09.webp",
     "projectRuralHealthcare": "thumbs/D10.webp",
     "projectMetro": "thumbs/D11.webp",
-    "economyInfrastructure": "thumbs/D11.webp"
+    "economyInfrastructure": "thumbs/D11.webp",
+    "supremeCourt": null,
+    "highCourt": null,
+    "lowerCourt": null,
+    "partyRegistration": null,
+    "allianceMeeting": null
   },
   "emblems": {
     "NDP": "emblems/E01_NDP_emblem.svg",
@@ -93,17 +101,27 @@
     "RPC": "emblems/E34_RPC_emblem.svg"
   },
   "events": {
-    "flood": "events/G01.webp",
-    "farmersProtest": "events/G02.webp",
-    "youthRally": "events/G03.webp",
-    "bigRally": "events/G04.webp",
-    "scandalPressStorm": "events/G05.webp",
-    "noConfidenceSession": "events/G06.webp",
-    "coalitionMeeting": "events/G07.webp",
-    "victoryCelebration": "events/G08.webp",
-    "defeat": "events/G09.webp",
-    "oathCeremony": "events/G10.webp",
-    "cycloneRelief": "events/G11.webp",
+    "flood": null,
+    "farmersProtest": null,
+    "youthRally": null,
+    "bigRally": null,
+    "scandalPressStorm": null,
+    "noConfidenceSession": null,
+    "coalitionMeeting": null,
+    "victoryCelebration": null,
+    "defeat": null,
+    "oathCeremony": null,
+    "cycloneRelief": null,
     "festivalUnity": null
+  },
+  "reservedSlots": {
+    "A11": null,
+    "A12": null,
+    "A13": null,
+    "D12": null,
+    "D13": null,
+    "D14": null,
+    "D15": null,
+    "D16": null
   }
 }

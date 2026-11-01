@@ -76,3 +76,30 @@ button:disabled, .btn:disabled, input:disabled, select:disabled {
 :root[data-graphics-quality="low"] * { box-shadow: none !important; text-shadow: none !important; }
 :root[data-graphics-quality="medium"] .panel { box-shadow: 0 3px 10px #0006; }
 .tile-map button { border: 0; }
+
+/* Landscape-first Android layout and immersive safe-area handling. */
+html, body, #root { width: 100%; min-height: 100%; }
+body { padding: 0; }
+.app { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
+button, .btn, input, select, textarea { appearance: none; -webkit-appearance: none; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+button, .btn { min-height: 44px; }
+.topbar { height: 52px; min-height: 52px; padding-top: 2px; padding-bottom: 2px; }
+.topbar nav button { min-height: 44px; }
+.sidebar { display: none !important; }
+.screen-content { margin-left: 0 !important; }
+.panel-body input, .panel-body select, .panel-body textarea { min-height: 44px; font-size: 14px; }
+#portrait-rotate-overlay { display: none; }
+@media (orientation: portrait) and (max-width: 899px) {
+  #portrait-rotate-overlay { position: fixed; z-index: 99999; inset: 0; display: grid; place-items: center; padding: 24px; background: #071923; color: #f7edd5; font: 700 22px Inter, sans-serif; text-align: center; }
+  #root { visibility: hidden; }
+}
+.party-art-preview { display:flex; align-items:center; gap:20px; padding:8px 0; }
+.party-art-preview > span { display:flex; flex-direction:column; gap:6px; color:#f2ead8; font-size:12px; }
+.party-art-preview img { width:64px; height:64px; border-radius:8px; }
+.party-flag-preview { display:block; width:112px; height:72px; border:1px solid #c8b990; border-radius:3px; }
+@media (max-width: 899px) {
+  .topbar { height:auto; min-height:52px; }
+  .date { min-width:82px; width:82px; }
+  .main { min-height:calc(100dvh - 52px); }
+  .content-head { margin-top:0; }
+}

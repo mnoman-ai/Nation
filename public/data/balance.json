@@ -4,7 +4,7 @@
   "startingInfluence": 12,
   "startingSupport": 18,
   "startingReputation": 50,
-  "startingPartyFunds": 8000,
+  "startingPartyFunds": 0,
   "startingReserve": 10000,
   "monthlyBaseRevenue": 1000000,
   "startingGDP": 100000000,
@@ -13,21 +13,19 @@
     "rally": 8,
     "outreach": 4,
     "speech": 2,
-    "fundraise": 3,
     "allianceTalk": 6,
     "pressRelease": 1,
     "poll": 3,
     "billProposal": 4,
     "committeeWork": 5,
     "campaign": 8,
-    "donate": 1,
     "factCheck": 2,
     "crisisResponse": 3
   },
   "partyCreation": {
     "money": 10000,
-    "influence": 25,
-    "members": 100
+    "influence": 0,
+    "members": 0
   },
   "tax": {
     "income": 18,
@@ -116,5 +114,17 @@
     "mlaMonthlySalary": 300000,
     "mpMonthlySalary": 700000,
     "partyMemberSalaryShare": 0.65
+  },
+  "v130": {
+    "partyRegistrationFee": 10000,
+    "partyRegistrationDecisionDays": 7,
+    "partyMembershipDecisionDays": 7,
+    "meetingScheduleDays": 3,
+    "candidateNominationFee": 5000,
+    "courtFirstHearingDays": 14,
+    "courtAppealWindowDays": 30,
+    "secondsPerGameDay": 30,
+    "donationIncomeEnabled": false,
+    "fundraisingIncomeEnabled": false
   }
 }

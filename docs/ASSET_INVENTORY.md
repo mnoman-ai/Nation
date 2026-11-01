@@ -1,10 +1,7 @@
 # Asset inventory
 
-Generated from the actual filenames in the supplied `nation_assets.zip` and `NATION_party_emblems.zip`. See `assets/manifest.json` for ID-to-path mapping.
+The v1.2 source ZIP contains 10 banner files, 10 player portraits (B01–B10), 6 origin cards, 11 thumbnails and 34 SVG party emblems. The event directory contains no G01–G12 image files.
 
-- Banners A01–A10
-- Player portraits B01–B10 (B11 default portrait is missing)
-- Origin cards C01–C06
-- Thumbnails D01–D11
-- 34 SVG party emblems plus `party_emblems_index.json`
-- Events directory supplied but no G01–G12 art files found
+Safe fallbacks are mandatory for B03 and B05 (unusable portrait artwork), B11 (default portrait file absent), and G01–G12 (no event art files supplied). New requested slots A11–A13 and D12–D16 are registered as empty slots and render gold-icon / gradient fallbacks until replacement files are supplied.
+
+Media outlet marks and player-created party logos and flags are generated locally as SVG/CSS. No outside image is used.

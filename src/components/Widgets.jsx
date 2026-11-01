@@ -16,3 +16,4 @@ export function Button({ children, onClick, kind = '', disabled = false, reason 
   const button = <button type={type} className={`btn ${kind}`} onClick={onClick} disabled={disabled} title={disabled ? (reason || title) : title}>{children}</button>;
   return disabled && reason ? <span className="button-control">{button}<small className="disabled-reason">{reason}</small></span> : button;
 }
+

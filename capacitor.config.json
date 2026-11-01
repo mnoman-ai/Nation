@@ -3,6 +3,14 @@
   "appName": "Nation: Rise to Power",
   "webDir": "dist",
   "android": {
-    "backgroundColor": "#071b26"
+    "backgroundColor": "#071b26",
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "StatusBar": {
+      "overlaysWebView": true,
+      "style": "DARK",
+      "backgroundColor": "#071b26"
+    }
   }
 }

@@ -1,2 +1,20 @@
-import fs from'node:fs';import path from'node:path';import{spawnSync}from'node:child_process';
-const root=process.cwd(),files=[];function walk(d){for(const e of fs.readdirSync(d,{withFileTypes:true})){const p=path.join(d,e.name);if(e.isDirectory())walk(p);else if(/\.(jsx?|tsx?)$/.test(e.name))files.push(p);}}walk(path.join(root,'src'));const bin=path.join(root,'node_modules','.bin','esbuild');if(!fs.existsSync(bin)){console.error('esbuild is unavailable. Run npm install on the development device, then npm run check.');process.exit(2);}const failures=[];for(const file of files){const r=spawnSync(bin,[file,'--loader:.js=jsx','--format=esm','--outfile=/dev/null'],{encoding:'utf8'});if(r.status!==0)failures.push({file:path.relative(root,file),message:(r.stderr||r.stdout).trim()});}if(failures.length){for(const f of failures)console.error(`\\n${f.file}\\n${f.message}`);process.exit(1);}console.log(`Syntax check passed for ${files.length} source files.`);
+import fs from 'node:fs';
+import path from 'node:path';
+import { execFileSync } from 'node:child_process';
+
+const roots = ['src', 'scripts', 'tests'];
+const sourceFiles = [];
+function walk(dir) {
+  if (!fs.existsSync(dir)) return;
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const file = path.join(dir, entry.name);
+    if (entry.isDirectory()) walk(file);
+    else if (/\.(?:js|mjs|cjs)$/.test(entry.name)) sourceFiles.push(file);
+  }
+}
+for (const dir of roots) walk(dir);
+for (const file of sourceFiles) execFileSync(process.execPath, ['--check', file], { stdio: 'inherit' });
+execFileSync(process.execPath, ['scripts/check-ui.mjs'], { stdio: 'inherit' });
+execFileSync(process.execPath, ['scripts/check-assets.mjs'], { stdio: 'inherit' });
+execFileSync(process.execPath, ['scripts/check-project.mjs'], { stdio: 'inherit' });
+console.log(`JavaScript syntax check passed (${sourceFiles.length} JS/MJS/CJS files).`);

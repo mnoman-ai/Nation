@@ -14,32 +14,57 @@
     "annualInterestRate": 0.24,
     "termYears": 2,
     "warningsEveryMonths": 3,
-    "warningLimit": 3
+    "warningLimit": 3,
+    "enforcementFine": 500000,
+    "lastChanceDays": 7
   },
   "campaigns": [
     {
-      "id": "rally",
-      "label": "Rally / Door-to-Door",
+      "id": "doorToDoor",
+      "label": "Door-to-door Rally",
       "fee": 100000,
-      "billing": "one-time"
+      "billing": "one-time",
+      "maxUsesPerElection": 1,
+      "benefit": {
+        "name": "local_contact",
+        "value": 8,
+        "description": "Improves local candidate contact and turnout mobilisation."
+      }
     },
     {
       "id": "politicalProgram",
       "label": "Political Program",
       "fee": 400000,
-      "billing": "one-time"
+      "billing": "one-time",
+      "maxUsesPerElection": 1,
+      "benefit": {
+        "name": "public_visibility",
+        "value": 12,
+        "description": "Raises party visibility across the campaign period."
+      }
     },
     {
       "id": "socialMedia",
       "label": "Social Media",
       "fee": 20000,
-      "billing": "monthly"
+      "billing": "monthly",
+      "benefit": {
+        "name": "youth_reach",
+        "value": 3,
+        "description": "Improves digital reach among youth voters per paid month."
+      }
     },
     {
       "id": "mediaInterview",
       "label": "Media Interview",
       "fee": 50000,
-      "billing": "one-time"
+      "billing": "one-time",
+      "maxUsesPerElection": 1,
+      "benefit": {
+        "name": "credibility",
+        "value": 4,
+        "description": "Improves candidate credibility through a public interview."
+      }
     },
     {
       "id": "mediaBroadcasting",
@@ -47,19 +72,35 @@
       "fee": 100000,
       "billing": "contract-monthly-prepaid",
       "minMonths": 1,
-      "maxMonths": 6
+      "maxMonths": 6,
+      "benefit": {
+        "name": "broadcast_reach",
+        "value": 4,
+        "description": "Improves broadcast reach per contracted month."
+      }
     },
     {
       "id": "publicMeeting",
-      "label": "Public Meeting / Town Hall",
+      "label": "Public Meeting",
       "fee": 200000,
-      "billing": "one-time"
+      "billing": "one-time",
+      "maxUsesPerElection": 1,
+      "benefit": {
+        "name": "ground_mobilisation",
+        "value": 7,
+        "description": "Improves local volunteer mobilisation and public contact."
+      }
     },
     {
-      "id": "printOutdoor",
-      "label": "Print & Outdoor Advertising",
-      "fee": 75000,
-      "billing": "monthly"
+      "id": "boothVolunteerNetwork",
+      "label": "Booth Volunteer Network",
+      "fee": 30000,
+      "billing": "monthly",
+      "benefit": {
+        "name": "booth_coverage",
+        "value": 4,
+        "description": "Improves polling-booth coverage per paid month."
+      }
     }
   ]
 }

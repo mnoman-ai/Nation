@@ -1,6 +1,7 @@
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
 export function recordCampaignAction(state, { type, stateId = null, partyId = state.player.partyId } = {}) {
+  if (type === 'fundraise' || type === 'donate' || type === 'sponsor') throw new Error('Donations, donor deals and fundraising are disabled by the v1.3.0 finance rules');
   const action = state.rules.balance.election.campaignActions[type];
   if (!action) throw new Error(`Unknown campaign action: ${type}`);
   if (!partyId || !state.parties.some((party) => party.party_id === partyId)) throw new Error('A valid party membership is required for campaign actions');
@@ -16,10 +17,9 @@ export function recordCampaignAction(state, { type, stateId = null, partyId = st
     support: Number(action.support) || 0,
     media: Number(action.media) || 0,
     organisation: Number(action.organisation) || 0,
-    financial: Number(action.financial) || (type === 'fundraise' ? Number(action.money) || 0 : 0),
+    financial: Number(action.financial) || 0,
     moneySpent: cost,
   };
-  if (type === 'fundraise') state.player.money += Math.abs(Number(action.money) || 0) * state.rules.balance.career.fundraiseReturnMultiplier;
   state.player.campaignActions.push(effect);
   state.historyLog.unshift({ monthIndex: state.calendar.monthIndex, type: 'campaign_action', message: `${type} campaign action recorded for ${partyId}.` });
   return state;

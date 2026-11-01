@@ -1,39 +1,34 @@
-# NATION v1.2.0 — Test Checklist
+# NATION v1.3.0 — Test Checklist
 
-## Automated checks run in this sandbox
-- [x] `node --test tests/*.test.js tests/*.test.mjs` — 37 passed.
-- [x] `node --check` for all `.js` and `.mjs` files.
-- [x] JSX parse check for all remaining `.jsx` files using the installed TypeScript parser.
-- [x] `node scripts/check-ui.mjs`.
-- [x] `node scripts/check-assets.mjs`.
-- [x] Unzip update over supplied base, run `scripts/cleanup.sh`, compare resulting project tree: zero mismatches.
-- [x] Candidate distribution: 33,000 AI / 12,000 player pool / 4,666 seats / 7–8 AI candidates per seat.
-- [x] Bill-to-ministry mapping test for Education, Agriculture and Health.
-- [x] Session-gated voting test; Draft bills cannot be voted on.
-- [x] Blank new-game identity and B11 default portrait test.
-- [x] Salary, party contribution, loan request and prepaid campaign test.
-- [x] Party loan default test: three quarterly warnings, court notice and enforcement state.
-- [x] Rupee formatter uses lakh, crore and lakh-crore units.
-- [x] Existing seeded acceptance test through Assembly simulation, coalition, balanced budget, event decision and save reload.
+## Automated — verified 2026-11-01
+- [x] Full suite: 66 passed, 0 failed (`node --test tests/*.test.js tests/*.test.mjs`).
+- [x] Time engine: 30s/day, speed scaling, +7 days, intermediate events and auto-pause.
+- [x] Party registration: ₹10,000 fee, no influence/member gate, seven-day decision, EC uniqueness/document rules.
+- [x] Party membership response, internal elections, factions, loyalty and defections.
+- [x] Salary, 65% elected-office party share, member fee, candidate fee, campaign billing and party loan lifecycle.
+- [x] Manifesto policy/promise fiscal aggregation.
+- [x] Meetings: multiple-party responses, three-day scheduling, attendance and alliance agreement.
+- [x] Judiciary: evidence-weighted case decision, hearing, appeal and loan enforcement records.
+- [x] Seven media outlets and public-opinion impact.
+- [x] Election math, candidate distribution, voter model, save/reload and v1-v3 migration.
+- [x] Headless acceptance test covering registration, election, government, alliance, court, loan and save/migration.
+- [x] `node scripts/check.mjs`: 58 JS/MJS/CJS syntax files, UI contract, assets and project integrity.
+- [x] JSX parser check: four JSX files, zero syntax diagnostics (host parser only).
 
-## Not run / not verified
-- [ ] `npm run check` (esbuild absent; npm install intentionally not run).
-- [ ] Vite production build.
-- [ ] Browser E2E on desktop and phone viewport.
-- [ ] Capacitor sync / Android Gradle build / APK / AAB.
-- [ ] Native landscape orientation on Android 8+.
-- [ ] Physical 3 GB RAM device performance and long-session memory use.
-- [ ] Android WebView IndexedDB save/load after force-close and offline restart.
-- [ ] Full visual comparison against all 15 supplied mockups.
+## Not run
+- [ ] Vite production build — Vite not installed; no npm install performed.
+- [ ] Browser end-to-end and desktop visual QA.
+- [ ] Capacitor sync, Android APK build, Android 8+ / 3 GB RAM device QA.
+- [ ] Physical landscape lock, portrait fallback, keyboard, safe-area and touch-target tests.
 
-## First 10 phone checks
-1. Install/update while offline; confirm app opens without network.
-2. Confirm landscape presentation and no scaled-down 1280×720 stage.
-3. New Game opens blank identity; name and Home State are mandatory; City is optional.
-4. Portrait picker has accessible labels; B03/B05 show gold icons; B11 is the default banner portrait.
-5. Dashboard values change from game state; no placeholder metrics or duplicate portrait.
-6. India Map opens a detail screen for every state and UT, including the five without Assemblies.
-7. Party directory filters All / National / State; party profile opens a membership application.
-8. Party HQ People loads the 12,000 player-pool records; recruit and funding actions update state.
-9. Parliament: Draft bill voting is disabled; start an eligible session, introduce a bill, then vote.
-10. Save slots 1–3, force-close the app, restart offline, and verify exact save restoration.
+## Phone acceptance sequence
+1. Landscape launch and portrait fallback.
+2. Safe area, navbar, header/date and scrolling on narrow screen.
+3. Long text in every form with keyboard open.
+4. Party creation fee and seven-day EC decision.
+5. Membership application and post authority.
+6. Manifesto publish and policy implementation.
+7. Election campaign, nominations, vote tally and seat allocation.
+8. Lok Sabha / State Assembly sessions and bills.
+9. Three-day meeting schedule, agreement and court case.
+10. Loan warnings/enforcement, notifications, save, close and reload.
