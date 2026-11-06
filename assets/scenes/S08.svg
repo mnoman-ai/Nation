@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">PARTY ORGANISATION</title><desc id="desc">Vector scene fallback for registration & manifesto. Left third reserved for player portrait overlay.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0a1924"/><stop offset="1" stop-color="#17384a"/></linearGradient><radialGradient id="glow"><stop stop-color="#d7b46b" stop-opacity=".22"/><stop offset="1" stop-color="#d7b46b" stop-opacity="0"/></radialGradient><pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#c5d4d8" stroke-opacity=".045"/></pattern></defs>
+<rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/><ellipse cx="1110" cy="420" rx="560" ry="520" fill="url(#glow)"/>
+<rect x="0" y="0" width="560" height="900" fill="#07141d" opacity=".3"/><path d="M580 0V900" stroke="#d7b46b" stroke-opacity=".28" stroke-width="2"/>
+<rect x="700" y="220" width="720" height="450" rx="12" fill="#142d3c" stroke="#d7b46b" stroke-width="5"/><rect x="800" y="300" width="520" height="110" rx="8" fill="#d7b46b" opacity=".2"/><path d="M850 500 H1270 M850 545 H1270 M850 590 H1150" stroke="#dbe2e4" stroke-width="13" opacity=".65"/><path d="M600 700 H1530" stroke="#d7b46b" stroke-width="2" opacity=".5"/>
+<text x="650" y="790" fill="#d7b46b" font-family="Georgia,serif" font-size="34" letter-spacing="7">PARTY ORGANISATION</text><text x="650" y="835" fill="#dbe2e4" opacity=".72" font-family="Arial,sans-serif" font-size="18" letter-spacing="5">REGISTRATION & MANIFESTO</text>
+<path d="M650 750H1500" stroke="#d7b46b" stroke-opacity=".55" stroke-width="2"/>
+</svg>

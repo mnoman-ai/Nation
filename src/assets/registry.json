@@ -109,5 +109,15 @@
   "thumb.D13": null,
   "thumb.D14": null,
   "thumb.D15": null,
-  "thumb.D16": null
+  "thumb.D16": null,
+  "scene.S01": "/assets/scenes/S01.svg",
+  "scene.S02": "/assets/scenes/S02.svg",
+  "scene.S03": "/assets/scenes/S03.svg",
+  "scene.S04": "/assets/scenes/S04.svg",
+  "scene.S05": "/assets/scenes/S05.svg",
+  "scene.S06": "/assets/scenes/S06.svg",
+  "scene.S07": "/assets/scenes/S07.svg",
+  "scene.S08": "/assets/scenes/S08.svg",
+  "scene.S09": "/assets/scenes/S09.svg",
+  "scene.S10": "/assets/scenes/S10.svg"
 }

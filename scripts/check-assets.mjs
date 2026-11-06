@@ -26,5 +26,17 @@ function walk(dir) {
   }
 }
 walk(path.join(root,'src'));
+// v1.4.0 strict S01–S10 scene registry contract.
+const sceneManifest = JSON.parse(fs.readFileSync(path.join(root, 'assets/manifest.json'), 'utf8')).scenes || {};
+for (let index = 1; index <= 10; index++) {
+  const id = `S${String(index).padStart(2, '0')}`;
+  const key = `scene.${id}`;
+  const manifestPath = sceneManifest[id];
+  const expected = manifestPath ? `/assets/${manifestPath}` : '';
+  if (!expected || !/\.(webp|svg)$/.test(manifestPath)) errors.push(`assets/manifest.json scenes.${id}: invalid scene path ${manifestPath}`);
+  if (registry[key] !== expected) errors.push(`${key}: expected ${expected}, received ${registry[key]}`);
+  if (expected && !fs.existsSync(path.join(root, expected.slice(1)))) errors.push(`${key}: missing scene file ${expected}`);
+}
+
 if (errors.length) { console.error(errors.join('\n')); process.exitCode = 1; }
-else console.log(`Asset registry OK (${Object.keys(registry).length} slots; ${documentedFallbacks.size} explicit fallbacks).`);
+else console.log(`Asset registry OK (${Object.keys(registry).length} slots; ${documentedFallbacks.size} explicit fallbacks; S01–S10 contract verified).`);

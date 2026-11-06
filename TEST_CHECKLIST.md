@@ -39,3 +39,18 @@
 - [ ] Submit a complete party registration and advance seven in-game days.
 - [ ] Verify application status, registered party status, player affiliation and Party HQ actions update without restarting.
 - [ ] Save and reload after approval; verify party affiliation remains active.
+
+
+## v1.4.0 graphics foundation smoke test
+
+- [ ] Loading screen appears before the Main Menu and progress reaches completion.
+- [ ] Main Menu uses scenic A01 banner, one left-third portrait, horizontal five-action row and feature strip.
+- [ ] New Game, Continue, Load Game, Settings and Credits each perform their intended action.
+- [ ] Dashboard uses the hybrid dark/light panels and all six shortcut buttons navigate.
+- [ ] Top bar exposes only +1 Day and +7 Days for manual time advancement; Settings opens from its button.
+- [ ] Save, Pause/Resume, Stop and 1x/2x/4x controls are available in Settings.
+- [ ] Custom day duration is visibly marked as pending engine integration; it must not be treated as active yet.
+- [ ] S01–S10 scene banners load locally while offline; each shows at most one portrait in the left third.
+- [ ] S01 Courts/Supreme Court; S02 District/Lower Court; S03 State Assembly; S04 Lok Sabha; S05 Committees; S06 Election Commission; S07 Meetings; S08 Party registration/manifesto; S09 Finance/Bank Loan; S10 Media & News.
+- [ ] No rotate-device message appears. Confirm native landscape lock separately after running `scripts/android-patch.sh` in the Android project.
+- [ ] Check touch scrolling, 44px targets, text legibility and no horizontal overflow on the actual phone.

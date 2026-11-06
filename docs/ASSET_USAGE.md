@@ -1,123 +1,40 @@
-# Asset Usage — NATION v1.2.0
+# Asset Usage — NATION v1.4.0
 
-All artwork is resolved through `src/assets/registry.js`. No runtime image URL may bypass the registry. Unassigned slots render a gold icon or gradient.
+All runtime artwork is resolved through `src/assets/registry.js`. UI components must use registry keys and must not hardcode asset paths. Unassigned slots use purpose-built vector or neutral fallbacks; unrelated images are never substituted.
 
-## Strict placement map
+## Existing main banners
 
-| Registry group | Permitted screens / contexts |
-|---|---|
-| A01–A10 | A01 Main Menu / Load / Credits / Notifications / Settings; A02 Create Identity / Player Profile; A03 Dashboard / Events / India Map; A04 Party HQ / Parties; A05 Elections; A06 Parliament; A07 State Assembly; A08 Government / Budget; A09 Media; A10 Economy / Projects |
-| B01–B10 | Create Identity portrait picker only; selected portrait is overlaid once in the banner left third |
-| B11 | Default highlighted player portrait; shown once in the player banner |
-| C01–C06 | Create Identity background selection and Player Profile |
-| D01–D11 | D01 Funding; D02 Alliances; D03 Polling; D04 Counting; D05 Courts; D06 Agriculture; D07 Manufacturing; D08 Trade / Exports; D09 Green Energy; D10 Rural Healthcare; D11 Metro / Economy Infrastructure |
-| E01–E34 | Party name / party flag only |
-| G01–G12 | Event cards only |
+A01–A10 retain their v1.3.1 screen assignments. They remain the primary screen banners and are not replaced by the S-series.
 
-## Registered slots
+## S01–S10 interior scene slots (strict)
 
-| Slot | File / treatment |
-|---|---|
-| `banner.mainMenu` | `/assets/banners/A01.webp` |
-| `banner.loadGame` | `/assets/banners/A01.webp` |
-| `banner.credits` | `/assets/banners/A01.webp` |
-| `banner.notifications` | `/assets/banners/A01.webp` |
-| `banner.settings` | `/assets/banners/A01.webp` |
-| `banner.createIdentity` | `/assets/banners/A02.webp` |
-| `banner.playerProfile` | `/assets/banners/A02.webp` |
-| `banner.dashboard` | `/assets/banners/A03.webp` |
-| `banner.events` | `/assets/banners/A03.webp` |
-| `banner.indiaMap` | `/assets/banners/A03.webp` |
-| `banner.partyHQ` | `/assets/banners/A04.webp` |
-| `banner.parties` | `/assets/banners/A04.webp` |
-| `banner.electionCentre` | `/assets/banners/A05.webp` |
-| `banner.parliament` | `/assets/banners/A06.webp` |
-| `banner.stateAssembly` | `/assets/banners/A07.webp` |
-| `banner.government` | `/assets/banners/A08.webp` |
-| `banner.budget` | `/assets/banners/A08.webp` |
-| `banner.media` | `/assets/banners/A09.webp` |
-| `banner.economy` | `/assets/banners/A10.webp` |
-| `banner.projects` | `/assets/banners/A10.webp` |
-| `player.B01` | `/assets/players/B01.webp` |
-| `player.B02` | `/assets/players/B02.webp` |
-| `player.B03` | `/assets/players/B03.webp` |
-| `player.B04` | `/assets/players/B04.webp` |
-| `player.B05` | `/assets/players/B05.webp` |
-| `player.B06` | `/assets/players/B06.webp` |
-| `player.B07` | `/assets/players/B07.webp` |
-| `player.B08` | `/assets/players/B08.webp` |
-| `player.B09` | `/assets/players/B09.webp` |
-| `player.B10` | `/assets/players/B10.webp` |
-| `player.B11` | `/assets/players/B11.webp` |
-| `origin.C01` | `/assets/cards/C01.webp` |
-| `origin.C02` | `/assets/cards/C02.webp` |
-| `origin.C03` | `/assets/cards/C03.webp` |
-| `origin.C04` | `/assets/cards/C04.webp` |
-| `origin.C05` | `/assets/cards/C05.webp` |
-| `origin.C06` | `/assets/cards/C06.webp` |
-| `thumb.partyHQ.funding` | `/assets/thumbs/D01.webp` |
-| `thumb.partyHQ.alliances` | `/assets/thumbs/D02.webp` |
-| `thumb.elections.polling` | `/assets/thumbs/D03.webp` |
-| `thumb.elections.counting` | `/assets/thumbs/D04.webp` |
-| `thumb.elections.courts` | `/assets/thumbs/D05.webp` |
-| `thumb.economy.agriculture` | `/assets/thumbs/D06.webp` |
-| `thumb.economy.manufacturing` | `/assets/thumbs/D07.webp` |
-| `thumb.economy.trade` | `/assets/thumbs/D08.webp` |
-| `thumb.projects.greenEnergy` | `/assets/thumbs/D09.webp` |
-| `thumb.projects.ruralHealthcare` | `/assets/thumbs/D10.webp` |
-| `thumb.projects.metro` | `/assets/thumbs/D11.webp` |
-| `thumb.economy.infrastructure` | `/assets/thumbs/D11.webp` |
-| `event.G01` | `/assets/events/G01.webp` |
-| `event.G02` | `/assets/events/G02.webp` |
-| `event.G03` | `/assets/events/G03.webp` |
-| `event.G04` | `/assets/events/G04.webp` |
-| `event.G05` | `/assets/events/G05.webp` |
-| `event.G06` | `/assets/events/G06.webp` |
-| `event.G07` | `/assets/events/G07.webp` |
-| `event.G08` | `/assets/events/G08.webp` |
-| `event.G09` | `/assets/events/G09.webp` |
-| `event.G10` | `/assets/events/G10.webp` |
-| `event.G11` | `/assets/events/G11.webp` |
-| `event.G12` | `Gold-icon fallback (G12 file is absent)` |
-| `emblem.NPC` | `/assets/emblems/NATION_party_emblems/E03_NPC_emblem.svg` |
-| `emblem.DPC` | `/assets/emblems/NATION_party_emblems/E31_DPC_emblem.svg` |
-| `emblem.EDC` | `/assets/emblems/NATION_party_emblems/E20_EDC_emblem.svg` |
-| `emblem.MPP` | `/assets/emblems/NATION_party_emblems/E21_MPP_emblem.svg` |
-| `emblem.PDF` | `/assets/emblems/NATION_party_emblems/E27_PDF_emblem.svg` |
-| `emblem.NUF` | `/assets/emblems/NATION_party_emblems/E06_NUF_emblem.svg` |
-| `emblem.PRP` | `/assets/emblems/NATION_party_emblems/E02_PRP_emblem.svg` |
-| `emblem.RPC` | `/assets/emblems/NATION_party_emblems/E34_RPC_emblem.svg` |
-| `emblem.SPP2` | `/assets/emblems/NATION_party_emblems/E26_SPP2_emblem.svg` |
-| `emblem.DJF` | `/assets/emblems/NATION_party_emblems/E08_DJF_emblem.svg` |
-| `emblem.SPP` | `/assets/emblems/NATION_party_emblems/E12_SPP_emblem.svg` |
-| `emblem.YDP` | `/assets/emblems/NATION_party_emblems/E16_YDP_emblem.svg` |
-| `emblem.PDP` | `/assets/emblems/NATION_party_emblems/E07_PDP_emblem.svg` |
-| `emblem.PSC` | `/assets/emblems/NATION_party_emblems/E25_PSC_emblem.svg` |
-| `emblem.PWC` | `/assets/emblems/NATION_party_emblems/E05_PWC_emblem.svg` |
-| `emblem.NPCO` | `/assets/emblems/NATION_party_emblems/E09_NPCO_emblem.svg` |
-| `emblem.PEF` | `/assets/emblems/NATION_party_emblems/E33_PEF_emblem.svg` |
-| `emblem.ICP` | `/assets/emblems/NATION_party_emblems/E10_ICP_emblem.svg` |
-| `emblem.CPP` | `/assets/emblems/NATION_party_emblems/E17_CPP_emblem.svg` |
-| `emblem.URP` | `/assets/emblems/NATION_party_emblems/E22_URP_emblem.svg` |
-| `emblem.GDP` | `/assets/emblems/NATION_party_emblems/E13_GDP_emblem.svg` |
-| `emblem.CFP` | `/assets/emblems/NATION_party_emblems/E15_CFP_emblem.svg` |
-| `emblem.PLF` | `/assets/emblems/NATION_party_emblems/E14_PLF_emblem.svg` |
-| `emblem.NDP` | `/assets/emblems/NATION_party_emblems/E01_NDP_emblem.svg` |
-| `emblem.PCP` | `/assets/emblems/NATION_party_emblems/E30_PCP_emblem.svg` |
-| `emblem.FPF` | `/assets/emblems/NATION_party_emblems/E04_FPF_emblem.svg` |
-| `emblem.FUF` | `/assets/emblems/NATION_party_emblems/E18_FUF_emblem.svg` |
-| `emblem.DLU` | `/assets/emblems/NATION_party_emblems/E23_DLU_emblem.svg` |
-| `emblem.TRF` | `/assets/emblems/NATION_party_emblems/E19_TRF_emblem.svg` |
-| `emblem.RJP` | `/assets/emblems/NATION_party_emblems/E24_RJP_emblem.svg` |
-| `emblem.SPA` | `/assets/emblems/NATION_party_emblems/E32_SPA_emblem.svg` |
-| `emblem.FDP` | `/assets/emblems/NATION_party_emblems/E29_FDP_emblem.svg` |
-| `emblem.RDF` | `/assets/emblems/NATION_party_emblems/E28_RDF_emblem.svg` |
-| `emblem.PAP` | `/assets/emblems/NATION_party_emblems/E11_PAP_emblem.svg` |
+| ID | Registry key | Only permitted placement | Current asset |
+|---|---|---|---|
+| S01 | `scene.S01` | Courts — Supreme Court section | Code-made SVG scene fallback |
+| S02 | `scene.S02` | Courts — District/Lower Court section | Code-made SVG scene fallback |
+| S03 | `scene.S03` | State Assembly — chamber/sessions section | Code-made SVG scene fallback |
+| S04 | `scene.S04` | Parliament — Lok Sabha chamber/sessions section | Code-made SVG scene fallback |
+| S05 | `scene.S05` | Parliament — Committees section | Code-made SVG scene fallback |
+| S06 | `scene.S06` | Election Commission — registration/verification section | Code-made SVG scene fallback |
+| S07 | `scene.S07` | Meetings and Alliances section | Code-made SVG scene fallback |
+| S08 | `scene.S08` | Party Creation, Party Registration and Manifesto builder | Code-made SVG scene fallback |
+| S09 | `scene.S09` | Finance and Bank Loan section | Code-made SVG scene fallback |
+| S10 | `scene.S10` | Media & News newsroom section | Code-made SVG scene fallback |
 
-## Verified artwork conditions
+The original requested S01.webp–S10.webp files were not present in either supplied source archive at the time of this build. The SVGs in `assets/scenes/` are intentional, code-authored fallbacks, not replacements masquerading as supplied photography. When the WebP files are supplied, update only the registry values and manifest entries; keep the same keys and strict placements.
 
-- `public/assets/players/B03.webp`: background is baked white/checker; slot retained but UI does not render the image.
-- `public/assets/players/B05.webp`: background is baked white/checker; slot retained but UI does not render the image.
-- `public/assets/players/B11.webp`: present; default highlighted portrait.
-- `public/assets/events/G12.webp`: missing; `event.G12` remains a null registry slot and event cards render a gold icon.
-- No other image substitutions are made. The exact registry path is used for all mapped artwork.
+## Portrait overlay rule
+
+Interior scene artwork reserves its left third for one player portrait overlay. A scene may render at most one portrait overlay, positioned in that reserved area. The portrait is not repeated in a second overlay on the same scene.
+
+## Existing asset groups
+
+- B01–B10: player portrait picker; selected portrait overlay only.
+- C01–C06: career background selection and profile.
+- D01–D11: existing contextual thumbnails in their assigned sections.
+- E01–E34: party emblems and flags only.
+- G01–G12: event cards; missing event art uses the existing neutral icon fallback.
+
+## Registry policy
+
+`src/assets/registry.json` is the runtime source of truth. `assets/manifest.json` is the human-readable inventory. `scripts/check-assets.mjs` verifies every non-empty registry path and rejects hardcoded asset paths in source components.

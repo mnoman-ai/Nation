@@ -1,16 +1,19 @@
-# NATION: RISE TO POWER — v1.3.1
+# NATION: RISE TO POWER — v1.4.0
 
-## Android interaction and party-registration hotfix
+## Graphics foundation milestone
+- Added a loading screen before the main menu.
+- Rebuilt the main menu in the classic scenic-banner composition, aligned to page 1 of the supplied graphics reference.
+- Introduced the hybrid dark/light visual system, dashboard shortcut strip and Android landscape layout overrides.
+- Moved Save, Pause/Resume, Stop and speed controls into Settings; retained +1 Day and +7 Days outside Settings.
+- Added the S01–S10 scene registry slots and ten local SVG scene fallbacks with the left-third portrait reserve.
+- Added the SceneBanner component and single portrait overlay behavior.
+- Updated asset manifest, offline precache list, asset documentation and service-worker cache version.
+- Removed the rotate-device overlay; native Android landscape lock remains a separate Android-project task.
 
-- Reworked the top navigation and game-time controls into separate, full-width horizontal touch-scroll regions on narrow Android/WebView layouts.
-- Added WebView-friendly momentum scrolling, horizontal touch gesture handling, stable non-shrinking controls and visible scroll affordance.
-- Kept the navigation and controls independent so a swipe on one strip does not compress or block the other.
-- Synchronized the top-level player UI state from the authoritative world state after real-time ticks, manual day advances, deadline processing and save loading. This ensures an automatically approved party's new party ID and office status propagate to all screens, not only the simulation world object.
-- Election Commission application rows now show the application decision, created party registration status, and whether the player is actively affiliated with that party.
-- Correction resubmission now preserves existing headquarters, logo, flag and colour selections when the corresponding form field is not changed.
-- Added v1.3.1 regression checks for Android touch-scroll regions and party affiliation state propagation.
+## Explicitly deferred
+- Detailed current 36-state/UT geographic map data integration.
+- Full interactive Parliament and State Assembly seating.
+- Custom day-duration integration with TimeEngine.
+- Full graphics completion across all screens, victory animation, complete device QA and final release validation.
 
-## Compatibility
-
-- Keeps the existing v1.3.0 offline data model, saves, game rules, Capacitor configuration and Android patch script.
-- No server, analytics, ads or network gameplay services were added.
+See `docs/V140_GRAPHICS_STATUS.md` for the exact implementation boundary and known gaps.

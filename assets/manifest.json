@@ -123,5 +123,18 @@
     "D14": null,
     "D15": null,
     "D16": null
-  }
+  },
+  "scenes": {
+    "S01": "scenes/S01.svg",
+    "S02": "scenes/S02.svg",
+    "S03": "scenes/S03.svg",
+    "S04": "scenes/S04.svg",
+    "S05": "scenes/S05.svg",
+    "S06": "scenes/S06.svg",
+    "S07": "scenes/S07.svg",
+    "S08": "scenes/S08.svg",
+    "S09": "scenes/S09.svg",
+    "S10": "scenes/S10.svg"
+  },
+  "version": "1.4.0"
 }

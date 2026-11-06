@@ -88,11 +88,6 @@ button, .btn { min-height: 44px; }
 .sidebar { display: none !important; }
 .screen-content { margin-left: 0 !important; }
 .panel-body input, .panel-body select, .panel-body textarea { min-height: 44px; font-size: 14px; }
-#portrait-rotate-overlay { display: none; }
-@media (orientation: portrait) and (max-width: 899px) {
-  #portrait-rotate-overlay { position: fixed; z-index: 99999; inset: 0; display: grid; place-items: center; padding: 24px; background: #071923; color: #f7edd5; font: 700 22px Inter, sans-serif; text-align: center; }
-  #root { visibility: hidden; }
-}
 .party-art-preview { display:flex; align-items:center; gap:20px; padding:8px 0; }
 .party-art-preview > span { display:flex; flex-direction:column; gap:6px; color:#f2ead8; font-size:12px; }
 .party-art-preview img { width:64px; height:64px; border-radius:8px; }
